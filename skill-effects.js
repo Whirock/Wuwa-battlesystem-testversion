@@ -60,45 +60,45 @@
     if(u.r2Pending && keyOf(u)==='denia')u.form='blue';
   }
   function describeStatus(k,s={}) {
-    if(s.capStatus)return `${ABNORMAL[s.capStatus].name}上限+${s.capBonus}；多个扩容取最高，不加层、不刷新异常，到期立即无伤害裁层。`;
+    if(s.capStatus)return `${ABNORMAL[s.capStatus].name}上限+${s.capBonus}；同类效果取最高，到期移除超出的层数。`;
     const descriptions={
-      rupture_shift:'爱弥斯震谐模态本人击破预存标记时消费，造成0.60ATK响应；队友击破不触发。',
-      strain_shift:'达妮娅集谐模态在己方击破预存标记后消费，主目标0.45ATK、最多两名同组敌人各0.225ATK。',
-      amy_quick:'下一次正常行动若用二段蓄力，本体伤害×1.20并消费；选择其他行动也会失效。',
-      amy_escort:`下一次主动攻击根与紧随反击队列中，第一条可防护反击减伤${Math.round((s.reduction||0)*100)}%，最多减免来源ATK×${s.capCoef}；该根结束清除。`,
-      lynae_cruise:'绮彩巡游；可用幻光折跃与视觉冲击，结束或交接时回取样态。',
-      lynae_chase:'载体每次原始攻击首次命中后触发琳奈追色0.25ATK；攻击开始时目标有颜料则0.35ATK。无每行动封顶，不递归。',
-      lynae_paint:'追色系数提高到0.35ATK；视觉冲击命中消费并附0.40ATK，附伤不随BP缩放。',
-      lynae_r_support:'下一次R、R1或R2整根伤害加深10%，提交即消费；解放分类E或蓝态普攻不消费。',
-      lynae_empowered:'下一次正常行动若选择普攻，首击1.40ATK、追加每击0.56ATK；选择其他行动也到期。',
-      mornye_air:'广域观测空中态，可使用分布式阵列、反演。落地不取消已有谐振场。',
-      mornye_field:s.strong?'轮末治疗HP比例最低的一名友方，治疗(30+0.25DEF)×1.40；存续时全队DEF+10%。':'轮末治疗HP比例最低的一名友方30+0.25DEF，包含本人；平手按固定槽位。',
-      mornye_field_def:'最终DEF+10%；同名取高，不叠加。',
-      mornye_guard:`保护下一次可格挡敌原始攻击，防减后盾前减伤60%，剩余减免预算${Number(s.remainingCap||0).toFixed(1)}；敌根结束反击1.10DEF。`,
-      mornye_bound:'最多3次把盾后HP伤害封顶为最大HP的30%；仍会致命时保留1HP并结束。第三次封顶或免死后治疗40+0.40DEF。',
-      mornye_observation:'己方实际击破预存观测目标后消费，在根结束施加两轮12%受伤加深；新挂不回溯。',
-      mornye_interference:'所受己方全部HP伤害加深12%，包含异常；同名取高，不叠加。',
-      mornye_support:`下一次原始攻击根开始HP≥70%时伤害加深${Math.round((s.amount||0)*100)}%，该根一次消费；不强化他人协同。`,
-      denia_group:'同组成员可供聚爆扩散、轻唤/放逐/织梦重击副目标与连景读取；无减速或跳行动。',
-      denia_spill:'下一次合格单目标单属性原始根命中后，向另一同组敌人溅射本体税前伤害20%，上限为达妮娅0.60ATK；成功触发才消费。',
-      denia_field:'轮末对全敌造成0.45ATK快照场伤，之后按模态加1层聚爆或刷新集谐偏移；不触发协同或主动异常钩子。',
-      chisa_saw:'电锯态：可疾攻/终结，不能断命之铗；自然到期回剪刀且不获得终结盾。',
-      chisa_unravel_mark:'每轮首次受到后续原始根攻击的实际HP伤害后加1层虚湮；同根多击只一次，协同与异常不触发。',
-      chisa_wanlv:'下一次锯环·疾攻或终结本体伤害×1.20；提交即消费，不增加攻击次数。',
-      spectro_echo_hold:'下一次光噪自然跳伤照常，但免除一次自然减1层；不阻止转换、主动消耗或异常到期。',
-      stasis_delay:'目标下一次可延后主行动移到当轮其他既定行动之后一次，不删除行动或延长危险蓄力截止。',
-      role_slow:`仅下一轮排序SPD降低${Math.round((s.pct||0)*100)}%。`,
-      dark_surge:'暗涌：普攻首击1.45ATK、追加0.58ATK且根B20；行刃替换为命刈2.60ATK。',
-      havoc_field:'目标接下来两次实际主行动结束各结算一次快照湮灭场伤；跳过或延后不计一次。',
-      aero_cap_aura:'敌方风蚀容量+2；队伍主动施加風蚀前同步给新目标容量，不送层。与其他扩容取最高。',
-      critical_resonance:'临界共鸣：雷引替换为千声翻涌，四次真实攻击依序衍射、湮灭、气动、导电。',
-      electro_relay:'下一次原始攻击首次非伤害免疫命中，受益者主动施加1层电磁并消费一次；协同不能消费。',
-      electro_marrow:`受益者下一次成功主动施加异常后恢复${s.amount}SP并消费；转换/场/持续异常不触发，溢出浪费。`,
-      spectro_frazzle:'轮末按[0.10n+0.02n(n−1)]×施加者ATK快照造成衍射异常伤害，然后自然减少1层。',
-      aero_erosion:'轮末按0.18n×施加者ATK快照造成气动异常伤害，不自然消层，到期清除。',
-      electro_flare:'轮末按0.22n×施加者ATK快照造成导电异常伤害，跳后层数取原层数的一半向下取整。',
-      fusion_burst:'到有效上限即引爆实际层数×0.15ATK快照热熔异常伤害并清层；同组其余敌人各受一半基数。',
-      havoc_bane:'每层DEF−3%，进入公共防御削弱池；整组到期清除。'
+      rupture_shift:'爱弥斯击破已有此标记的目标时，消耗标记并造成60%热熔伤害。',
+      strain_shift:'己方击破已有此标记的目标时，消耗标记，造成45%热熔伤害；最多2名同组敌人各受22.5%伤害。',
+      amy_quick:'下次行动使用二段蓄力时，伤害提升20%；选择其他行动则失效。',
+      amy_escort:`下次主动攻击引发的首次反击减伤${Math.round((s.reduction||0)*100)}%，上限为来源攻击力的${Math.round((s.capCoef||0)*100)}%。攻击结束后护航消失。`,
+      lynae_cruise:'巡游形态：可使用幻光折跃、视觉冲击。结束或交接追色后回到取样形态。',
+      lynae_chase:'每次主动攻击首次命中时，琳奈追加25%伤害；目标已有颜料时提升至35%。',
+      lynae_paint:'追色伤害提升至35%；视觉冲击命中时消耗颜料，追加40%衍射伤害。',
+      lynae_r_support:'下一次R、R1或R2伤害加深10%，施放时消耗。',
+      lynae_empowered:'下次普攻首击140%，追加攻击每击56%；下次行动选择其他指令则失效。',
+      mornye_air:'空中形态：可使用分布式阵列、反演。落地后保留谐振场。',
+      mornye_field:s.strong?'轮末治疗生命比例最低的友方，恢复42＋35%防御力的生命；全队防御力提升10%。':'轮末治疗生命比例最低的友方，恢复30＋25%防御力的生命。',
+      mornye_field_def:'防御力提升10%。',
+      mornye_guard:`莫宁下次行动前，下次受攻击减伤60%，剩余抵消上限${Number(s.remainingCap||0).toFixed(1)}；成功格挡后反击110%防御力伤害。`,
+      mornye_bound:'受到的生命伤害最多为最大生命的30%，最多3次；致命伤保留1点生命。次数耗尽或触发保命后，恢复40＋40%防御力的生命。',
+      mornye_observation:'己方击破目标时消耗观测，施加干涉2轮：目标受到的伤害加深12%。',
+      mornye_interference:'受到己方的伤害加深12%。',
+      mornye_support:`生命达到70%时，下次主动攻击伤害加深${Math.round((s.amount||0)*100)}%，生效1次。`,
+      denia_group:'同组敌人可受到聚爆、轻唤、放逐、织梦重击与连景的扩散伤害。',
+      denia_spill:'下次单体、单属性主动攻击命中时，向另一同组敌人溅射本次攻击基础伤害的20%，上限为达妮娅攻击力的60%；成功触发后消耗。',
+      denia_field:'轮末群攻45%，随后施加聚爆1层或刷新集谐·偏移2轮。',
+      chisa_saw:'电锯形态：可使用锯环·疾攻与终结，不能使用断命之铗；结束后回到剪刀形态。',
+      chisa_unravel_mark:'每轮首次受到后续主动攻击的生命伤害时，增加虚湮1层。',
+      chisa_wanlv:'下次锯环·疾攻或终结伤害提升20%，施放时消耗。',
+      spectro_echo_hold:'免除下一次光噪的自然减层。',
+      stasis_delay:'将下一次行动延后一次。',
+      role_slow:`下一轮速度降低${Math.round((s.pct||0)*100)}%。`,
+      dark_surge:'普攻首击145%，追加攻击每击58%；行刃替换为命刈，伤害260%。',
+      havoc_field:`接下来2次行动结束时，各受到${Math.round((s.coef||.9)*10000)/100}%湮灭伤害。`,
+      aero_cap_aura:'敌方风蚀上限提高2层；队友对新目标施加风蚀时同样生效。',
+      critical_resonance:'雷引替换为千声翻涌，依次以衍射、湮灭、气动、导电攻击。',
+      electro_relay:'下次主动攻击首次命中且未被伤害免疫时，施加电磁1层并消耗援阵。',
+      electro_marrow:`下次主动施加异常成功后，恢复${s.amount}SP，生效1次。`,
+      spectro_frazzle:'轮末造成衍射伤害，随后减少1层；层数越高，伤害越高。',
+      aero_erosion:'轮末每层造成18%气动伤害，到期清除。',
+      electro_flare:'轮末每层造成22%导电伤害，随后层数减半，向下取整。',
+      fusion_burst:'达到层数上限时引爆，每层造成15%热熔伤害；同组敌人受到一半伤害。引爆后清空。',
+      havoc_bane:'每层使防御力降低3%。'
     };return descriptions[k] || '';
   }
   function normOptions(o={}) {
@@ -124,7 +124,7 @@
       out.abnormalChoicesByTarget=Object.fromEntries(foes.map(t=>[t.id,Object.keys(ABNORMAL).filter(k=>status(t,k)&&status(t,k).stacks>0).map(value=>({value,label:ABNORMAL[value].name}))]));
     }
     if(id==='rover_aero'&&q==='E3') {
-      out.abnormalChoices=[{value:'none',label:'只攻击，不转换'},...['spectro_frazzle','fusion_burst','havoc_bane','electro_flare'].filter(k=>!target || status(target,k)).map(value=>({value,label:ABNORMAL[value].name}))];
+      out.abnormalChoices=[{value:'none',label:'只攻击'},...['spectro_frazzle','fusion_burst','havoc_bane','electro_flare'].filter(k=>!target || status(target,k)).map(value=>({value,label:ABNORMAL[value].name}))];
       if(target)out.conversionPreview=conversionPreview(e,a,target,o.abnormal||'none');
     }
     if(target&&liveStatus(e,a,'denia_spill'))out.spillTargets=groupMembers(e,target).filter(t=>t!==target).map(t=>t.id);
@@ -145,35 +145,74 @@
     }
     return {audit,category};
   }
+  // Presentation only: chosen BP/form/branch copy. Does not prepare or commit an action.
+  function describeSkill(e,a,s,k,bp=0,o={}) {
+    if(s.generic)return e.params.generic_skills[k==='escape'?'retreat':k]?.description||s.description||'';
+    const id=keyOf(a),q=slot(s,k),n=preview(e,a,s,k,bp,o).audit;
+    const num=x=>String(Math.round(Number(x)*10000)/10000),pct=x=>num(x*100)+'%';
+    let text=s.description||s.status_effect_and_duration||s.effect||'';
+    if((id==='amy'||id==='denia')&&q==='A'){
+      const variant=s.conditional_variants&&s.conditional_variants[0];
+      if(variant)text=text.replace('115%',pct(variant.numeric_audit.damage_atk_by_bp[bp]));
+    }
+    if(id==='amy'&&q==='E5')text=`为其他队友护航2轮：下次主动攻击引发的首次反击减伤${[25,35,45,55][bp]}%，最多抵消爱弥斯攻击力的${[60,85,110,135][bp]}%。攻击结束后护航消失。`;
+    if(id==='mornye'&&q==='E1')text=text.replace('40＋35%防御力',`${num(n.healing.flat_by_bp[bp])}＋${pct(n.healing.def_by_bp[bp])}防御力`);
+    if(id==='mornye'&&q==='E3'){
+      const healing=o.choice==='healing',h=n.healing;
+      text=text.replace('60＋55%防御力',`${num(healing?h.flat_by_bp[bp]:h.attack_channel_heal_fixed[0])}＋${pct(healing?h.def_by_bp[bp]:h.attack_channel_heal_fixed[1])}防御力`);
+    }
+    if(id==='mornye'&&q==='E5')text=text.replace('12/15/18/20%',[12,15,18,20][bp]+'%');
+    if(id==='denia'&&q==='E3'){
+      const exile=o.choice==='exile',total=n.damage_atk_by_bp[bp],secondary=total*(exile?.65/2.2:.4/1.7);
+      text=`${exile?'放逐':'轻唤'}：攻击主目标及最多2名同组敌人，主目标${pct(total)}，副目标各${pct(secondary)}。副目标不削减共振。`;
+    }
+    if(id==='chisa'&&q==='E2'){
+      const scale=o.choice==='healing'?[1,1.3,1.55,1.75][bp]:1;
+      text=text.replace('35＋35%攻击力',`${num(35*scale)}＋${pct(.35*scale)}攻击力`);
+    }
+    if(id==='rover_spectro'&&q==='S')text=text.replace('10/15/20/25%',[10,15,20,25][bp]+'%');
+    if(id==='rover_havoc'&&q==='E1'){
+      const dark=s.numeric_audit.state_overrides.dark_surge;
+      text=text.replace('260%',pct(dark.damage_atk_by_bp[bp]));
+    }
+    if(id==='rover_havoc'&&q==='S')text=text.replace('90%',pct(n.delayed_total_damage_atk_by_bp[bp]/2));
+    if(id==='rover_aero'&&['E1','R'].includes(q)){
+      const h=n.healing_by_bp[bp];
+      text=`${q==='R'?'群攻':'攻击'}并治疗全队，恢复${pct(h.atk)}攻击力＋${pct(h.caster_max_hp)}自身最大生命的生命。`;
+    }
+    if(id==='rover_aero'&&q==='S')text=text.replace('2/3/4/5轮',[2,3,4,5][bp]+'轮');
+    if(id==='rover_electro'&&q==='S')text=text.replace('12/16/20/24SP',[12,16,20,24][bp]+'SP');
+    return text;
+  }
   function validate(e,c) {
     const a=c.actor,id=keyOf(a),q=slot(c.skill,c.key),o=normOptions(c.options),f=a.form;
-    for(const field of ['allyTarget','spillTarget','spillTargetId'])if(o[field]!=null&&typeof o[field]!=='string')return '目标ID必须是字符串';
-    for(const field of ['allyTargets','extraTargets','targetIds'])if(o[field]!=null&&(!Array.isArray(o[field])||o[field].some(x=>typeof x!=='string')))return '多选目标必须是ID列表';
+    for(const field of ['allyTarget','spillTarget','spillTargetId'])if(o[field]!=null&&typeof o[field]!=='string')return '目标选择无效';
+    for(const field of ['allyTargets','extraTargets','targetIds'])if(o[field]!=null&&(!Array.isArray(o[field])||o[field].some(x=>typeof x!=='string')))return '目标选择无效';
     if(o.abnormalSelections!=null&&(!Array.isArray(o.abnormalSelections)||o.abnormalSelections.some(x=>!x||typeof x!=='object'||typeof x.targetId!=='string'||typeof x.statusId!=='string')))return '请选择合法的敌人和异常';
     if(id==='rover_aero'&&q==='E3'&&c.options?.abnormal!=null&&typeof c.options.abnormal!=='string')return '请选择一种异常，或只攻击';
     const requires = id==='lynae'?{E2:'sampling',E3:'cruise',E4:'cruise'}:id==='mornye'?{E2:'ground',E3:'air',E4:'air'}:id==='denia'?{E1:'red',E3:'blue',R1:'red'}:id==='chisa'?{E2:'scissors',E3:'scissors',E4:'saw',E5:'saw'}:{};
     if(requires[q] && f!==requires[q])return `当前形态不可使用${c.skill.name || q}`;
     if(id==='rover_electro' && q==='E1-state' && !liveStatus(e,a,'critical_resonance'))return '需要临界共鸣';
     if(id==='rover_electro' && q==='E1' && liveStatus(e,a,'critical_resonance'))return '临界期间使用千声翻涌';
-    if((id==='amy'&&q==='E5') || (id==='lynae'&&q==='E5') || (id==='rover_electro'&&q==='S')){const t=chosenAlly(e,c,false);if(!alive(t)||t.side!==a.side||t.id===a.id)return '请选择另一名在场存活队友';}
-    if(id==='mornye'&&['E1','E3'].includes(q)){const t=chosenAlly(e,c);if(!alive(t)||t.side!==a.side)return '请选择在场存活的格挡或有界受益者';}
+    if((id==='amy'&&q==='E5') || (id==='lynae'&&q==='E5') || (id==='rover_electro'&&q==='S')){const t=chosenAlly(e,c,false);if(!alive(t)||t.side!==a.side||t.id===a.id)return '请选择其他存活队友';}
+    if(id==='mornye'&&['E1','E3'].includes(q)){const t=chosenAlly(e,c);if(!alive(t)||t.side!==a.side)return '请选择受保护的友方';}
     if(id==='denia'&&q==='E5'){
-      if(!enemies(e,a).some(t=>groupMembers(e,t).length>=2))return '需要至少两名存活敌人的有效归群';
-      const selected=selectedAllies(e,c);if(!selected.length || selected.length>c.bp+1 || selected.some(t=>!alive(t)||t.side!==a.side) || new Set(selected.map(t=>t.id)).size!==selected.length)return '连景目标必须为不重复的存活队友，数量不超过BP档位';
+      if(!enemies(e,a).some(t=>groupMembers(e,t).length>=2))return '需要至少2名敌人同组';
+      const selected=selectedAllies(e,c);if(!selected.length || selected.length>c.bp+1 || selected.some(t=>!alive(t)||t.side!==a.side) || new Set(selected.map(t=>t.id)).size!==selected.length)return '所选队友无效或数量超限';
     }
     if(id==='denia'&&['E3','E4'].includes(q)){
       const extra=(o.extraTargets || o.targetIds || []).map(x=>get(e,x));
-      if(extra.length>2 || new Set(extra.map(x=>x&&x.id)).size!==extra.length || extra.some(t=>!alive(t)||t===c.target||!groupMembers(e,c.target).includes(t)))return '副目标必须为主目标同组的至多两名其他存活敌人';
+      if(extra.length>2 || new Set(extra.map(x=>x&&x.id)).size!==extra.length || extra.some(t=>!alive(t)||t===c.target||!groupMembers(e,c.target).includes(t)))return '请选最多2名同组副目标';
     }
     if(id==='chisa'&&q==='E6'){
-      const selected=selectedAbnormals(e,c);if(!selected.length || selected.length>c.bp+1 || new Set(selected.map(x=>x.targetId)).size!==selected.length)return '请选择本档允许数量的不同敌人及其已有异常';
-      for(const x of selected){const t=get(e,x.targetId);if(!alive(t)||t.side===a.side||!ABNORMAL[x.statusId]||!status(t,x.statusId)||status(t,x.statusId).stacks<1)return '扩容只能选择敌人已有的已实现异常';}
+      const selected=selectedAbnormals(e,c);if(!selected.length || selected.length>c.bp+1 || new Set(selected.map(x=>x.targetId)).size!==selected.length)return '请选择敌人及其已有异常';
+      for(const x of selected){const t=get(e,x.targetId);if(!alive(t)||t.side===a.side||!ABNORMAL[x.statusId]||!status(t,x.statusId)||status(t,x.statusId).stacks<1)return '目标须已有所选异常';}
     }
     if(id==='rover_aero'&&q==='E3' && o.abnormal && o.abnormal!=='none' && !['spectro_frazzle','fusion_burst','havoc_bane','electro_flare'].includes(o.abnormal))return '该异常不可转换';
     if(id==='rover_aero'&&q==='E3' && o.abnormal && o.abnormal!=='none' && !status(c.target,o.abnormal))return '所选目标没有该异常；可选择只攻击';
     if(o.choice && ((id==='mornye'&&q==='E3')||(id==='chisa'&&q==='E2'))&&!['attack','healing'].includes(o.choice))return '请选择攻势或续航';
     if(id==='denia'&&q==='E3'&&o.choice&&!['call','exile'].includes(o.choice))return '请选择轻唤或放逐';
-    if(o.spillTarget&&(!liveStatus(e,a,'denia_spill')||!groupMembers(e,c.target).some(t=>t!==c.target&&t.id===o.spillTarget)))return '连景副目标必须为主目标同组的另一名存活敌人';
+    if(o.spillTarget&&(!liveStatus(e,a,'denia_spill')||!groupMembers(e,c.target).some(t=>t!==c.target&&t.id===o.spillTarget)))return '请选择另一名同组敌人';
     return null;
   }
   function snapshot(e,c) {
@@ -542,5 +581,5 @@
     }
     return true;
   }
-  return {validateState,roleUnitFields:['form','roleState'],roleEngineFields:['_roleStatusSerial','_roleOrder'],describeStatus,version:'0.4',cardCount:Object.values(SLOTS).reduce((n,x)=>n+x.length,0),cardCoverage:SLOTS,init,preview,validate,choices,prepare,beforeAttack,afterHit,afterAttack,afterRoot,onBreak,afterBreaks,modifiers,statModifiers,beforeIncomingDamage,beforeHPDamage,afterEnemyRoot,onActionEnd,afterCounterQueue,roundEnd,onDown,onLeave:onDown,applyAbnormal,addCapacity,capacity,conversionPreview,convertAbnormal,burst};
+  return {validateState,roleUnitFields:['form','roleState'],roleEngineFields:['_roleStatusSerial','_roleOrder'],describeStatus,describeSkill,version:'0.4',cardCount:Object.values(SLOTS).reduce((n,x)=>n+x.length,0),cardCoverage:SLOTS,init,preview,validate,choices,prepare,beforeAttack,afterHit,afterAttack,afterRoot,onBreak,afterBreaks,modifiers,statModifiers,beforeIncomingDamage,beforeHPDamage,afterEnemyRoot,onActionEnd,afterCounterQueue,roundEnd,onDown,onLeave:onDown,applyAbnormal,addCapacity,capacity,conversionPreview,convertAbnormal,burst};
 });

@@ -1,51 +1,23 @@
 {
-  "release_tag": "v3.0.0-test.4",
-  "current_version": "0.4.0-candidate",
-  "verification": {
-    "engine_and_effects": {
-      "passed": 81,
-      "failed": 0
-    },
-    "independent_runtime": {
-      "passed": 413,
-      "failed": 0,
-      "not_run": 0
-    },
-    "actual_matrix": {
-      "legal_teams": 134,
-      "encounters": 7,
-      "battles": 938,
-      "errors": 0,
-      "bounded_outcomes": 0
-    },
-    "static_parameters": 23,
-    "ui_interaction": 44,
-    "independent_dom": 11,
-    "same_level_victory": {
-      "level": 40,
-      "enemy_level": 40,
-      "normal_initial_resources": true,
-      "stat_adjustments": false,
-      "rounds": 36,
-      "survivor": "mornye",
-      "remaining_hp": 90,
-      "legal_commands": 143,
-      "events": 1385
-    },
-    "art": {
-      "runtime_pngs": 160,
-      "historical_pngs_byte_preserved": 158,
-      "new_dreamless_idle": 1,
-      "projectile_placeholder": 1,
-      "user_acceptance": "pending"
-    },
-    "real_browser": "Separate recorded cloud-browser QA; see docs/test4-browser-qa.md",
-    "windows_double_click": "not tested",
-    "audio_playback": "audible playback not verified"
-  },
-  "limits": [
-    "Candidate balance; narrow same-level victory does not establish mature balance.",
-    "Dreamless one idle pose reused for actions; projectile is a geometric mechanism marker.",
-    "Offline standalone battle prototype, not full narrative/RPG integration."
-  ]
+  "release_tag": "v3.0.0-test.5",
+  "candidate_review": "passed",
+  "review_evidence": [
+    "tests/v05/results/independent_final_full.json",
+    "tests/v05/results/final_recheck.json",
+    "docs/test5-browser-qa.md",
+    "docs/test5-independent-qa.md"
+  ],
+  "release_url": "https://github.com/Whirock/Wuwa-battlesystem-testversion/releases/tag/v3.0.0-test.5",
+  "publication_status_source": "The GitHub Release URL is authoritative; this source record is prepared before publishing.",
+  "frozen_zip": "Wuwa-battlesystem-v3.0.0-test.5-complete.zip",
+  "frozen_zip_bytes": 19936904,
+  "frozen_zip_sha256": "89ad5936ad57f6b4e22efbc0b36140ef871940a25155440ef4e6150588ac6942",
+  "package_metadata_state": "Frozen ZIP retains its original pre-publication candidate metadata and original internal checksums.",
+  "repository_metadata_changes": [
+    "README.md",
+    "VERSION.json",
+    "PUBLICATION_CHECKS.json",
+    "SHA256SUMS.txt"
+  ],
+  "scope": "Runtime, public implementation documents, and reproducible tests only."
 }

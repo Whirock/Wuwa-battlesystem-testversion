@@ -1,5 +1,5 @@
 {
-  "public_version": "0.4.0-candidate",
+  "public_version": "0.4.1-presentation-candidate",
   "scope": "Actual mapped runtime PNGs; empty slots are pending, not claimed complete.",
   "runtime_png_count": 160,
   "mapped_slot_count": 160,

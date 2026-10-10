@@ -1,0 +1,19 @@
+Running node tests/v05/mechanics_differential.cjs
+Running node tests/v05/copy_purity.cjs
+Running node tests/v05/mechanics_identity.cjs
+Running node tests/v05/ui_presentation_contract.cjs
+Running node tests/v05/ui_storage_isolation.cjs
+Running node tests/v05/ui_dynamic_effects.cjs
+Running node --test tests/v05/engine_core.test.cjs tests/v05/skill_effects.test.cjs
+Running node tests/v05/independent_parameters.cjs
+Running node tests/v05/independent_runtime.cjs
+Running node tests/v05/ui_bp_contract.cjs
+Running node tests/v05/ui_project_migration.cjs
+Running node tests/v05/ui_target_branches.cjs
+Running node tests/v05/ui_roster_coverage.cjs
+Running node tests/v05/ui_dreamless_bounds.cjs
+Running node tests/v05/ui_enemy_action_labels.cjs
+Running node tests/v05/ui_projectile_queue.cjs
+Running node tests/v05/independent_dom.cjs
+Running node tests/v05/independent_victory_replay.cjs
+Running python tests/v05/asset_audit.py
