@@ -1,8 +1,8 @@
 {
-  "public_version": "0.4.1-presentation-candidate",
-  "scope": "Actual mapped runtime PNGs; empty slots are pending, not claimed complete.",
-  "runtime_png_count": 160,
-  "mapped_slot_count": 160,
+  "public_version": "0.5.0-creation-candidate",
+  "scope": "191 mapped authored runtime PNG files plus embedded player-creation components. File inventory is not a gameplay or artwork acceptance certificate.",
+  "runtime_png_count": 191,
+  "mapped_slot_count": 191,
   "pending_slot_count": 0,
   "contains_master_or_3x_archives": false,
   "provenance_note": "Only public package-local paths, dimensions and hashes. Source models, reference renders and private research are excluded.",
@@ -928,9 +928,9 @@
     {
       "slot": "rover.male_default.04-AE-a",
       "role": "offline_runtime_copy",
-      "path": "assets/RVM-D-04-AE-a_v002_work1px.png",
-      "size": 102601,
-      "sha256": "b4dee887fe06cd749a2e6bce7ec02807f5d133fc2f79c41b84b0828908577b2a",
+      "path": "assets/RVM-D-04-AE-a_bloodpact_v002_work1px.png",
+      "size": 110145,
+      "sha256": "1b67666ef7fc2664b619e4617b5f7c46521b6b5cc5f70f84fae9f9c1c9786919",
       "width": 640,
       "height": 576
     },
@@ -991,11 +991,11 @@
     {
       "slot": "rover.male_default.04-HV-b",
       "role": "offline_runtime_copy",
-      "path": "assets/RVM-D-04-HV-b_v001_work1px.png",
-      "size": 87290,
-      "sha256": "74e31d88c32197507147a0011ebfe0325fc1a64d0d1d7ca5f8c440189d349abd",
-      "width": 768,
-      "height": 448
+      "path": "assets/RVM-D-04-HV-b_v002_work1px.png",
+      "size": 134802,
+      "sha256": "4ea530a88bb13b4d2555eced567f0b8f432e599f7990a7e34acea0081e679dc3",
+      "width": 824,
+      "height": 478
     },
     {
       "slot": "rover.male_school.01-CM",
@@ -1072,9 +1072,9 @@
     {
       "slot": "rover.male_school.04-AE-a",
       "role": "offline_runtime_copy",
-      "path": "assets/RVM-S-04-AE-a_v002_work1px.png",
-      "size": 93469,
-      "sha256": "c70a475b5cca4ec5d72797453233d184c527824bbed3d2b8e8d4f53aaa1fdb0e",
+      "path": "assets/RVM-S-04-AE-a_bloodpact_v001_work1px.png",
+      "size": 102343,
+      "sha256": "61a66c6ef0bb6f2601b267cf9d07326baad2e7333f6c9d4496c0d44f47b50a4b",
       "width": 640,
       "height": 576
     },
@@ -1135,11 +1135,11 @@
     {
       "slot": "rover.male_school.04-HV-b",
       "role": "offline_runtime_copy",
-      "path": "assets/RVM-S-04-HV-b_v001_work1px.png",
-      "size": 93818,
-      "sha256": "f60ef437a20aeb67116c18f6275926be20f4605f411edf7dc2002fb078343b44",
-      "width": 768,
-      "height": 448
+      "path": "assets/RVM-S-04-HV-b_v003_work1px.png",
+      "size": 141346,
+      "sha256": "f6735c0d5e4cbab83b5a1234972f64efae0b27ec324d08069db384693c829adc",
+      "width": 875,
+      "height": 415
     },
     {
       "slot": "rover.female_default.01-CM",
@@ -1216,9 +1216,9 @@
     {
       "slot": "rover.female_default.04-AE-a",
       "role": "offline_runtime_copy",
-      "path": "assets/RVF-D-04-AE-a_v004_work1px.png",
-      "size": 111544,
-      "sha256": "d8520b18641dad6bcaabf4939fb20ef32f2baa09f244d05b2c71d9cdd999bb42",
+      "path": "assets/RVF-D-04-AE-a_bloodpact_v003_work1px.png",
+      "size": 119594,
+      "sha256": "e0c8b20ce1843a3d5e822c43c8b95ac210d58d51468889d395f39b2ec9ca6895",
       "width": 832,
       "height": 640
     },
@@ -1279,9 +1279,9 @@
     {
       "slot": "rover.female_default.04-HV-b",
       "role": "offline_runtime_copy",
-      "path": "assets/RVF-D-04-HV-b_v003_work1px.png",
-      "size": 95206,
-      "sha256": "6768764abb22f2275984fdb9c45da75f12567a0198cd62c7a7f04603e0330b02",
+      "path": "assets/RVF-D-04-HV-b_v009_work1px.png",
+      "size": 138255,
+      "sha256": "2b18113d63038f6fcc67c3f9f348020bbf6204521a4ba6a478c0cb10c0f31263",
       "width": 832,
       "height": 448
     },
@@ -1360,9 +1360,9 @@
     {
       "slot": "rover.female_school.04-AE-a",
       "role": "offline_runtime_copy",
-      "path": "assets/RVF-S-04-AE-a_v003_work1px.png",
-      "size": 112542,
-      "sha256": "02056eb2a3c70b3bc184179a29460ff28c6fe06902e0d4789ce1654c1e319fd1",
+      "path": "assets/RVF-S-04-AE-a_bloodpact_v001_work1px.png",
+      "size": 117285,
+      "sha256": "2ae72fd37dd88960ae67143211ff703e98aea4bbd233c0e94c59e8630360754e",
       "width": 832,
       "height": 640
     },
@@ -1423,9 +1423,9 @@
     {
       "slot": "rover.female_school.04-HV-b",
       "role": "offline_runtime_copy",
-      "path": "assets/RVF-S-04-HV-b_v004_work1px.png",
-      "size": 87366,
-      "sha256": "1ffe9d6f9b5f904fe9e5ecedd70050d718dce33ed7062513ff5071db5334f8ea",
+      "path": "assets/RVF-S-04-HV-b_v006_work1px.png",
+      "size": 134457,
+      "sha256": "07f938e66e07dc771cf31718e16a79f28a4b1e3df2e8f6a02ce2f3bd7a27aaae",
       "width": 832,
       "height": 448
     },
@@ -1446,7 +1446,307 @@
       "sha256": "ec492c27cb8d2b439cfa8491ee1249d61d696b11915843fa9da408621c4de87f",
       "width": 192,
       "height": 192
+    },
+    {
+      "slot": "rover.female_default.02-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-D-02-HV-dark_v002_work1px.png",
+      "size": 138122,
+      "sha256": "2e047d0ecda1fe0765e86fe0396c56a723c22e2f5eff69e5c578b8e79e291eb4",
+      "width": 896,
+      "height": 448
+    },
+    {
+      "slot": "rover.female_default.04-HV-a-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-D-04-HV-a-dark_v003_work1px.png",
+      "size": 150027,
+      "sha256": "b127a6a8dd2509f858ac59fcd0c2dd8da91ab52f8b344d2d61500b7cccc9dd0c",
+      "width": 896,
+      "height": 448
+    },
+    {
+      "slot": "rover.female_default.10-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-D-10-HV-dark_v001_work1px.png",
+      "size": 105795,
+      "sha256": "8a9aa0b66c723268dd0bef440489cc0b804a0fbb51a67cdd0c4cfcd328d682f9",
+      "width": 704,
+      "height": 448
+    },
+    {
+      "slot": "rover.female_default.03-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-D-03-HV-dark_v001_work1px.png",
+      "size": 105948,
+      "sha256": "1c0df6bca999749890d7dd112ba115d3a01598730409270eae5971cb626145ff",
+      "width": 704,
+      "height": 448
+    },
+    {
+      "slot": "rover.female_default.06-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-D-06-HV-dark_v001_work1px.png",
+      "size": 114524,
+      "sha256": "a9c2904de2e25ffcde6b3cc3974c8c939170658fb4805e055519613fdd3dd018",
+      "width": 704,
+      "height": 448
+    },
+    {
+      "slot": "rover.female_default.09-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-D-09-HV-dark_v001_work1px.png",
+      "size": 128368,
+      "sha256": "bde2d4d8762bf7f03965ea695d22e2282a98a70b6728f3ae7559bc9cb21cf1b1",
+      "width": 768,
+      "height": 448
+    },
+    {
+      "slot": "rover.female_default.07-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-D-07-HV-dark_v001_work1px.png",
+      "size": 86779,
+      "sha256": "f729008256a00a5bf604d72acdd97a135f1d3e5fb372478d0c4ded3e49c68a2d",
+      "width": 704,
+      "height": 448
+    },
+    {
+      "slot": "rover.male_default.02-AE",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-D-02-AE_bloodpact_v001_work1px.png",
+      "size": 96000,
+      "sha256": "2d81b3e195efd30d0bd2dd45ace503a40fa6462d6a7172f6661f993130f4e91a",
+      "width": 864,
+      "height": 448
+    },
+    {
+      "slot": "rover.male_school.02-AE",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-S-02-AE_bloodpact_v001_work1px.png",
+      "size": 95981,
+      "sha256": "7763dee44c25a4c51fd1d7fb6a30a693de767004fbfa86eb74ac072964f51318",
+      "width": 864,
+      "height": 448
+    },
+    {
+      "slot": "rover.female_school.02-AE",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-S-02-AE_bloodpact_v001_work1px.png",
+      "size": 89469,
+      "sha256": "8e043992e7f9dad70182828cd97020f73e36fb803a2e26bb2afb74d738739d3f",
+      "width": 928,
+      "height": 448
+    },
+    {
+      "slot": "rover.female_default.02-AE",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-D-02-AE_bloodpact_v002_work1px.png",
+      "size": 100263,
+      "sha256": "f73369540fc54184cd75e9246faf31434c529310c75946fa41595e754197f24a",
+      "width": 928,
+      "height": 448
+    },
+    {
+      "slot": "rover.male_default.02-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-D-02-HV-dark_v002_work1px.png",
+      "size": 132774,
+      "sha256": "d6b02c97a753aa964abac0ad436ed38ac939ab583748d73814b33d165134a25a",
+      "width": 821,
+      "height": 479
+    },
+    {
+      "slot": "rover.male_default.04-HV-a-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-D-04-HV-a-dark_v002_work1px.png",
+      "size": 131821,
+      "sha256": "9b7538757069c9edfab602222b06ae1d363fe4c9f7e65053b8e4bf616632a092",
+      "width": 821,
+      "height": 479
+    },
+    {
+      "slot": "rover.male_default.10-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-D-10-HV-dark_v002_work1px.png",
+      "size": 102006,
+      "sha256": "436f478b6696fd92d25b5b2c89e7868ca6078c3ab5c05dfb112fca45772d691f",
+      "width": 615,
+      "height": 410
+    },
+    {
+      "slot": "rover.male_default.03-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-D-03-HV-dark_v002_work1px.png",
+      "size": 113079,
+      "sha256": "0a762ac73e7c3407ab4310ab8dde673508f963eaea814ff5c21d67aa8cb8e624",
+      "width": 616,
+      "height": 409
+    },
+    {
+      "slot": "rover.male_default.06-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-D-06-HV-dark_v002_work1px.png",
+      "size": 115935,
+      "sha256": "e637451b8a33f870128644178112b1543e445862d6f846764cd738e382f26efa",
+      "width": 615,
+      "height": 410
+    },
+    {
+      "slot": "rover.male_default.09-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-D-09-HV-dark_v002_work1px.png",
+      "size": 124907,
+      "sha256": "eeda88dab88a44bbf9e009a2e2075a79ea62b58b1e813c6b5df8d33ebcb50d4f",
+      "width": 477,
+      "height": 477
+    },
+    {
+      "slot": "rover.male_default.07-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-D-07-HV-dark_v002_work1px.png",
+      "size": 82752,
+      "sha256": "fe82e37ce6e950f0e98d4ccc984b0e4091c9e141b2b0cd3642d818418c8fdccc",
+      "width": 557,
+      "height": 319
+    },
+    {
+      "slot": "rover.male_school.02-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-S-02-HV-dark_v002_work1px.png",
+      "size": 145789,
+      "sha256": "01c1fb1a0a0bca3bdb5e50fded9f3481d524c219ed2bac20d36730d0cdb8733a",
+      "width": 821,
+      "height": 479
+    },
+    {
+      "slot": "rover.male_school.04-HV-a-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-S-04-HV-a-dark_v002_work1px.png",
+      "size": 137808,
+      "sha256": "de4861711603ff129fe02ccd3042b8868a7a9988fcbc318fd7c52ff6b112da99",
+      "width": 821,
+      "height": 479
+    },
+    {
+      "slot": "rover.male_school.10-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-S-10-HV-dark_v002_work1px.png",
+      "size": 101759,
+      "sha256": "c11ff6946674d750decf03ad0534fc758a2a19977f03f83f58d0b0ef742a697e",
+      "width": 608,
+      "height": 425
+    },
+    {
+      "slot": "rover.male_school.03-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-S-03-HV-dark_v002_work1px.png",
+      "size": 115447,
+      "sha256": "70d3e4a2a7db0ba8644d9acc38de51dd9f7c8fd68f5db6eb62ec553ad87e27dd",
+      "width": 586,
+      "height": 377
+    },
+    {
+      "slot": "rover.male_school.06-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-S-06-HV-dark_v002_work1px.png",
+      "size": 119121,
+      "sha256": "7511e1a13f6c006d1062a8af771a81150a523206b337585d6e489ecacd2180ce",
+      "width": 608,
+      "height": 393
+    },
+    {
+      "slot": "rover.male_school.09-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-S-09-HV-dark_v002_work1px.png",
+      "size": 138728,
+      "sha256": "abd9f1584d8faf331e6c8a4186b4994d938f52b96afe7bf5b0dff0419b401824",
+      "width": 656,
+      "height": 463
+    },
+    {
+      "slot": "rover.male_school.07-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVM-S-07-HV-dark_v002_work1px.png",
+      "size": 88216,
+      "sha256": "2c6634089e00537720d8daf0e1ce60519582cda0fda0f7a07497cfad0b9bccec",
+      "width": 588,
+      "height": 367
+    },
+    {
+      "slot": "rover.female_school.02-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-S-02-HV-dark_v001_work1px.png",
+      "size": 134768,
+      "sha256": "bb0d3444fdc5a1b3e578137fa02b3067bd222fd8a93aba73478772a1c85bd315",
+      "width": 896,
+      "height": 448
+    },
+    {
+      "slot": "rover.female_school.04-HV-a-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-S-04-HV-a-dark_v001_work1px.png",
+      "size": 127287,
+      "sha256": "bf643d37f14762db29781145af448ea821c690e31803d1241164491ae7972c20",
+      "width": 832,
+      "height": 448
+    },
+    {
+      "slot": "rover.female_school.10-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-S-10-HV-dark_v001_work1px.png",
+      "size": 104403,
+      "sha256": "d615684d143ba9a8b6ffb2f00634cfd1f8f09efecf11d7a96ef0bdc2960f3cee",
+      "width": 704,
+      "height": 448
+    },
+    {
+      "slot": "rover.female_school.03-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-S-03-HV-dark_v001_work1px.png",
+      "size": 102106,
+      "sha256": "3fbdc681644f918c4d46d6ebb5caf69e742f7e245a86d0a6f34a9b6a482b2bdb",
+      "width": 704,
+      "height": 448
+    },
+    {
+      "slot": "rover.female_school.06-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-S-06-HV-dark_v001_work1px.png",
+      "size": 115290,
+      "sha256": "f0e5df9214e09550e5a8cb852ab0dcb31521663767d81c885aa39f6fa6503e29",
+      "width": 704,
+      "height": 448
+    },
+    {
+      "slot": "rover.female_school.07-HV-dark",
+      "role": "offline_runtime_copy",
+      "path": "assets/RVF-S-07-HV-dark_v001_work1px.png",
+      "size": 91356,
+      "sha256": "5c130518f1137fcb7dcb884f785f2cb849e3091ad60495f040670973a278adbe",
+      "width": 704,
+      "height": 448
     }
   ],
-  "pending_slots": []
+  "pending_slots": [],
+  "player_creation": {
+    "container": "creation-art-data.js",
+    "container_sha256": "e6ee84c5fdbb88c0fcc0be14449632f3b1e7cc7a832fdec98785adce4d345d27",
+    "embedded_png_count": 120,
+    "count_note": "Includes material masks and eye clips; not 120 independently drawn actions.",
+    "bodies": 2,
+    "semantic_poses_per_body": 5,
+    "hair_styles": 7,
+    "iris_patterns": 4,
+    "dimensions": {
+      "upright": [
+        448,
+        448
+      ],
+      "down": [
+        576,
+        448
+      ]
+    },
+    "component_version": "player-art-v1-r004"
+  }
 }

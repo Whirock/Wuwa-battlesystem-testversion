@@ -17,7 +17,7 @@
     fusion_burst:{name:'聚爆',cap:5,duration:3,element:'热熔',factor:n=>.15*n},
     havoc_bane:{name:'虚湮',cap:3,duration:2,element:'湮灭'}
   };
-  const NAMES = {rupture_shift:'震谐·偏移',strain_shift:'集谐·偏移',amy_quick:'迅应',amy_escort:'护航',lynae_cruise:'绮彩巡游',lynae_chase:'追色',lynae_paint:'颜料',lynae_r_support:'兜风·解放支援',lynae_empowered:'向着多彩的明天！',mornye_air:'广域观测',mornye_field:'谐振场',mornye_field_def:'强谐振场·防御',mornye_guard:'格挡',mornye_bound:'有界',mornye_observation:'观测',mornye_interference:'干涉',mornye_support:'稳态支援',denia_group:'归群',denia_spill:'连景',denia_field:'蚀域',chisa_saw:'电锯',chisa_unravel_mark:'虚无绞痕',chisa_wanlv:'万缕·汇终',spectro_echo_hold:'留响',stasis_delay:'凝滞',role_slow:'减速',dark_surge:'暗涌',havoc_field:'唤声',aero_cap_aura:'蚀境象',critical_resonance:'临界共鸣',electro_relay:'援阵',electro_marrow:'电髓'};
+  const NAMES = {rupture_shift:'震谐·偏移',strain_shift:'集谐·偏移',amy_quick:'迅应',amy_escort:'护航',lynae_cruise:'绮彩巡游',lynae_chase:'追色',lynae_paint:'颜料',lynae_r_support:'兜风·解放支援',lynae_empowered:'向着多彩的明天！',mornye_air:'广域观测',mornye_field:'谐振场',mornye_field_def:'强谐振场·防御',mornye_guard:'格挡',mornye_taunt:'迎击·挑衅',mornye_bound:'有界',mornye_observation:'观测',mornye_interference:'干涉',mornye_support:'稳态支援',denia_group:'归群',denia_spill:'连景',denia_field:'蚀域',chisa_saw:'电锯',chisa_unravel_mark:'虚无绞痕',chisa_wanlv:'万缕·汇终',spectro_echo_hold:'留响',stasis_delay:'凝滞',role_slow:'减速',dark_surge:'暗涌',havoc_field:'唤声',aero_cap_aura:'蚀境象',critical_resonance:'临界共鸣',electro_relay:'援阵',electro_marrow:'电髓'};
   const SLOTS = {amy:['A','E1','E2','E3','E4','E5','R1','R2'],lynae:['A','E1','E2','E3','E4','E5','R'],mornye:['A','E1','E2','E3','E4','E5','R'],denia:['A','E1','E2','E3','E4','E5','R1','R2'],chisa:['A','E1','E2','E3','E4','E5','E6','R'],rover_spectro:['A','E1','E2','S','R'],rover_havoc:['A','E1','E2','S','R'],rover_aero:['A','E1','E2','E3','S','R'],rover_electro:['A','E1','E2A','E2B','E1-state','S','R']};
   const keyOf = u => u && (u.key==='aemeath'?'amy':u.key || u.combat_profile_id);
   const alive = u => !!u && u.hp>0 && !u.retreated && !u.left && !u.offField && u.present!==false;
@@ -37,6 +37,7 @@
     if(!alive(u)||!alive(src))return null;
     const old=status(u,k), expires=rounds==null?null:e.round+rounds-1;
     const data={id:k,key:k,name:NAMES[k] || (ABNORMAL[k]&&ABNORMAL[k].name) || k,roleEffect:true,ownerId:src.id,sourceId:src.id,expires,...extra};
+    if(k==='role_slow'&&old&&old.startsRound===data.startsRound&&old.pct>=data.pct)return old;
     if(old && ['mornye_support','mornye_interference'].includes(k))data.amount=Math.max(old.amount||0,data.amount||0);
     data.description=describeStatus(k,data);
     const changed=!old || Object.keys(data).some(field=>JSON.stringify(old[field])!==JSON.stringify(data[field]));
@@ -75,6 +76,7 @@
       mornye_field:s.strong?'轮末治疗生命比例最低的友方，恢复42＋35%防御力的生命；全队防御力提升10%。':'轮末治疗生命比例最低的友方，恢复30＋25%防御力的生命。',
       mornye_field_def:'防御力提升10%。',
       mornye_guard:`莫宁下次行动前，下次受攻击减伤60%，剩余抵消上限${Number(s.remainingCap||0).toFixed(1)}；成功格挡后反击110%防御力伤害。`,
+      mornye_taunt:'下一次未锁定的单体主动攻击转向莫宁，生效1次；群攻、反击、已锁定攻击和免疫状态不受影响。',
       mornye_bound:'受到的生命伤害最多为最大生命的30%，最多3次；致命伤保留1点生命。次数耗尽或触发保命后，恢复40＋40%防御力的生命。',
       mornye_observation:'己方击破目标时消耗观测，施加干涉2轮：目标受到的伤害加深12%。',
       mornye_interference:'受到己方的伤害加深12%。',
@@ -113,7 +115,8 @@
   function choices(e,a,s,k,bp,o={}) {
     const id=keyOf(a),q=slot(s,k),out={},friends=team(e,a),foes=enemies(e,a),target=get(e,o.target || o.targetId);
     if((id==='amy'&&q==='E5') || (id==='lynae'&&q==='E5') || (id==='rover_electro'&&q==='S'))out.allyTargets=friends.filter(x=>x.id!==a.id).map(x=>x.id);
-    if(id==='mornye' && ['E1','E3'].includes(q))out.allyTargets=friends.map(x=>x.id);
+    if(id==='mornye' && (q==='E3'||q==='E1'&&o.choice!=='intercept'))out.allyTargets=friends.map(x=>x.id);
+    if(id==='mornye'&&q==='E1')out.choices=[{value:'protect',label:'保护（10SP · CD2）'},{value:'intercept',label:'迎击（16SP · CD3）'}];
     if((id==='mornye'&&q==='E3') || (id==='chisa'&&q==='E2'))out.choices=[{value:'attack',label:'攻势'},{value:'healing',label:'续航'}];
     if(id==='denia'&&q==='E3')out.choices=[{value:'call',label:'轻唤（18SP）'},{value:'exile',label:'放逐（24SP）'}];
     if(id==='denia'&&['E3','E4'].includes(q))out.multiTarget={kind:'extra_enemies',ids:(target?groupMembers(e,target).filter(x=>x!==target):foes.filter(x=>groupMembers(e,x).length>1)).map(x=>x.id),max:2,min:0};
@@ -143,6 +146,7 @@
       if(id==='mornye'&&q==='E3')audit.damage_def_by_bp=[1.2,1.2,1.2,1.2];
       if(id==='chisa'&&q==='E2')audit.damage_atk_by_bp=[1.15,1.15,1.15,1.15];
     }
+    if(id==='mornye'&&q==='E1'&&o.choice==='intercept'){audit={...audit,sp:16,cd:3};return {audit,category,target:'enemy',name:s.name+'·迎击'};}
     return {audit,category};
   }
   // Presentation only: chosen BP/form/branch copy. Does not prepare or commit an action.
@@ -156,7 +160,7 @@
       if(variant)text=text.replace('115%',pct(variant.numeric_audit.damage_atk_by_bp[bp]));
     }
     if(id==='amy'&&q==='E5')text=`为其他队友护航2轮：下次主动攻击引发的首次反击减伤${[25,35,45,55][bp]}%，最多抵消爱弥斯攻击力的${[60,85,110,135][bp]}%。攻击结束后护航消失。`;
-    if(id==='mornye'&&q==='E1')text=text.replace('40＋35%防御力',`${num(n.healing.flat_by_bp[bp])}＋${pct(n.healing.def_by_bp[bp])}防御力`);
+    if(id==='mornye'&&q==='E1'){text=text.replace('40＋35%防御力',`${num(n.healing.flat_by_bp[bp])}＋${pct(n.healing.def_by_bp[bp])}防御力`);if(o.choice==='intercept')text=text.replace('指定友方','莫宁自身')+' 选定敌人受到挑衅2轮：下一次未锁定单体主动攻击转向莫宁，生效1次；不影响群攻、反击、已锁定攻击或免疫目标。格挡仍在莫宁下次行动前结束。';}
     if(id==='mornye'&&q==='E3'){
       const healing=o.choice==='healing',h=n.healing;
       text=text.replace('60＋55%防御力',`${num(healing?h.flat_by_bp[bp]:h.attack_channel_heal_fixed[0])}＋${pct(healing?h.def_by_bp[bp]:h.attack_channel_heal_fixed[1])}防御力`);
@@ -195,7 +199,9 @@
     if(id==='rover_electro' && q==='E1-state' && !liveStatus(e,a,'critical_resonance'))return '需要临界共鸣';
     if(id==='rover_electro' && q==='E1' && liveStatus(e,a,'critical_resonance'))return '临界期间使用千声翻涌';
     if((id==='amy'&&q==='E5') || (id==='lynae'&&q==='E5') || (id==='rover_electro'&&q==='S')){const t=chosenAlly(e,c,false);if(!alive(t)||t.side!==a.side||t.id===a.id)return '请选择其他存活队友';}
-    if(id==='mornye'&&['E1','E3'].includes(q)){const t=chosenAlly(e,c);if(!alive(t)||t.side!==a.side)return '请选择受保护的友方';}
+    if(id==='mornye'&&q==='E1'&&o.choice&&!['protect','intercept'].includes(o.choice))return '请选择保护或迎击';
+    if(id==='mornye'&&q==='E1'&&o.choice==='intercept'){if(f!=='ground')return '当前形态不可使用迎击';const t=c.target;if(!alive(t)||t.side===a.side||t.mechanicUnit||t.mechanism||e.effectPolicy(t,'taunt')!=='apply')return '目标不受挑衅影响';}
+    else if(id==='mornye'&&['E1','E3'].includes(q)){const t=chosenAlly(e,c);if(!alive(t)||t.side!==a.side)return '请选择受保护的友方';}
     if(id==='denia'&&q==='E5'){
       if(!enemies(e,a).some(t=>groupMembers(e,t).length>=2))return '需要至少2名敌人同组';
       const selected=selectedAllies(e,c);if(!selected.length || selected.length>c.bp+1 || selected.some(t=>!alive(t)||t.side!==a.side) || new Set(selected.map(t=>t.id)).size!==selected.length)return '所选队友无效或数量超限';
@@ -313,7 +319,7 @@
     if(id==='mornye') {
       if(q==='E1'){
         healTeam(e,c,(40+.35*stat(e,a,'def'))*[1,1.25,1.5,1.75][bp]);remove(e,a,'mornye_air');setForm(e,a,'ground',c);
-        const t=chosenAlly(e,c);put(e,t,'mornye_guard',a,null,{remainingCap:1.20*stat(e,a,'def'),lockedAttackId:null,lockedRootId:null,prevented:0,attackerId:null},c);grantBound(e,c,t);
+        const t=o.choice==='intercept'?a:chosenAlly(e,c);put(e,t,'mornye_guard',a,null,{remainingCap:1.20*stat(e,a,'def'),lockedAttackId:null,lockedRootId:null,prevented:0,attackerId:null},c);grantBound(e,c,t);if(o.choice==='intercept')put(e,c.target,'mornye_taunt',a,2,{uses:1},c);
       }
       if(q==='E2'){setForm(e,a,'air',c);put(e,a,'mornye_air',a,3,{},c);put(e,a,'mornye_field',a,3,{roleField:true,strong:false},c);clearOwned(e,a,['mornye_field_def']);}
       if(q==='E3'){healTeam(e,c,(60+.55*stat(e,a,'def'))*(o.choice==='healing'?[1,1.25,1.5,1.75][bp]:1));grantBound(e,c,chosenAlly(e,c));}
@@ -533,7 +539,7 @@
       mornye_bound:['uses'],mornye_interference:['amount'],mornye_support:['uses','amount'],
       denia_group:['groupId'],denia_spill:['uses'],denia_field:['roleField','atkSnapshot','levelSnapshot','fusion'],
       chisa_unravel_mark:['lastTriggeredRound'],chisa_wanlv:['uses'],spectro_echo_hold:['uses'],
-      stasis_delay:['uses'],role_slow:['startsRound','pct'],havoc_field:['uses','coef','atkSnapshot','levelSnapshot','damageBonusSnapshot'],
+      mornye_taunt:['uses'],stasis_delay:['uses'],role_slow:['startsRound','pct'],havoc_field:['uses','coef','atkSnapshot','levelSnapshot','damageBonusSnapshot'],
       electro_relay:['uses'],electro_marrow:['uses','amount']
     };
     const abnormalFields=['stacks','owner_ATK_snapshot','owner_level_snapshot','owner_actor_id','last_tick_round','derived_status'];
@@ -554,13 +560,13 @@
         if(Object.keys(s).some(x=>!allowed.has(x)))fail('未知状态字段');
         for(const required of [...common,...(ABNORMAL[k]?abnormalFields:cap?['capStatus','capBonus']:special[k]||[])])if(required!=='used'&&!Object.prototype.hasOwnProperty.call(s,required))fail('缺少必要状态字段');
         if(typeof s.name!=='string'||typeof s.description!=='string')fail('状态说明类型无效');
-        const requiredOwners={amy_quick:'amy',amy_escort:'amy',lynae_cruise:'lynae',lynae_chase:'lynae',lynae_paint:'lynae',lynae_r_support:'lynae',lynae_empowered:'lynae',mornye_air:'mornye',mornye_field:'mornye',mornye_field_def:'mornye',mornye_guard:'mornye',mornye_bound:'mornye',mornye_observation:'mornye',mornye_interference:'mornye',mornye_support:'mornye',denia_group:'denia',denia_spill:'denia',denia_field:'denia',chisa_saw:'chisa',chisa_unravel_mark:'chisa',chisa_wanlv:'chisa',spectro_echo_hold:'rover_spectro',dark_surge:'rover_havoc',havoc_field:'rover_havoc',aero_cap_aura:'rover_aero',critical_resonance:'rover_electro',electro_relay:'rover_electro',electro_marrow:'rover_electro'};
+        const requiredOwners={amy_quick:'amy',amy_escort:'amy',lynae_cruise:'lynae',lynae_chase:'lynae',lynae_paint:'lynae',lynae_r_support:'lynae',lynae_empowered:'lynae',mornye_air:'mornye',mornye_field:'mornye',mornye_field_def:'mornye',mornye_guard:'mornye',mornye_taunt:'mornye',mornye_bound:'mornye',mornye_observation:'mornye',mornye_interference:'mornye',mornye_support:'mornye',denia_group:'denia',denia_spill:'denia',denia_field:'denia',chisa_saw:'chisa',chisa_unravel_mark:'chisa',chisa_wanlv:'chisa',spectro_echo_hold:'rover_spectro',dark_surge:'rover_havoc',havoc_field:'rover_havoc',aero_cap_aura:'rover_aero',critical_resonance:'rover_electro',electro_relay:'rover_electro',electro_marrow:'rover_electro'};
         if(requiredOwners[k]&&keyOf(owner(e,s))!==requiredOwners[k])fail('状态来源角色不匹配');
         if(k==='mornye_support'&&![.12,.15,.18,.20].includes(s.amount)||k==='mornye_interference'&&s.amount!==.12||k==='mornye_field_def'&&s.pct!==.10||k==='electro_marrow'&&![12,16,20,24].includes(s.amount)||k==='havoc_field'&&![.9,1.26,1.575,1.845].includes(s.coef))fail('状态强度不匹配');
         if(k==='amy_escort'&&[.60,.85,1.10,1.35][[.25,.35,.45,.55].indexOf(s.reduction)]!==s.capCoef)fail('护航档位不匹配');
         if(cap&&(k.startsWith('aero_capacity:')&&(s.capStatus!=='aero_erosion'||s.capBonus!==2||keyOf(owner(e,s))!=='rover_aero')||k.startsWith('chisa_capacity:')&&(s.capBonus!==1||keyOf(owner(e,s))!=='chisa')))fail('扩容来源或强度不匹配');
         if(['amy_quick','lynae_cruise','lynae_empowered','mornye_air','mornye_field','denia_field','chisa_saw','chisa_wanlv','dark_surge','aero_cap_aura','critical_resonance'].includes(k)&&u.id!==s.ownerId)fail('自身状态载体不匹配');
-        if((ABNORMAL[k]||cap||['rupture_shift','strain_shift','lynae_paint','mornye_observation','mornye_interference','denia_group','chisa_unravel_mark','spectro_echo_hold','stasis_delay','role_slow','havoc_field'].includes(k))&&u.side===owner(e,s).side)fail('敌方状态载体不匹配');
+        if((ABNORMAL[k]||cap||['rupture_shift','strain_shift','lynae_paint','mornye_observation','mornye_interference','denia_group','chisa_unravel_mark','spectro_echo_hold','stasis_delay','role_slow','mornye_taunt','havoc_field'].includes(k))&&u.side===owner(e,s).side)fail('敌方状态载体不匹配');
         if(['amy_escort','lynae_r_support','electro_relay','electro_marrow'].includes(k)&&u.id===s.ownerId)fail('支援状态不能授予本人');
         if(s.uses!==undefined&&!integer(s.uses,1,k==='mornye_bound'?3:k==='havoc_field'?2:1))fail('次数无效');
         for(const x of ['amount','pct','remainingCap','prevented','atkSnapshot','owner_ATK_snapshot','damageBonusSnapshot','coef','capCoef','reduction'])if(s[x]!==undefined&&!number(s[x]))fail('状态数值无效');

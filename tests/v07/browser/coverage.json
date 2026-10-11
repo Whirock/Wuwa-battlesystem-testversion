@@ -1,0 +1,300 @@
+{
+  "schema": 1,
+  "product": "v3.0.0-test.7",
+  "dateUTC": "2026-10-11",
+  "result": "pass within documented scope",
+  "browser": {
+    "engine": "cloud Chrome, real rendered browser",
+    "topLevelViewportCSS": [
+      1180,
+      757
+    ],
+    "iframeViewportsCSS": [
+      [
+        1366,
+        768
+      ],
+      [
+        1920,
+        1080
+      ],
+      [
+        2048,
+        949
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "iframeDevicePixelRatio": 1,
+    "viewportCaveat": "Explicit iframe CSS viewports, not physical windows or actual mobile-device certification. Top-level mouse and iframe real keyboard were both used. The iframe automation click adapter sometimes focused without activation, so Enter was used and the resulting UI state was verified."
+  },
+  "testedSourcesSHA256": {
+    "app.js": "139e2b09c7fe85cd5ad03333322c235c8d72b7e09b200e2d0ae9acafcbc206ae",
+    "index.html": "c5faded208110481d07ab42931280c4eb769deab9061323957c598c8aeb47dc0",
+    "style.css": "aeab606b1bb923a0099338c475ce6b74e5f39c9ee9403622ef250441bd3623e5",
+    "party-stage.js": "99ab3313df2024a8adafde77dc326d7ccf48e8fb7265b21376a1b4357adfdbee",
+    "party-stage.css": "c7784fd6da58c6e7f014bc83940e16a8f9561ae5999ed4b4b8061d74740da35a",
+    "creation-core.js": "3dbf2c9ed8ba76f1dbef0c1508408d662f973e64ce9b8c49fc13f58c63033eac",
+    "creation-ui.js": "de1fb36474fe5e9130c462cc650b0ec8579104765498a1da5fcedb7a3de84381",
+    "creation.css": "8b68c33e0ec3764f84fe66ce85522d837fe773ea612ab9c42a9c7e11b7e4e199",
+    "creation-art.js": "f1f528ef5718daacd9098775229f2d2cbebbceafcef17065fc50053cbc7a209e",
+    "creation-art-data.js": "e6ee84c5fdbb88c0fcc0be14449632f3b1e7cc7a832fdec98785adce4d345d27",
+    "engine.js": "e639fd2f1363a56368623e2128035dc3010b67cefa7a7b800a74dcc0bcbcb6c7"
+  },
+  "realFlow": {
+    "steps": [
+      "Create male-body/twin-tail/star-iris/aero character in actual editor",
+      "Save complete recipe to local character catalog",
+      "Replace first team member through actual picker and apply future party",
+      "Select Crownless encounter and start actual battle",
+      "Execute custom E1 through single-step normal action, manual ordinary attack, manual guard",
+      "Save battle, reload page, confirm round 3 with custom recipe and guard preserved",
+      "Export project through actual download UI"
+    ],
+    "reloadedCustomState": {
+      "round": 3,
+      "hp": 948,
+      "sp": 53,
+      "bp": 3,
+      "energy": 125,
+      "guard": true
+    },
+    "artVersionNote": "Creation initially used r003; r004 changed locked clothing RGB only. Full r004 rendering groups and imported/current battle assembly were separately rechecked."
+  },
+  "interactionChecks": [
+    {
+      "name": "All five team presets",
+      "result": "Saved independently and survived navigation/reload; HTML-like preset name remained literal."
+    },
+    {
+      "name": "Rover identity",
+      "result": "Havoc to Aero selection replaced the profile without adding a second Rover. Cancel retained original party."
+    },
+    {
+      "name": "Role detail keyboard",
+      "result": "F2 opened role details; Escape returned; relevant modal actions usable."
+    },
+    {
+      "name": "Numeric normal mode",
+      "result": "999999 ATK committed to recommended max 272; Undo restored raw input. Incomplete minus stayed visible and blocked tab change."
+    },
+    {
+      "name": "Finite break-limit mode",
+      "result": "500 percent main skill multiplier committed; closing break-limit showed one adjustment and confirmation restored 300 percent."
+    },
+    {
+      "name": "Safe text rendering",
+      "result": "HTML-like character name, preset name and skill description remained literal; inspected surfaces contained no injected img/script/onerror nodes. Imported 1157-character description was default-collapsed and scrollable on expansion."
+    },
+    {
+      "name": "Final long name repair",
+      "result": "40 W characters retained in full with wrapping in side card, actor menu and target. At 390 CSS width name width 128 and attributes right edge 376; at 1366 name width 181.984, header width 240, attributes right edge 1343. Target width 240 with visible return/confirm."
+    },
+    {
+      "name": "Native portrait zoom",
+      "result": "Canvas native and desktop CSS size 432 by 432. Star iris visible. At 390 width zoom panel fit, close button visible and usable."
+    }
+  ],
+  "viewCoverage": [
+    {
+      "surface": "party dialog",
+      "viewportsCSS": [
+        [
+          1366,
+          768
+        ],
+        [
+          1920,
+          1080
+        ],
+        [
+          2048,
+          949
+        ],
+        [
+          390,
+          844
+        ]
+      ],
+      "observation": "Captured and visually reviewed; scrolling used for content taller than viewport; no blocking clipping found."
+    },
+    {
+      "surface": "quick picker",
+      "viewportsCSS": [
+        [
+          1366,
+          768
+        ],
+        [
+          1920,
+          1080
+        ],
+        [
+          2048,
+          949
+        ],
+        [
+          390,
+          844
+        ]
+      ],
+      "observation": "Captured and visually reviewed; scrolling used for content taller than viewport; no blocking clipping found."
+    },
+    {
+      "surface": "role detail",
+      "viewportsCSS": [
+        [
+          1366,
+          768
+        ],
+        [
+          1920,
+          1080
+        ],
+        [
+          2048,
+          949
+        ],
+        [
+          390,
+          844
+        ]
+      ],
+      "observation": "Captured and visually reviewed; scrolling used for content taller than viewport; no blocking clipping found."
+    },
+    {
+      "surface": "stage selection",
+      "viewportsCSS": [
+        [
+          1366,
+          768
+        ],
+        [
+          1920,
+          1080
+        ],
+        [
+          2048,
+          949
+        ],
+        [
+          390,
+          844
+        ]
+      ],
+      "observation": "Captured and visually reviewed; scrolling used for content taller than viewport; no blocking clipping found."
+    },
+    {
+      "surface": "creation appearance",
+      "viewportsCSS": [
+        [
+          1366,
+          768
+        ],
+        [
+          1920,
+          1080
+        ],
+        [
+          2048,
+          949
+        ],
+        [
+          390,
+          844
+        ]
+      ],
+      "observation": "Captured and visually reviewed; scrolling used for content taller than viewport; no blocking clipping found."
+    }
+  ],
+  "art": {
+    "version": "player-art-v1-r004",
+    "assetRevision": "sha256-d2528f0e35d530652c98d33a0bc5443343bd979c90818901c36e4d9160ed6cff",
+    "visuallyReviewedGroups": [
+      {
+        "group": "two bodies x five poses",
+        "renders": 10
+      },
+      {
+        "group": "two bodies x seven hairstyles",
+        "renders": 14
+      },
+      {
+        "group": "two bodies x four iris portraits",
+        "renders": 8
+      },
+      {
+        "group": "two bodies x four black/white/same/near-color palettes",
+        "renders": 8
+      }
+    ],
+    "observation": "Actual PNG/mask/recolor renderer outputs reviewed in browser. Distinct poses/hair/iris readable, no observed clipping or detached components in these samples; locked clothing quantization speckling corrected. Rendering helper explicitly labels pose selection as synthetic.",
+    "fullCombinationIntegrity": {
+      "combinations": 280,
+      "successful": 280,
+      "failed": 0,
+      "criterion": "Actual real-asset render returned finite nonempty alphaBBox within canvas bounds.",
+      "limitation": "Not 280 separate artistic or pixel-by-pixel visual approvals."
+    }
+  },
+  "syntheticBattleFixtures": {
+    "scope": "Artificial validator-accepted snapshots imported via actual file picker. Initial low/zero HP or full energy are deliberate, not natural battle achievements.",
+    "bodyPoses": "Both bodies idle/guard/critical/down visible in actual battle; general cast also reviewed in real-renderer group.",
+    "mecha": "Amy initial full-energy fixture executes real R1. Head, body and weapon remained fully visible alongside both custom bodies; final CSS rechecked at 1366x768.",
+    "statusCapacity": "Strict-restored 1025 statuses per ally: 12 main chips plus overflow counts; actual browser walked all 43 pages, final page 17 rows and next disabled. 390x844 modal retains list scroll and footer controls. Fixture later pins current ally using finite SPD300 to prevent enemy/stun auto-progress during layout inspection.",
+    "fixtures": [
+      {
+        "path": "fixtures/synthetic-mecha-scale.json.gz",
+        "uncompressedSHA256": "794bf41a492442cf1ac58f936077ffce39e372041c7fd24df35466bfcf7323dd",
+        "gzipSHA256": "af474863f2f6d5e22f227b6c39652814ccac43bad4522c92f22cc37eebe2f196"
+      },
+      {
+        "path": "fixtures/synthetic-poses-a.json.gz",
+        "uncompressedSHA256": "561a8a95b9d97a852a4ea9f36241a102f7e6dcbe2517bf03632e97830132a6a5",
+        "gzipSHA256": "add92b32a95de7ac15c39990c61cda26b61019383cffacb62c6c9ce4cf52f046"
+      },
+      {
+        "path": "fixtures/synthetic-poses-b.json.gz",
+        "uncompressedSHA256": "425326a1e5c89118b58d6fcd76e3c50ffe3cf78fb163e9defab2a6b65a763b6e",
+        "gzipSHA256": "944932b1228b02d23580398a1b4e58ce50ee2d2cd8bded6db8d8797ec896eefb"
+      },
+      {
+        "path": "fixtures/synthetic-status-capacity.json.gz",
+        "uncompressedSHA256": "df6adb086e33e85a805b9495070e62dbf06fea4b3695710cb3fe3cd15895f5dc",
+        "gzipSHA256": "2ad0f9b8e601f436b204a43656a7f72a449e17f5a568022e3a0442852657a42b"
+      }
+    ]
+  },
+  "defects": {
+    "foundAndFixed": [
+      {
+        "issue": "40-character battle name pushed form and attribute entry outside side card",
+        "files": [
+          "../../../style.css"
+        ],
+        "verified": "Final CSS wrapping and fixed metadata space passed real 390 and 1366 checks and complete independent regression."
+      }
+    ],
+    "openBlockingInTestedScope": []
+  },
+  "aggregate": {
+    "report": "../results-final.json",
+    "commandsPassed": 20,
+    "commandsTotal": 20,
+    "elapsedMs": 72774,
+    "sourceChangesDuringRun": [],
+    "publicReportSHA256": "34a022ede8f88f088d582bedea3a4c6eb625664bc442e4fbac3047d3ce6aa5f2",
+    "privateOriginalSHA256": "980e62e181dc5147d839996173848b4b2ef7d78ed223e51d3cb295163ec12917",
+    "pathRedaction": "Public report differs only by replacing execution-workspace paths with placeholders and adding this disclosure. Test data, counts, assertions, hashes and conclusions are unchanged."
+  },
+  "privacy": "No screenshots, account identifiers, private preview addresses or browser raw snapshots are included in this public report.",
+  "limitations": [
+    "No Windows executable launch was available in this environment.",
+    "No actual audio-output verification.",
+    "No full accessibility, assistive technology, physical touch device or cross-browser certification.",
+    "No exhaustive custom-color artwork approval or final numerical balance certification.",
+    "Synthetic capacity and pose fixtures are distinct from natural encounters and human playthroughs."
+  ]
+}

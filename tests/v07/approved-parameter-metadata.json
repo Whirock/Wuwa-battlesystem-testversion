@@ -1,0 +1,52 @@
+{
+  "scope": "Metadata only; existing rule and role numbers unchanged. schema_version preserved.",
+  "changes": [
+    {
+      "path": [
+        "release_tag"
+      ],
+      "before": "v3.0.0-test.4",
+      "after": "v3.0.0-test.7"
+    },
+    {
+      "path": [
+        "date"
+      ],
+      "before": "2026-10-10",
+      "after": "2026-10-11"
+    },
+    {
+      "path": [
+        "status"
+      ],
+      "before": "独立角色定位/SP-CD-BP测试候选；项目改编数值，非官方参数或最终平衡。",
+      "after": "玩家创建与编队测试候选；保留既有角色数值，新增玩家模板为项目改编候选，非官方参数或最终平衡。"
+    },
+    {
+      "path": [
+        "formula",
+        "damage"
+      ],
+      "before": "floor(stat * coefficient * (100+5*source_level)/(100+5*source_level+effective_DEF) * (1-effective_resistance) * applicable_multipliers)",
+      "after": "floor(stat * coefficient * (100+5*source_level)/(100+5*source_level+effective_DEF) * resistanceMultiplier(r) * applicable_multipliers); r=clamp(effective_resistance,-0.5,0.9); resistanceMultiplier(r)=r<0 ? 1-r/2 : r<0.75 ? 1-r : 1/(1+4*r)"
+    },
+    {
+      "path": [
+        "difficulties",
+        "easy",
+        "targeting"
+      ],
+      "before": "rotation",
+      "after": "lowest_fraction"
+    },
+    {
+      "path": [
+        "difficulties",
+        "standard",
+        "targeting"
+      ],
+      "before": "rotation",
+      "after": "lowest_fraction"
+    }
+  ]
+}

@@ -1,23 +1,18 @@
 {
-  "release_tag": "v3.0.0-test.5",
-  "candidate_review": "passed",
-  "review_evidence": [
-    "tests/v05/results/independent_final_full.json",
-    "tests/v05/results/final_recheck.json",
-    "docs/test5-browser-qa.md",
-    "docs/test5-independent-qa.md"
-  ],
-  "release_url": "https://github.com/Whirock/Wuwa-battlesystem-testversion/releases/tag/v3.0.0-test.5",
-  "publication_status_source": "The GitHub Release URL is authoritative; this source record is prepared before publishing.",
-  "frozen_zip": "Wuwa-battlesystem-v3.0.0-test.5-complete.zip",
-  "frozen_zip_bytes": 19936904,
-  "frozen_zip_sha256": "89ad5936ad57f6b4e22efbc0b36140ef871940a25155440ef4e6150588ac6942",
-  "package_metadata_state": "Frozen ZIP retains its original pre-publication candidate metadata and original internal checksums.",
-  "repository_metadata_changes": [
-    "README.md",
-    "VERSION.json",
-    "PUBLICATION_CHECKS.json",
-    "SHA256SUMS.txt"
-  ],
-  "scope": "Runtime, public implementation documents, and reproducible tests only."
+  "release_tag": "v3.0.0-test.7",
+  "github_publication": "prepared_after_validation; actual remote state is reported by the Release",
+  "release_url": "https://github.com/Whirock/Wuwa-battlesystem-testversion/releases/tag/v3.0.0-test.7",
+  "delivery": "Public standalone test release; package checksums provided alongside each ZIP",
+  "automation": {
+    "commands": 20,
+    "passed": true,
+    "report": "tests/v07/results-final.json",
+    "sha256": "34a022ede8f88f088d582bedea3a4c6eb625664bc442e4fbac3047d3ce6aa5f2",
+    "source_changed_during_run": [],
+    "path_redacted": true
+  },
+  "browser_report": "tests/v07/browser/coverage.json",
+  "browser_report_sha256": "2a1d4324bd2f185a9464491c9bee175baa61c3e5b64117e27d93784085d5374f",
+  "old_site_paths_verified_unchanged": 1041,
+  "scope": "Runtime, public player documentation, required implementation data, generated runtime assets and reproducible tests. No private game framework, art production instructions, raw references or browser screenshots."
 }

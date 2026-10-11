@@ -1,0 +1,17 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const root=path.resolve(process.argv[2]||path.join(__dirname,'../..'));
+const base=JSON.parse(fs.readFileSync(path.join(__dirname,'baseline-contract.json'),'utf8'));
+const P=JSON.parse(fs.readFileSync(path.join(root,'parameters.json'),'utf8'));
+const assets=JSON.parse(fs.readFileSync(path.join(root,'assets.js'),'utf8').split('window.DEFAULT_ASSETS')[1].split('=').slice(1).join('=').trim().replace(/;$/,''));
+const result={suite:'test7-retained-contracts',at:new Date().toISOString(),runtime:"supplied runtime",checks:[],errors:[],sourceHashes:{}};
+const check=(name,fn)=>{try{fn();result.checks.push(name);}catch(e){result.errors.push({name,error:e.message});}};
+const hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+for(const f of ['parameters.json','engine.js','skill-effects.js','app.js','index.html','style.css','storage.js','assets.js','creation.js','creation-effects.js','creation-ui.js','creation-data.js'])if(fs.existsSync(path.join(root,f)))result.sourceHashes[f]=hash(path.join(root,f));
+check('nine authored configurations retained',()=>assert.deepEqual(Object.keys(P.characters),base.characters));
+check('61 authored cards retained',()=>assert.equal(Object.values(P.characters).reduce((n,c)=>n+Object.keys(c.skills).length,0),61));
+check('seven authored encounter definitions retained',()=>assert.deepEqual(Object.keys(P.encounters),base.encounters));
+check('only six approved parameter metadata leaves differ from frozen test.6',()=>{const baseline=JSON.parse(require('node:zlib').gunzipSync(fs.readFileSync(path.join(__dirname,'baseline-test6-runtime.json.gz'))));const old=JSON.parse(baseline['parameters.json'].text),approved=JSON.parse(fs.readFileSync(path.join(__dirname,'approved-parameter-metadata.json'))).changes,expected=['date','release_tag','status','formula.damage','difficulties.easy.targeting','difficulties.standard.targeting'];assert.deepEqual(approved.map(x=>x.path.join('.')).sort(),expected.sort());const normalized=JSON.parse(JSON.stringify(P));for(const change of approved){let current=normalized,original=old;for(const k of change.path.slice(0,-1)){current=current[k];original=original[k]}const key=change.path.at(-1);assert.deepEqual(original[key],change.before);assert.deepEqual(current[key],change.after);current[key]=change.before;}assert.deepEqual(normalized,old);result.approvedMetadataChanges=approved;result.parameterBytesChanged=hash(path.join(root,'parameters.json'))!==base.sourceHashes['parameters.json'];});
+check('parameters.js mirrors JSON exactly',()=>{const vm=require('node:vm'),sandbox={window:{}};vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(root,'parameters.js'),'utf8'),sandbox);assert.deepEqual(JSON.parse(JSON.stringify(sandbox.window.BATTLE_PARAMETERS)),P);});
+for(const [key,row]of Object.entries(base.assets))check('original active image '+key,()=>{assert.equal(assets.slots[key]?.src,row.src);assert.equal(hash(path.join(root,row.src)),row.sha256);});
+result.activeAuthoredSlots=Object.keys(base.assets).length;result.passed=!result.errors.length;console.log(JSON.stringify(result,null,2));process.exitCode=result.passed?0:1;

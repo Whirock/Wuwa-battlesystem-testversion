@@ -1,0 +1,38 @@
+{
+  "stage": "full-art-r004-static-approved-awaiting-browser-review",
+  "source_files": {
+    "creation-data.js": "0d0a46bcb92f6c68c464e83249f9f85bf8c644208acfd31696d4a2ff8131b760",
+    "creation-core.js": "3dbf2c9ed8ba76f1dbef0c1508408d662f973e64ce9b8c49fc13f58c63033eac",
+    "creation-effects.js": "f9ac5a69c949242f88bbc620f2d3b340667ea447d2476d055696feed8c338299",
+    "creation-ui.js": "de1fb36474fe5e9130c462cc650b0ec8579104765498a1da5fcedb7a3de84381",
+    "creation.css": "8b68c33e0ec3764f84fe66ce85522d837fe773ea612ab9c42a9c7e11b7e4e199",
+    "creation-art.js": "f1f528ef5718daacd9098775229f2d2cbebbceafcef17065fc50053cbc7a209e",
+    "creation-art-data.js": "e6ee84c5fdbb88c0fcc0be14449632f3b1e7cc7a832fdec98785adce4d345d27",
+    "engine.js": "e639fd2f1363a56368623e2128035dc3010b67cefa7a7b800a74dcc0bcbcb6c7",
+    "tools/build_player_art.py": "6af12440b72a85192590d3dbec61c47f7aca963cb022b2f53b02f89b448d1d4b",
+    "tools/verify_player_art_data.py": "89a9bc5414509017c4762c3fa0d9be8d70690c331e7ca589eda4b84065977bdb",
+    "tests/v07/creation-core.cjs": "b7c4c260d35e1f3e680db874255c1ceecb945e2a1eaa06c6fa90b831740dd560",
+    "tests/v07/creation-editor.cjs": "8c23b81b86ba0951fe1e04ee3167789307f5b4d80b58d482e2b91da81dd8d455",
+    "tests/v07/creation-art-cache.cjs": "d021a236618be1a88b2abce1277c0941180bc93dc2793ac6e04dc2604b0ef35e",
+    "docs/creation-runtime-contract.md": "4bdf070c9dc02150b4547cf0dac71d5f87455eb755b01a665bfbeb940b2f4f71",
+    "tests/v07/creation-editor-async.cjs": "9bb568692fed5fb3cadb2e316fe3883d87ea386349799e7e67f9664e5ca1c489"
+  },
+  "test_results": {
+    "creation_core_assertions": 545,
+    "creation_editor_dom_contracts": 28,
+    "creation_art_synthetic_cache_contracts": 21,
+    "retained_engine_and_skill_tests": 81,
+    "creation_editor_async_contracts": 10
+  },
+  "test_scope_note": "Automated core/DOM/cache/static tests do not certify browser layout, visual artwork or final numeric balance.",
+  "art_static_report": "tests/v07/results/art-static.json",
+  "independent_qa_snapshot": {
+    "core_contracts": 112,
+    "ui_contracts": 22,
+    "runtime_contracts": 50,
+    "attribute_assertions": 45900,
+    "source": "Independent QA report; full suite ownership separate."
+  },
+  "asset_bundle_sha256": "e6ee84c5fdbb88c0fcc0be14449632f3b1e7cc7a832fdec98785adce4d345d27",
+  "source_manifest_sha256": "06546e5579eef6aafe10c2367e0085856d86ae42eebb1cd9b76b974d3a94a4c6"
+}

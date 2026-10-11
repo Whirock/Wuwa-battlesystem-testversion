@@ -1,0 +1,42 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const root=path.resolve(process.argv[2]||path.join(__dirname,'../..')),C=require(root+'/creation-core.js'),D=require(root+'/creation-data.js'),P=require(root+'/parameters.json');
+const result={suite:'test7-creation-core-independent',at:new Date().toISOString(),passed:[],failed:[],sourceHashes:{},scope:'Actual creation-core functions; no rendered-browser certification or final balance claim.'};
+const clone=x=>JSON.parse(JSON.stringify(x));const test=(name,f)=>{try{f();result.passed.push(name);}catch(e){result.failed.push({name,error:e.message,stack:e.stack.split('\n').slice(0,4)});}};
+for(const f of ['creation-core.js','creation-data.js'])result.sourceHashes[f]=crypto.createHash('sha256').update(fs.readFileSync(root+'/'+f)).digest('hex');
+const draft=()=>C.createDraft('T01',20),range=id=>C.skillRange(id,draft()),reject=(mutate,name)=>test(name,()=>{const d=draft();mutate(d);assert.equal(C.validateCharacter(d).ok,false)});
+for(const t of C.TEMPLATES)for(const L of [1,20,90])test(`${t.id} level${L} default is executable and stable`,()=>{const d=C.createDraft(t.id,L),v=C.validateCharacter(d);assert.equal(v.ok,true,v.errors.join(';'));assert.deepEqual(C.parseRoster(C.serializeRoster([d])),[d]);const def=C.compileCharacter(d,P).definition;assert.equal(C.validateCompiled(def,'custom_'+d.id,P),true);assert.equal(Object.keys(v.growth).length,90);for(const a of C.ATTRS)assert.equal(v.growth[L][a],d.attributes[a]);});
+for(const [raw,want]of [['-3',6],['2.5',6],['6.5',7],['999999',32]])test(`normal SP ${raw} -> ${want}`,()=>{const r=C.commitValue(raw,range('sp_cost.E'),false);assert.equal(r.ok,true);assert.equal(r.value,want)});
+for(const [raw,want]of [['-0.1',1],['2.5',3],['99999',5]])test(`normal CD ${raw} -> ${want}`,()=>{const r=C.commitValue(raw,range('cooldown.E'),false);assert.equal(r.ok,true);assert.equal(r.value,want)});
+for(const raw of ['', ' ', '-', '.', 'NaN','Infinity','-Infinity','1e309','10 SP','<script>42</script>',null,undefined,NaN,Infinity])for(const limit of [false,true])test(`invalid input ${String(raw)} mode ${limit}`,()=>assert.equal(C.commitValue(raw,range('sp_cost.E'),limit).ok,false));
+for(const [id,raw]of [['sp_cost.E','-0.1'],['sp_cost.E','6.5'],['cooldown.E','2.5'],['original_attack_count.E','1.2'],['cooldown.E','-0.1']])test(`break-limit preserves original semantic rejection ${id}:${raw}`,()=>assert.equal(C.commitValue(raw,range(id),true).ok,false));
+for(const [id,raw,want]of [['sp_cost.E','0',0],['cooldown.E','0',0],['cooldown.E','9999',9999],['damage.E','1000',1000],['damage.E','1.005',1.01]])test(`legal break-limit ${id}:${raw}`,()=>{const r=C.commitValue(raw,range(id),true);assert.equal(r.ok,true,r.message);assert.equal(r.value,want)});
+test('CR above 100 percent cannot be rounded back into legality',()=>assert.equal(C.commitValue('1.0004',C.attributeRange('T01',20,'cr'),true).ok,false));
+test('CDMG under 100 percent remains legal break-limit',()=>assert.equal(C.commitValue('.4',C.attributeRange('T01',20,'cdmg'),true).ok,true));
+test('zero DEF native basis preserves zero actual output input',()=>{const d=draft();d.break_limits.attributes=true;d.attributes.def=0;const r=C.commitValue('0',C.attributeRange('T01',20,'def'),true);assert.equal(r.ok,true);assert.equal(r.value,0);});
+test('T03 DEF native range uses template anchor',()=>{const d=C.createDraft('T03',20),r=C.skillRange('damage.E',d,'def');assert.equal(r.min,.26);assert.equal(r.max,2.52);assert.equal(r.default,1.26);d.attributes.def=0;assert.deepEqual(C.skillRange('damage.E',d,'def'),r);});
+test('SP recommendation independent from current capacity',()=>{const d=draft();d.attributes.sp=0;const r=C.skillRange('sp_cost.E',d);assert.equal(r.min,6);assert.equal(r.max,32);});
+const mutations={
+ 'unknown top-level field':d=>d.unknown='no', 'marker cannot bypass schema':d=>d.custom_player=true,
+ 'missing character ID':d=>delete d.id,'non-string character ID':d=>d.id=123,'null character ID':d=>d.id=null,
+ 'unsupported baseBP':d=>d.skills[0].baseBP=0,'negative executable fee':d=>{d.break_limits.skills=true;d.skills[0].sp=-.1},'fractional executable CD':d=>{d.break_limits.skills=true;d.skills[0].cd=2.5},
+ 'NaN attribute':d=>d.attributes.atk=NaN,'Infinity attribute':d=>d.attributes.atk=Infinity,'null executable attribute':d=>d.attributes.atk=null,
+ 'unknown ability':d=>d.skills[0].effects=[{type:'summon',target:'self',basis:'atk'}], 'player-defined trigger graph':d=>d.skills[0].trigger={event:'sp_changed',emit:'sp_changed'},
+ 'function data rejected':d=>d.skills[0].coefficient=()=>100,'prototype field':d=>Object.defineProperty(d,'__proto__',{enumerable:true,value:{polluted:true}}),'constructor field':d=>d.attributes.constructor='attack',
+ 'probability exceeds semantic max':d=>{d.break_limits.attributes=true;d.attributes.cr=1.001},'duplicate skill IDs':d=>d.skills[1].id=d.skills[0].id,'unsupported shape':d=>d.appearance.body_outfit_set_id='female_male_mix',
+ 'unmarked out-of-range executable record':d=>d.skills[0].coefficient=1000,
+ 'unsafe low-level growth despite legal current HP':d=>{d.break_limits.attributes=true;d.attributes.hp=1;},
+ 'hidden inactive effect field':d=>d.skills[0].effects=[{...C.effectDefault('heal',d),charges:10}],
+ 'empty support card cannot execute':d=>Object.assign(d.skills[0],{channel:'none',coefficient:0,q:0,effects:[]}),
+ 'more than four ordinary effects requires explicit choice':d=>d.skills[0].effects=Array.from({length:5},()=>C.effectDefault('heal',d)),
+};
+for(const [name,f]of Object.entries(mutations))reject(f,name);
+test('empty effect list valid for real damage main channel',()=>{const d=draft();d.skills[0].effects=[];assert(C.validateCharacter(d).ok)});
+test('finite high coefficient at low cost is permitted as unbalanced experiment',()=>{const d=draft();d.break_limits.skills=true;Object.assign(d.skills[0],{coefficient:1000,sp:0,cd:0,attacks:64,q:1000000});const v=C.validateCharacter(d);assert.equal(v.ok,true,v.errors.join(';'));assert.equal(v.mechanical_status,'executable');assert(v.warnings.length);});
+test('five supported effects allowed with explicit break-limit',()=>{const d=draft();d.break_limits.skills=true;d.skills[0].effects=Array.from({length:5},()=>C.effectDefault('heal',d));assert(C.validateCharacter(d).ok)});
+test('description is opaque plain text and never affects compiled mechanical audit',()=>{const d=draft(),a=C.compileCharacter(d,P);d.skills[0].description='globalThis.__CREATION_PWNED = 1; 每次必中 100000000%';const b=C.compileCharacter(d,P);assert.deepEqual(a.definition.skills.E1.numeric_audit,b.definition.skills.E1.numeric_audit);assert.equal(globalThis.__CREATION_PWNED,undefined);});
+test('compiled definition rejects numeric tampering even with marker',()=>{const d=draft(),x=C.compileCharacter(d,P);x.definition.skills.E1.numeric_audit.sp=-100;assert.equal(C.validateCompiled(x.definition,x.key,P),false);});
+test('compiled flag alone is insufficient',()=>assert.equal(C.validateCompiled({custom_player:true,creation_id:'pwned'},'custom_pwned',P),false));
+test('parse rejects unknown fields and prototype keys atomically',()=>{const d=draft(),s=C.serializeRoster([d]);const p=JSON.parse(s);p.characters[0].attributes.__proto_test__=1;assert.throws(()=>C.parseRoster(JSON.stringify(p)));assert.throws(()=>C.parseRoster(s.replace('"characters":','"__proto__":{"polluted":true},"characters":')));assert.equal({}.polluted,undefined);assert.deepEqual(C.parseRoster(s),[d]);});
+test('independent gender/hair/iris freedom preserved',()=>{for(const body of ['male','female'])for(const hair of Object.keys(C.HAIRS))for(const iris of Object.keys(C.IRISES)){const d=draft();Object.assign(d.appearance,{body_profile:body,body_outfit_set_id:body+'_basic',hair_id:hair,iris_pattern_id:iris,hair_color:'#000001',iris_color:'#ff00ff',skin_color:'#fffffe'});assert.equal(C.validateCharacter(d).ok,true,`${body}/${hair}/${iris}`)}});
+result.endSourceHashes={};for(const f of Object.keys(result.sourceHashes))result.endSourceHashes[f]=crypto.createHash('sha256').update(fs.readFileSync(root+'/'+f)).digest('hex');result.sourceChanged=Object.keys(result.sourceHashes).filter(f=>result.sourceHashes[f]!==result.endSourceHashes[f]);result.summary={passed:result.passed.length,failed:result.failed.length};result.ok=!result.failed.length&&!result.sourceChanged.length;console.log(JSON.stringify(result,null,2));process.exitCode=result.ok?0:1;

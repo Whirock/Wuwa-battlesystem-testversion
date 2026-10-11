@@ -36,3 +36,12 @@
 .battle-layout{height:calc(100dvh - 96px)}.actor-command{display:flex;flex-direction:column;overflow:hidden}.actor-action-list{min-height:0;overflow:auto;flex:1}.actor-command-head,.actor-command #actorResources,.command-foot{flex-shrink:0}@media(max-width:760px){.battle-layout{height:calc(100dvh - 89px)}}
 /* Buff-heavy party cards keep a usable, independently scrollable enemy/log lane. */
 @media(min-width:761px){.right-column>.enemy-panel{flex-shrink:1;min-height:90px}.right-column>.log-panel{flex-shrink:1;min-height:65px!important}}
+/* test.6: reserve one quiet top lane for danger notices, never over a head. */
+.tactical-notice{top:8px;max-height:44px;overflow:auto;overscroll-behavior:contain;padding:6px 12px;line-height:1.45;max-width:82%}
+@media(max-width:760px){.tactical-notice{top:7px;max-height:44px;padding:5px 8px;font-size:10px;max-width:92%}}
+/* test.7: keep full legal player/skill names readable without displacing controls. */
+.unit-heading{min-width:0}.unit-heading .unit-name{flex:1 1 0;min-width:0;white-space:normal;overflow-wrap:anywhere}.unit-heading>small,.unit-heading>.shield-num,.unit-heading>.unit-attributes{flex:0 0 auto}
+.actor-command-head>div{flex:1 1 0;min-width:0}.actor-command-head h2{max-width:100%;overflow-wrap:anywhere}.actor-command-head>button{flex:0 0 auto}
+.menu-action>span:first-child,.root-option>span:first-child{flex:1 1 0;min-width:0;overflow-wrap:anywhere}.menu-action>small,.root-option>small{flex:0 0 auto}
+.target-dock .target-btn{max-width:min(240px,100%)}.target-btn>span{min-width:0;max-width:100%;overflow-wrap:anywhere}.target-options>label{max-width:100%}.target-options select{min-width:0;max-width:100%}.multi-target label{min-width:0;max-width:100%;overflow-wrap:anywhere}.multi-target input{flex:0 0 auto}
+.action-detail h3,.action-detail p,.action-detail dd,.actor-prompt,.target-description,.target-metrics,.target-dock .selection-hint,.target-dock #previewText,#actionBanner,.log-entry{min-width:0;overflow-wrap:anywhere}

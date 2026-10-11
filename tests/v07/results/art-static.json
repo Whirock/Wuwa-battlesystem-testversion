@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": 168,
+  "unique_images": 120,
+  "embedded_images": 120,
+  "asset_revision": "sha256-d2528f0e35d530652c98d33a0bc5443343bd979c90818901c36e4d9160ed6cff",
+  "bundle_sha256": "e6ee84c5fdbb88c0fcc0be14449632f3b1e7cc7a832fdec98785adce4d345d27",
+  "errors": [],
+  "scope": "Static actual component masks, dimensions, head interfaces, source hashes and all supplied gender/hair/pose placements. Not rendered browser certification."
+}

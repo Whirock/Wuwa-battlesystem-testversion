@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "runtime-assets-test4",
-  "created": "2026-10-10",
+  "schemaVersion": "runtime-assets-test6",
+  "created": "2026-10-11",
   "slots": {
     "lynae.normal.L01": {
       "key": "lynae.normal.L01",
@@ -6699,8 +6699,8 @@
       "entity": "rover",
       "form": "male_default",
       "action": "skill",
-      "label": "男漂泊者 · 默认 · 气动技能",
-      "src": "assets/RVM-D-04-AE-a_v002_work1px.png",
+      "label": "男漂泊者 · 默认 · 气动技能 · 血誓盟约",
+      "src": "assets/RVM-D-04-AE-a_bloodpact_v002_work1px.png",
       "width": 640,
       "height": 576,
       "referenceBodyHeight": 353.495,
@@ -6710,31 +6710,33 @@
       "facing": "left",
       "mirrorAllowed": false,
       "assetStatus": "art_candidate_user_acceptance_pending",
-      "runtimeVerified": false,
+      "runtimeVerified": true,
       "userConfirmed": false,
       "anchors": {
         "ground": {
           "x": 320,
-          "y": 518
+          "y": 521
         },
         "head": {
           "x": 300.956,
           "y": 118.625
         }
       },
-      "sha256": "b4dee887fe06cd749a2e6bce7ec02807f5d133fc2f79c41b84b0828908577b2a",
+      "sha256": "1b67666ef7fc2664b619e4617b5f7c46521b6b5cc5f70f84fae9f9c1c9786919",
       "naturalWidth": 640,
       "naturalHeight": 576,
       "provenanceVerified": true,
-      "artReview": "Independent static visual QA passed; user acceptance pending",
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
       "attribute": "aero",
       "alphaBinary": true,
       "alphaBBox": [
-        38,
-        30,
-        493,
-        480
-      ]
+        42,
+        10,
+        502,
+        483
+      ],
+      "groundAnchorKind": "virtual_airborne_floor",
+      "sourceVersion": "test6-20261011"
     },
     "rover.male_default.04-EL-a": {
       "key": "rover.male_default.04-EL-a",
@@ -7025,10 +7027,10 @@
       "entity": "rover",
       "form": "male_default",
       "action": "enhanced",
-      "label": "男漂泊者 · 默认 · 湮灭强化",
-      "src": "assets/RVM-D-04-HV-b_v001_work1px.png",
-      "width": 768,
-      "height": 448,
+      "label": "男漂泊者 · 默认 · 暗涌 · 强化姿势",
+      "src": "assets/RVM-D-04-HV-b_v002_work1px.png",
+      "width": 824,
+      "height": 478,
       "referenceBodyHeight": 353.495,
       "bodyHeight": 353.495,
       "bodyScale": 1,
@@ -7036,31 +7038,32 @@
       "facing": "left",
       "mirrorAllowed": false,
       "assetStatus": "art_candidate_user_acceptance_pending",
-      "runtimeVerified": false,
+      "runtimeVerified": true,
       "userConfirmed": false,
       "anchors": {
         "ground": {
-          "x": 384,
-          "y": 418
+          "x": 507,
+          "y": 435
         },
         "head": {
-          "x": 308.859,
-          "y": 141.978
+          "x": 392,
+          "y": 165
         }
       },
-      "sha256": "74e31d88c32197507147a0011ebfe0325fc1a64d0d1d7ca5f8c440189d349abd",
-      "naturalWidth": 768,
-      "naturalHeight": 448,
+      "sha256": "4ea530a88bb13b4d2555eced567f0b8f432e599f7990a7e34acea0081e679dc3",
+      "naturalWidth": 824,
+      "naturalHeight": 478,
       "provenanceVerified": true,
-      "artReview": "Independent static visual and binary QA passed; user art acceptance pending",
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
       "attribute": "havoc",
       "alphaBinary": true,
       "alphaBBox": [
-        75,
-        137,
-        544,
-        420
-      ]
+        19,
+        96,
+        814,
+        442
+      ],
+      "sourceVersion": "test6-20261011"
     },
     "rover.male_school.01-CM": {
       "key": "rover.male_school.01-CM",
@@ -7432,8 +7435,8 @@
       "entity": "rover",
       "form": "male_school",
       "action": "skill",
-      "label": "男漂泊者 · 校服 · 气动技能",
-      "src": "assets/RVM-S-04-AE-a_v002_work1px.png",
+      "label": "男漂泊者 · 校服 · 气动技能 · 血誓盟约",
+      "src": "assets/RVM-S-04-AE-a_bloodpact_v001_work1px.png",
       "width": 640,
       "height": 576,
       "referenceBodyHeight": 353.495,
@@ -7443,7 +7446,7 @@
       "facing": "left",
       "mirrorAllowed": false,
       "assetStatus": "art_candidate_user_acceptance_pending",
-      "runtimeVerified": false,
+      "runtimeVerified": true,
       "userConfirmed": false,
       "anchors": {
         "ground": {
@@ -7455,19 +7458,21 @@
           "y": 154.337
         }
       },
-      "sha256": "c70a475b5cca4ec5d72797453233d184c527824bbed3d2b8e8d4f53aaa1fdb0e",
+      "sha256": "61a66c6ef0bb6f2601b267cf9d07326baad2e7333f6c9d4496c0d44f47b50a4b",
       "naturalWidth": 640,
       "naturalHeight": 576,
       "provenanceVerified": true,
-      "artReview": "Independent static visual QA passed; user acceptance pending",
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
       "attribute": "aero",
       "alphaBinary": true,
       "alphaBBox": [
-        41,
-        69,
-        509,
+        33,
+        40,
+        520,
         480
-      ]
+      ],
+      "groundAnchorKind": "virtual_airborne_floor",
+      "sourceVersion": "test6-20261011"
     },
     "rover.male_school.04-EL-a": {
       "key": "rover.male_school.04-EL-a",
@@ -7748,10 +7753,10 @@
       "entity": "rover",
       "form": "male_school",
       "action": "enhanced",
-      "label": "男漂泊者 · 校服 · 湮灭强化",
-      "src": "assets/RVM-S-04-HV-b_v001_work1px.png",
-      "width": 768,
-      "height": 448,
+      "label": "男漂泊者 · 校服 · 暗涌 · 强化姿势",
+      "src": "assets/RVM-S-04-HV-b_v003_work1px.png",
+      "width": 875,
+      "height": 415,
       "referenceBodyHeight": 353.495,
       "bodyHeight": 353.495,
       "bodyScale": 1,
@@ -7759,31 +7764,32 @@
       "facing": "left",
       "mirrorAllowed": false,
       "assetStatus": "art_candidate_user_acceptance_pending",
-      "runtimeVerified": false,
+      "runtimeVerified": true,
       "userConfirmed": false,
       "anchors": {
         "ground": {
-          "x": 384,
-          "y": 418
+          "x": 544.0,
+          "y": 396.0
         },
         "head": {
-          "x": 305.471,
-          "y": 125.304
+          "x": 434.0,
+          "y": 121.0
         }
       },
-      "sha256": "f60ef437a20aeb67116c18f6275926be20f4605f411edf7dc2002fb078343b44",
-      "naturalWidth": 768,
-      "naturalHeight": 448,
+      "sha256": "f6735c0d5e4cbab83b5a1234972f64efae0b27ec324d08069db384693c829adc",
+      "naturalWidth": 875,
+      "naturalHeight": 415,
       "provenanceVerified": true,
-      "artReview": "Independent static visual and binary QA passed; user art acceptance pending",
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
       "attribute": "havoc",
       "alphaBinary": true,
       "alphaBBox": [
-        60,
-        117,
-        552,
-        420
-      ]
+        16,
+        44,
+        871,
+        400
+      ],
+      "sourceVersion": "test6-20261011"
     },
     "rover.female_default.01-CM": {
       "key": "rover.female_default.01-CM",
@@ -8126,8 +8132,8 @@
       "entity": "rover",
       "form": "female_default",
       "action": "skill",
-      "label": "女漂泊者 · 默认 · 气动技能",
-      "src": "assets/RVF-D-04-AE-a_v004_work1px.png",
+      "label": "女漂泊者 · 默认 · 气动技能 · 血誓盟约",
+      "src": "assets/RVF-D-04-AE-a_bloodpact_v003_work1px.png",
       "width": 832,
       "height": 640,
       "referenceBodyHeight": 349.977,
@@ -8137,7 +8143,7 @@
       "facing": "left",
       "mirrorAllowed": false,
       "assetStatus": "art_candidate_user_acceptance_pending",
-      "runtimeVerified": false,
+      "runtimeVerified": true,
       "userConfirmed": false,
       "anchors": {
         "ground": {
@@ -8149,19 +8155,21 @@
           "y": 196.495
         }
       },
-      "sha256": "d8520b18641dad6bcaabf4939fb20ef32f2baa09f244d05b2c71d9cdd999bb42",
+      "sha256": "e0c8b20ce1843a3d5e822c43c8b95ac210d58d51468889d395f39b2ec9ca6895",
       "naturalWidth": 832,
       "naturalHeight": 640,
       "provenanceVerified": true,
-      "artReview": "Independent static QA passed; user acceptance pending",
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
       "attribute": "aero",
       "groundAnchorKind": "virtual_airborne_floor",
       "alphaBBox": [
-        171,
-        34,
-        547,
-        589
-      ]
+        130,
+        5,
+        549,
+        586
+      ],
+      "sourceVersion": "test6-20261011",
+      "alphaBinary": true
     },
     "rover.female_default.04-EL-a": {
       "key": "rover.female_default.04-EL-a",
@@ -8474,41 +8482,43 @@
       "entity": "rover",
       "form": "female_default",
       "action": "enhanced",
-      "label": "女漂泊者 · 默认 · 湮灭强化",
-      "src": "assets/RVF-D-04-HV-b_v003_work1px.png",
+      "label": "女漂泊者 · 默认 · 暗涌 · 强化姿势",
+      "src": "assets/RVF-D-04-HV-b_v009_work1px.png",
       "width": 832,
       "height": 448,
       "referenceBodyHeight": 349.977,
       "bodyHeight": 349.977,
       "bodyScale": 1,
       "side": "ally",
-      "facing": "left",
+      "facing": "left_or_front_left",
       "mirrorAllowed": false,
       "assetStatus": "art_candidate_user_acceptance_pending",
-      "runtimeVerified": false,
+      "runtimeVerified": true,
       "userConfirmed": false,
       "anchors": {
         "ground": {
-          "x": 416,
+          "x": 419.0,
           "y": 418
         },
         "head": {
-          "x": 400.374,
-          "y": 97.827
+          "x": 416.0,
+          "y": 107.0
         }
       },
-      "sha256": "6768764abb22f2275984fdb9c45da75f12567a0198cd62c7a7f04603e0330b02",
+      "sha256": "2b18113d63038f6fcc67c3f9f348020bbf6204521a4ba6a478c0cb10c0f31263",
       "naturalWidth": 832,
       "naturalHeight": 448,
       "provenanceVerified": true,
-      "artReview": "Independent static QA passed; user acceptance pending",
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
       "attribute": "havoc",
       "alphaBBox": [
-        186,
-        45,
-        560,
+        26,
+        27,
+        815,
         419
-      ]
+      ],
+      "sourceVersion": "test6-20261011",
+      "alphaBinary": true
     },
     "rover.female_school.01-CM": {
       "key": "rover.female_school.01-CM",
@@ -8861,8 +8871,8 @@
       "entity": "rover",
       "form": "female_school",
       "action": "skill",
-      "label": "女漂泊者 · 校服 · 气动技能",
-      "src": "assets/RVF-S-04-AE-a_v003_work1px.png",
+      "label": "女漂泊者 · 校服 · 气动技能 · 血誓盟约",
+      "src": "assets/RVF-S-04-AE-a_bloodpact_v001_work1px.png",
       "width": 832,
       "height": 640,
       "referenceBodyHeight": 352.22,
@@ -8872,31 +8882,33 @@
       "facing": "left",
       "mirrorAllowed": false,
       "assetStatus": "art_candidate_user_acceptance_pending",
-      "runtimeVerified": false,
+      "runtimeVerified": true,
       "userConfirmed": false,
       "anchors": {
         "ground": {
           "x": 416,
-          "y": 610
+          "y": 603
         },
         "head": {
           "x": 427.205,
           "y": 177.593
         }
       },
-      "sha256": "02056eb2a3c70b3bc184179a29460ff28c6fe06902e0d4789ce1654c1e319fd1",
+      "sha256": "2ae72fd37dd88960ae67143211ff703e98aea4bbd233c0e94c59e8630360754e",
       "naturalWidth": 832,
       "naturalHeight": 640,
       "provenanceVerified": true,
-      "artReview": "Independent static QA passed; user acceptance pending",
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
       "attribute": "aero",
       "groundAnchorKind": "virtual_airborne_floor",
       "alphaBBox": [
-        158,
-        36,
+        149,
+        6,
         556,
-        589
-      ]
+        582
+      ],
+      "alphaBinary": true,
+      "sourceVersion": "test6-20261011"
     },
     "rover.female_school.04-EL-a": {
       "key": "rover.female_school.04-EL-a",
@@ -9210,41 +9222,43 @@
       "entity": "rover",
       "form": "female_school",
       "action": "enhanced",
-      "label": "女漂泊者 · 校服 · 湮灭强化",
-      "src": "assets/RVF-S-04-HV-b_v004_work1px.png",
+      "label": "女漂泊者 · 校服 · 暗涌 · 强化姿势",
+      "src": "assets/RVF-S-04-HV-b_v006_work1px.png",
       "width": 832,
       "height": 448,
       "referenceBodyHeight": 352.22,
       "bodyHeight": 352.22,
       "bodyScale": 1,
       "side": "ally",
-      "facing": "left",
+      "facing": "left_or_front_left",
       "mirrorAllowed": false,
       "assetStatus": "art_candidate_user_acceptance_pending",
-      "runtimeVerified": false,
+      "runtimeVerified": true,
       "userConfirmed": false,
       "anchors": {
         "ground": {
-          "x": 416,
-          "y": 418
+          "x": 416.0,
+          "y": 419
         },
         "head": {
-          "x": 392.584,
-          "y": 98.137
+          "x": 397.0,
+          "y": 100.0
         }
       },
-      "sha256": "1ffe9d6f9b5f904fe9e5ecedd70050d718dce33ed7062513ff5071db5334f8ea",
+      "sha256": "07f938e66e07dc771cf31718e16a79f28a4b1e3df2e8f6a02ce2f3bd7a27aaae",
       "naturalWidth": 832,
       "naturalHeight": 448,
       "provenanceVerified": true,
-      "artReview": "Independent static QA passed; user acceptance pending",
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
       "attribute": "havoc",
       "alphaBBox": [
-        197,
-        62,
-        531,
-        418
-      ]
+        14,
+        17,
+        794,
+        420
+      ],
+      "alphaBinary": true,
+      "sourceVersion": "test6-20261011"
     },
     "enemy.dreamless.idle": {
       "key": "enemy.dreamless.idle",
@@ -9378,6 +9392,1411 @@
       "airborne": true,
       "provenanceVerified": true,
       "provenanceNote": "Project-created geometric mechanic marker. Not a depiction of final Dreamless art."
+    },
+    "rover.female_default.02-HV-dark": {
+      "key": "rover.female_default.02-HV-dark",
+      "entity": "rover",
+      "form": "female_default",
+      "action": "basic",
+      "label": "女漂泊者 · 默认 · 暗涌 · 普攻",
+      "src": "assets/RVF-D-02-HV-dark_v002_work1px.png",
+      "width": 896,
+      "height": 448,
+      "referenceBodyHeight": 349.977,
+      "bodyHeight": 349.977,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left_or_front_left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 550.0,
+          "y": 418
+        },
+        "head": {
+          "x": 461.0,
+          "y": 117.0
+        }
+      },
+      "sha256": "2e047d0ecda1fe0765e86fe0396c56a723c22e2f5eff69e5c578b8e79e291eb4",
+      "naturalWidth": 896,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        30,
+        98,
+        874,
+        419
+      ],
+      "alphaBinary": true,
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc"
+    },
+    "rover.female_default.04-HV-a-dark": {
+      "key": "rover.female_default.04-HV-a-dark",
+      "entity": "rover",
+      "form": "female_default",
+      "action": "skill",
+      "label": "女漂泊者 · 默认 · 暗涌 · 技能",
+      "src": "assets/RVF-D-04-HV-a-dark_v003_work1px.png",
+      "width": 896,
+      "height": 448,
+      "referenceBodyHeight": 349.977,
+      "bodyHeight": 349.977,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left_or_front_left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 526.0,
+          "y": 420
+        },
+        "head": {
+          "x": 423.0,
+          "y": 148.0
+        }
+      },
+      "sha256": "b127a6a8dd2509f858ac59fcd0c2dd8da91ab52f8b344d2d61500b7cccc9dd0c",
+      "naturalWidth": 896,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "attribute": "havoc",
+      "alphaBBox": [
+        34,
+        57,
+        856,
+        427
+      ],
+      "alphaBinary": true,
+      "sourceVersion": "test6-20261011"
+    },
+    "rover.female_default.10-HV-dark": {
+      "key": "rover.female_default.10-HV-dark",
+      "entity": "rover",
+      "form": "female_default",
+      "action": "liberation",
+      "label": "女漂泊者 · 默认 · 暗涌 · 共鸣解放",
+      "src": "assets/RVF-D-10-HV-dark_v001_work1px.png",
+      "width": 704,
+      "height": 448,
+      "referenceBodyHeight": 349.977,
+      "bodyHeight": 349.977,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left_or_front_left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 252.0,
+          "y": 419
+        },
+        "head": {
+          "x": 180.0,
+          "y": 164.0
+        }
+      },
+      "sha256": "8a9aa0b66c723268dd0bef440489cc0b804a0fbb51a67cdd0c4cfcd328d682f9",
+      "naturalWidth": 704,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "attribute": "havoc",
+      "castAnchorName": "rightPalm",
+      "groundAnchorKind": "grounded_floor",
+      "effectRendering": "Independent runtime Havoc liberation FX, no baked effect",
+      "runtimeEffectStatus": "pending",
+      "alphaBBox": [
+        82,
+        154,
+        611,
+        420
+      ],
+      "alphaBinary": true,
+      "sourceVersion": "test6-20261011"
+    },
+    "rover.female_default.03-HV-dark": {
+      "key": "rover.female_default.03-HV-dark",
+      "entity": "rover",
+      "form": "female_default",
+      "action": "critical",
+      "label": "女漂泊者 · 默认 · 暗涌 · 濒危",
+      "src": "assets/RVF-D-03-HV-dark_v001_work1px.png",
+      "width": 704,
+      "height": 448,
+      "referenceBodyHeight": 349.977,
+      "bodyHeight": 349.977,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left_or_front_left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 224.0,
+          "y": 420
+        },
+        "head": {
+          "x": 171.0,
+          "y": 151.0
+        }
+      },
+      "sha256": "1c0df6bca999749890d7dd112ba115d3a01598730409270eae5971cb626145ff",
+      "naturalWidth": 704,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBinary": true,
+      "alphaBBox": [
+        108,
+        136,
+        610,
+        421
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc"
+    },
+    "rover.female_default.06-HV-dark": {
+      "key": "rover.female_default.06-HV-dark",
+      "entity": "rover",
+      "form": "female_default",
+      "action": "guard",
+      "label": "女漂泊者 · 默认 · 暗涌 · 防御",
+      "src": "assets/RVF-D-06-HV-dark_v001_work1px.png",
+      "width": 704,
+      "height": 448,
+      "referenceBodyHeight": 349.977,
+      "bodyHeight": 349.977,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left_or_front_left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 224.0,
+          "y": 418
+        },
+        "head": {
+          "x": 185.0,
+          "y": 83.0
+        }
+      },
+      "sha256": "a9c2904de2e25ffcde6b3cc3974c8c939170658fb4805e055519613fdd3dd018",
+      "naturalWidth": 704,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBinary": true,
+      "alphaBBox": [
+        118,
+        62,
+        623,
+        419
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc"
+    },
+    "rover.female_default.09-HV-dark": {
+      "key": "rover.female_default.09-HV-dark",
+      "entity": "rover",
+      "form": "female_default",
+      "action": "hurt",
+      "label": "女漂泊者 · 默认 · 暗涌 · 受击",
+      "src": "assets/RVF-D-09-HV-dark_v001_work1px.png",
+      "width": 768,
+      "height": 448,
+      "referenceBodyHeight": 349.977,
+      "bodyHeight": 349.977,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left_or_front_left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 224.0,
+          "y": 420
+        },
+        "head": {
+          "x": 263.0,
+          "y": 65.0
+        }
+      },
+      "sha256": "bde2d4d8762bf7f03965ea695d22e2282a98a70b6728f3ae7559bc9cb21cf1b1",
+      "naturalWidth": 768,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBinary": true,
+      "alphaBBox": [
+        83,
+        45,
+        694,
+        421
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc"
+    },
+    "rover.female_default.07-HV-dark": {
+      "key": "rover.female_default.07-HV-dark",
+      "entity": "rover",
+      "form": "female_default",
+      "action": "down",
+      "label": "女漂泊者 · 默认 · 暗涌 · 倒地",
+      "src": "assets/RVF-D-07-HV-dark_v001_work1px.png",
+      "width": 704,
+      "height": 448,
+      "referenceBodyHeight": 349.977,
+      "bodyHeight": 349.977,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left_or_front_left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 288.0,
+          "y": 418
+        },
+        "head": {
+          "x": 108.0,
+          "y": 307.0
+        }
+      },
+      "sha256": "f729008256a00a5bf604d72acdd97a135f1d3e5fb372478d0c4ded3e49c68a2d",
+      "naturalWidth": 704,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBinary": true,
+      "alphaBBox": [
+        50,
+        243,
+        528,
+        419
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc"
+    },
+    "rover.male_default.02-AE": {
+      "key": "rover.male_default.02-AE",
+      "entity": "rover",
+      "form": "male_default",
+      "action": "basic",
+      "label": "男漂泊者 · 默认 · 气动普攻 · 血誓盟约",
+      "src": "assets/RVM-D-02-AE_bloodpact_v001_work1px.png",
+      "width": 864,
+      "height": 448,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 480,
+          "y": 410
+        },
+        "head": {
+          "x": 431.915,
+          "y": 105.588
+        }
+      },
+      "sha256": "2d81b3e195efd30d0bd2dd45ace503a40fa6462d6a7172f6661f993130f4e91a",
+      "naturalWidth": 864,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        91,
+        96,
+        645,
+        412
+      ],
+      "alphaBinary": true,
+      "groundAnchorKind": "visible_boot_floor",
+      "sourceVersion": "test6-20261011",
+      "attribute": "aero"
+    },
+    "rover.male_school.02-AE": {
+      "key": "rover.male_school.02-AE",
+      "entity": "rover",
+      "form": "male_school",
+      "action": "basic",
+      "label": "男漂泊者 · 校服 · 气动普攻 · 血誓盟约",
+      "src": "assets/RVM-S-02-AE_bloodpact_v001_work1px.png",
+      "width": 864,
+      "height": 448,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 480,
+          "y": 406
+        },
+        "head": {
+          "x": 431.915,
+          "y": 107.588
+        }
+      },
+      "sha256": "7763dee44c25a4c51fd1d7fb6a30a693de767004fbfa86eb74ac072964f51318",
+      "naturalWidth": 864,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        82,
+        99,
+        657,
+        408
+      ],
+      "revisionReason": "Fingerless school gloves / enclosed default gloves restored to outfit identity using imagegen only. Existing action slot replacement; not a new action.",
+      "alphaBinary": true,
+      "revisionHistory": [
+        {
+          "file": "RVM-S-02-CM_v001_work1px.png",
+          "sha256": "22fa3b69defef06256e1cc36c2b2a468516cdc08414304a9f5053fa612831ec1",
+          "status": "superseded_costume_consistency",
+          "reason": "Fingerless school gloves / enclosed default gloves restored to outfit identity using imagegen only. Existing action slot replacement; not a new action."
+        }
+      ],
+      "acceptanceStatus": "user_acceptance_pending",
+      "groundAnchorKind": "visible_boot_floor",
+      "sourceVersion": "test6-20261011",
+      "attribute": "aero"
+    },
+    "rover.female_school.02-AE": {
+      "key": "rover.female_school.02-AE",
+      "entity": "rover",
+      "form": "female_school",
+      "action": "basic",
+      "label": "女漂泊者 · 校服 · 气动普攻 · 血誓盟约",
+      "src": "assets/RVF-S-02-AE_bloodpact_v001_work1px.png",
+      "width": 928,
+      "height": 448,
+      "referenceBodyHeight": 352.22,
+      "bodyHeight": 352.22,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 512,
+          "y": 404
+        },
+        "head": {
+          "x": 456.097,
+          "y": 129.044
+        }
+      },
+      "sha256": "8e043992e7f9dad70182828cd97020f73e36fb803a2e26bb2afb74d738739d3f",
+      "naturalWidth": 928,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        116,
+        115,
+        644,
+        406
+      ],
+      "alphaBinary": true,
+      "groundAnchorKind": "visible_boot_floor",
+      "sourceVersion": "test6-20261011",
+      "attribute": "aero"
+    },
+    "rover.female_default.02-AE": {
+      "key": "rover.female_default.02-AE",
+      "entity": "rover",
+      "form": "female_default",
+      "action": "basic",
+      "label": "女漂泊者 · 默认 · 气动普攻 · 血誓盟约",
+      "src": "assets/RVF-D-02-AE_bloodpact_v002_work1px.png",
+      "width": 928,
+      "height": 448,
+      "referenceBodyHeight": 349.977,
+      "bodyHeight": 349.977,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 512,
+          "y": 405
+        },
+        "head": {
+          "x": 438.267,
+          "y": 116.854
+        }
+      },
+      "sha256": "f73369540fc54184cd75e9246faf31434c529310c75946fa41595e754197f24a",
+      "naturalWidth": 928,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        101,
+        100,
+        632,
+        407
+      ],
+      "alphaBinary": true,
+      "groundAnchorKind": "visible_boot_floor",
+      "sourceVersion": "test6-20261011",
+      "attribute": "aero"
+    },
+    "rover.male_default.02-HV-dark": {
+      "key": "rover.male_default.02-HV-dark",
+      "entity": "rover",
+      "form": "male_default",
+      "action": "basic",
+      "label": "男漂泊者 · 默认 · 暗涌 · 普攻",
+      "src": "assets/RVM-D-02-HV-dark_v002_work1px.png",
+      "width": 821,
+      "height": 479,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 473,
+          "y": 455
+        },
+        "head": {
+          "x": 402,
+          "y": 166
+        }
+      },
+      "sha256": "d6b02c97a753aa964abac0ad436ed38ac939ab583748d73814b33d165134a25a",
+      "naturalWidth": 821,
+      "naturalHeight": 479,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        22,
+        110,
+        812,
+        455
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc",
+      "alphaBinary": true
+    },
+    "rover.male_default.04-HV-a-dark": {
+      "key": "rover.male_default.04-HV-a-dark",
+      "entity": "rover",
+      "form": "male_default",
+      "action": "skill",
+      "label": "男漂泊者 · 默认 · 暗涌 · 技能",
+      "src": "assets/RVM-D-04-HV-a-dark_v002_work1px.png",
+      "width": 821,
+      "height": 479,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 513,
+          "y": 437
+        },
+        "head": {
+          "x": 408,
+          "y": 169
+        }
+      },
+      "sha256": "9b7538757069c9edfab602222b06ae1d363fe4c9f7e65053b8e4bf616632a092",
+      "naturalWidth": 821,
+      "naturalHeight": 479,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "attribute": "havoc",
+      "alphaBinary": true,
+      "alphaBBox": [
+        19,
+        95,
+        816,
+        437
+      ],
+      "revisionReason": "Corrected default enclosed glove / school fingerless glove consistency with imagegen. Same action slot; pose, head, limb chains, weapon and anchor unchanged.",
+      "revisionHistory": [
+        {
+          "file": "RVM-D-04-HV-a_v002_work1px.png",
+          "sha256": "fd4267de67a3c8550ef0134d2c2a2a19dd6595f7cb655ccc37b11cbbb1a1da55",
+          "status": "superseded_costume_consistency",
+          "reason": "Corrected default enclosed glove / school fingerless glove consistency with imagegen. Same action slot; pose, head, limb chains, weapon and anchor unchanged."
+        }
+      ],
+      "acceptanceStatus": "user_acceptance_pending",
+      "sourceVersion": "test6-20261011"
+    },
+    "rover.male_default.10-HV-dark": {
+      "key": "rover.male_default.10-HV-dark",
+      "entity": "rover",
+      "form": "male_default",
+      "action": "liberation",
+      "label": "男漂泊者 · 默认 · 暗涌 · 共鸣解放",
+      "src": "assets/RVM-D-10-HV-dark_v002_work1px.png",
+      "width": 615,
+      "height": 410,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 323,
+          "y": 389
+        },
+        "head": {
+          "x": 248,
+          "y": 96
+        }
+      },
+      "sha256": "436f478b6696fd92d25b5b2c89e7868ca6078c3ab5c05dfb112fca45772d691f",
+      "naturalWidth": 615,
+      "naturalHeight": 410,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "attribute": "havoc",
+      "alphaBinary": true,
+      "alphaBBox": [
+        95,
+        69,
+        609,
+        390
+      ],
+      "sourceVersion": "test6-20261011"
+    },
+    "rover.male_default.03-HV-dark": {
+      "key": "rover.male_default.03-HV-dark",
+      "entity": "rover",
+      "form": "male_default",
+      "action": "critical",
+      "label": "男漂泊者 · 默认 · 暗涌 · 濒危",
+      "src": "assets/RVM-D-03-HV-dark_v002_work1px.png",
+      "width": 616,
+      "height": 409,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 264,
+          "y": 391
+        },
+        "head": {
+          "x": 195,
+          "y": 126
+        }
+      },
+      "sha256": "0a762ac73e7c3407ab4310ab8dde673508f963eaea814ff5c21d67aa8cb8e624",
+      "naturalWidth": 616,
+      "naturalHeight": 409,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        140,
+        79,
+        599,
+        392
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc",
+      "alphaBinary": true
+    },
+    "rover.male_default.06-HV-dark": {
+      "key": "rover.male_default.06-HV-dark",
+      "entity": "rover",
+      "form": "male_default",
+      "action": "guard",
+      "label": "男漂泊者 · 默认 · 暗涌 · 防御",
+      "src": "assets/RVM-D-06-HV-dark_v002_work1px.png",
+      "width": 615,
+      "height": 410,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 272,
+          "y": 398
+        },
+        "head": {
+          "x": 211,
+          "y": 75
+        }
+      },
+      "sha256": "e637451b8a33f870128644178112b1543e445862d6f846764cd738e382f26efa",
+      "naturalWidth": 615,
+      "naturalHeight": 410,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        120,
+        29,
+        609,
+        399
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc",
+      "alphaBinary": true
+    },
+    "rover.male_default.09-HV-dark": {
+      "key": "rover.male_default.09-HV-dark",
+      "entity": "rover",
+      "form": "male_default",
+      "action": "hurt",
+      "label": "男漂泊者 · 默认 · 暗涌 · 受击",
+      "src": "assets/RVM-D-09-HV-dark_v002_work1px.png",
+      "width": 477,
+      "height": 477,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 217,
+          "y": 444
+        },
+        "head": {
+          "x": 189,
+          "y": 72
+        }
+      },
+      "sha256": "eeda88dab88a44bbf9e009a2e2075a79ea62b58b1e813c6b5df8d33ebcb50d4f",
+      "naturalWidth": 477,
+      "naturalHeight": 477,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        38,
+        54,
+        473,
+        445
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc",
+      "alphaBinary": true
+    },
+    "rover.male_default.07-HV-dark": {
+      "key": "rover.male_default.07-HV-dark",
+      "entity": "rover",
+      "form": "male_default",
+      "action": "down",
+      "label": "男漂泊者 · 默认 · 暗涌 · 倒地",
+      "src": "assets/RVM-D-07-HV-dark_v002_work1px.png",
+      "width": 557,
+      "height": 319,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 279,
+          "y": 317
+        },
+        "head": {
+          "x": 172,
+          "y": 182
+        }
+      },
+      "sha256": "fe82e37ce6e950f0e98d4ccc984b0e4091c9e141b2b0cd3642d818418c8fdccc",
+      "naturalWidth": 557,
+      "naturalHeight": 319,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        23,
+        138,
+        542,
+        317
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc",
+      "alphaBinary": true
+    },
+    "rover.male_school.02-HV-dark": {
+      "key": "rover.male_school.02-HV-dark",
+      "entity": "rover",
+      "form": "male_school",
+      "action": "basic",
+      "label": "男漂泊者 · 校服 · 暗涌 · 普攻",
+      "src": "assets/RVM-S-02-HV-dark_v002_work1px.png",
+      "width": 821,
+      "height": 479,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 508.0,
+          "y": 460.0
+        },
+        "head": {
+          "x": 438.0,
+          "y": 167.0
+        }
+      },
+      "sha256": "01c1fb1a0a0bca3bdb5e50fded9f3481d524c219ed2bac20d36730d0cdb8733a",
+      "naturalWidth": 821,
+      "naturalHeight": 479,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        16,
+        80,
+        816,
+        460
+      ],
+      "revisionReason": "Fingerless school gloves / enclosed default gloves restored to outfit identity using imagegen only. Existing action slot replacement; not a new action.",
+      "alphaBinary": true,
+      "revisionHistory": [
+        {
+          "file": "RVM-S-02-CM_v001_work1px.png",
+          "sha256": "22fa3b69defef06256e1cc36c2b2a468516cdc08414304a9f5053fa612831ec1",
+          "status": "superseded_costume_consistency",
+          "reason": "Fingerless school gloves / enclosed default gloves restored to outfit identity using imagegen only. Existing action slot replacement; not a new action."
+        }
+      ],
+      "acceptanceStatus": "user_acceptance_pending",
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc"
+    },
+    "rover.male_school.04-HV-a-dark": {
+      "key": "rover.male_school.04-HV-a-dark",
+      "entity": "rover",
+      "form": "male_school",
+      "action": "skill",
+      "label": "男漂泊者 · 校服 · 暗涌 · 技能",
+      "src": "assets/RVM-S-04-HV-a-dark_v002_work1px.png",
+      "width": 821,
+      "height": 479,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 522.0,
+          "y": 456.0
+        },
+        "head": {
+          "x": 421.0,
+          "y": 195.0
+        }
+      },
+      "sha256": "de4861711603ff129fe02ccd3042b8868a7a9988fcbc318fd7c52ff6b112da99",
+      "naturalWidth": 821,
+      "naturalHeight": 479,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "attribute": "havoc",
+      "alphaBinary": true,
+      "alphaBBox": [
+        26,
+        115,
+        811,
+        456
+      ],
+      "revisionReason": "Fingerless school gloves / enclosed default gloves restored to outfit identity using imagegen only. Existing action slot replacement; not a new action.",
+      "revisionHistory": [
+        {
+          "file": "RVM-S-04-HV-a_v001_work1px.png",
+          "sha256": "f25bd8a64c8da04b5692ac7c0076fabf46bb6a70c3f922c2d17ae40ca2ce69eb",
+          "status": "superseded_costume_consistency",
+          "reason": "Fingerless school gloves / enclosed default gloves restored to outfit identity using imagegen only. Existing action slot replacement; not a new action."
+        }
+      ],
+      "acceptanceStatus": "user_acceptance_pending",
+      "sourceVersion": "test6-20261011"
+    },
+    "rover.male_school.10-HV-dark": {
+      "key": "rover.male_school.10-HV-dark",
+      "entity": "rover",
+      "form": "male_school",
+      "action": "liberation",
+      "label": "男漂泊者 · 校服 · 暗涌 · 共鸣解放",
+      "src": "assets/RVM-S-10-HV-dark_v002_work1px.png",
+      "width": 608,
+      "height": 425,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 329.0,
+          "y": 402.0
+        },
+        "head": {
+          "x": 250.0,
+          "y": 117.0
+        }
+      },
+      "sha256": "c11ff6946674d750decf03ad0534fc758a2a19977f03f83f58d0b0ef742a697e",
+      "naturalWidth": 608,
+      "naturalHeight": 425,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "attribute": "havoc",
+      "alphaBinary": true,
+      "alphaBBox": [
+        98,
+        79,
+        596,
+        403
+      ],
+      "sourceVersion": "test6-20261011"
+    },
+    "rover.male_school.03-HV-dark": {
+      "key": "rover.male_school.03-HV-dark",
+      "entity": "rover",
+      "form": "male_school",
+      "action": "critical",
+      "label": "男漂泊者 · 校服 · 暗涌 · 濒危",
+      "src": "assets/RVM-S-03-HV-dark_v002_work1px.png",
+      "width": 586,
+      "height": 377,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 261.0,
+          "y": 364.0
+        },
+        "head": {
+          "x": 185.0,
+          "y": 103.0
+        }
+      },
+      "sha256": "70d3e4a2a7db0ba8644d9acc38de51dd9f7c8fd68f5db6eb62ec553ad87e27dd",
+      "naturalWidth": 586,
+      "naturalHeight": 377,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        120,
+        38,
+        578,
+        365
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc",
+      "alphaBinary": true
+    },
+    "rover.male_school.06-HV-dark": {
+      "key": "rover.male_school.06-HV-dark",
+      "entity": "rover",
+      "form": "male_school",
+      "action": "guard",
+      "label": "男漂泊者 · 校服 · 暗涌 · 防御",
+      "src": "assets/RVM-S-06-HV-dark_v002_work1px.png",
+      "width": 608,
+      "height": 393,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 251.0,
+          "y": 383.0
+        },
+        "head": {
+          "x": 178.0,
+          "y": 78.0
+        }
+      },
+      "sha256": "7511e1a13f6c006d1062a8af771a81150a523206b337585d6e489ecacd2180ce",
+      "naturalWidth": 608,
+      "naturalHeight": 393,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        86,
+        27,
+        596,
+        384
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc",
+      "alphaBinary": true
+    },
+    "rover.male_school.09-HV-dark": {
+      "key": "rover.male_school.09-HV-dark",
+      "entity": "rover",
+      "form": "male_school",
+      "action": "hurt",
+      "label": "男漂泊者 · 校服 · 暗涌 · 受击",
+      "src": "assets/RVM-S-09-HV-dark_v002_work1px.png",
+      "width": 656,
+      "height": 463,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 310.0,
+          "y": 443.0
+        },
+        "head": {
+          "x": 286.0,
+          "y": 72.0
+        }
+      },
+      "sha256": "abd9f1584d8faf331e6c8a4186b4994d938f52b96afe7bf5b0dff0419b401824",
+      "naturalWidth": 656,
+      "naturalHeight": 463,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        130,
+        54,
+        647,
+        446
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc",
+      "alphaBinary": true
+    },
+    "rover.male_school.07-HV-dark": {
+      "key": "rover.male_school.07-HV-dark",
+      "entity": "rover",
+      "form": "male_school",
+      "action": "down",
+      "label": "男漂泊者 · 校服 · 暗涌 · 倒地",
+      "src": "assets/RVM-S-07-HV-dark_v002_work1px.png",
+      "width": 588,
+      "height": 367,
+      "referenceBodyHeight": 353.495,
+      "bodyHeight": 353.495,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 292.0,
+          "y": 359.0
+        },
+        "head": {
+          "x": 178.0,
+          "y": 215.0
+        }
+      },
+      "sha256": "2c6634089e00537720d8daf0e1ce60519582cda0fda0f7a07497cfad0b9bccec",
+      "naturalWidth": 588,
+      "naturalHeight": 367,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        20,
+        190,
+        572,
+        360
+      ],
+      "revisionReason": "Corrected default enclosed glove / school fingerless glove consistency with imagegen. Same action slot; pose, head, limb chains, weapon and anchor unchanged.",
+      "alphaBinary": true,
+      "revisionHistory": [
+        {
+          "file": "RVM-S-07-CM_v001_work1px.png",
+          "sha256": "01fb01bfb872a60dcbf8f7030832f29c911bd03399202326a90dcc54c9201310",
+          "status": "superseded_costume_consistency",
+          "reason": "Corrected default enclosed glove / school fingerless glove consistency with imagegen. Same action slot; pose, head, limb chains, weapon and anchor unchanged."
+        }
+      ],
+      "acceptanceStatus": "user_acceptance_pending",
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc"
+    },
+    "rover.female_school.02-HV-dark": {
+      "key": "rover.female_school.02-HV-dark",
+      "entity": "rover",
+      "form": "female_school",
+      "action": "basic",
+      "label": "女漂泊者 · 校服 · 暗涌 · 普攻",
+      "src": "assets/RVF-S-02-HV-dark_v001_work1px.png",
+      "width": 896,
+      "height": 448,
+      "referenceBodyHeight": 352.22,
+      "bodyHeight": 352.22,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left_or_front_left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 484.0,
+          "y": 418
+        },
+        "head": {
+          "x": 450.0,
+          "y": 131.0
+        }
+      },
+      "sha256": "bb0d3444fdc5a1b3e578137fa02b3067bd222fd8a93aba73478772a1c85bd315",
+      "naturalWidth": 896,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBBox": [
+        25,
+        49,
+        841,
+        419
+      ],
+      "alphaBinary": true,
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc"
+    },
+    "rover.female_school.04-HV-a-dark": {
+      "key": "rover.female_school.04-HV-a-dark",
+      "entity": "rover",
+      "form": "female_school",
+      "action": "skill",
+      "label": "女漂泊者 · 校服 · 暗涌 · 技能",
+      "src": "assets/RVF-S-04-HV-a-dark_v001_work1px.png",
+      "width": 832,
+      "height": 448,
+      "referenceBodyHeight": 352.22,
+      "bodyHeight": 352.22,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left_or_front_left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 442.0,
+          "y": 416
+        },
+        "head": {
+          "x": 392.0,
+          "y": 154.0
+        }
+      },
+      "sha256": "bf643d37f14762db29781145af448ea821c690e31803d1241164491ae7972c20",
+      "naturalWidth": 832,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "attribute": "havoc",
+      "alphaBBox": [
+        13,
+        115,
+        785,
+        417
+      ],
+      "alphaBinary": true,
+      "sourceVersion": "test6-20261011"
+    },
+    "rover.female_school.10-HV-dark": {
+      "key": "rover.female_school.10-HV-dark",
+      "entity": "rover",
+      "form": "female_school",
+      "action": "liberation",
+      "label": "女漂泊者 · 校服 · 暗涌 · 共鸣解放",
+      "src": "assets/RVF-S-10-HV-dark_v001_work1px.png",
+      "width": 704,
+      "height": 448,
+      "referenceBodyHeight": 352.22,
+      "bodyHeight": 352.22,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left_or_front_left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 258.0,
+          "y": 419
+        },
+        "head": {
+          "x": 234.0,
+          "y": 159.0
+        }
+      },
+      "sha256": "d615684d143ba9a8b6ffb2f00634cfd1f8f09efecf11d7a96ef0bdc2960f3cee",
+      "naturalWidth": 704,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "attribute": "havoc",
+      "castAnchorName": "rightPalm",
+      "groundAnchorKind": "grounded_floor",
+      "effectRendering": "Independent runtime Havoc liberation FX, no baked effect",
+      "runtimeEffectStatus": "pending",
+      "alphaBBox": [
+        109,
+        140,
+        636,
+        420
+      ],
+      "alphaBinary": true,
+      "sourceVersion": "test6-20261011"
+    },
+    "rover.female_school.03-HV-dark": {
+      "key": "rover.female_school.03-HV-dark",
+      "entity": "rover",
+      "form": "female_school",
+      "action": "critical",
+      "label": "女漂泊者 · 校服 · 暗涌 · 濒危",
+      "src": "assets/RVF-S-03-HV-dark_v001_work1px.png",
+      "width": 704,
+      "height": 448,
+      "referenceBodyHeight": 352.22,
+      "bodyHeight": 352.22,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left_or_front_left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 246.0,
+          "y": 419
+        },
+        "head": {
+          "x": 181.0,
+          "y": 165.0
+        }
+      },
+      "sha256": "3fbdc681644f918c4d46d6ebb5caf69e742f7e245a86d0a6f34a9b6a482b2bdb",
+      "naturalWidth": 704,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBinary": true,
+      "alphaBBox": [
+        113,
+        148,
+        584,
+        420
+      ],
+      "acceptanceStatus": "user_acceptance_pending",
+      "reviewNote": "v004已获静态修订复验；用户美术确认待定。远膝与近足纵深接地点约16.5工作px差异，列Q42实机核验。",
+      "revisionHistory": [
+        {
+          "file": "RVF-S-03-CM_v002_work1px.png",
+          "sha256": "abab60be588e154b9a0ad98157979053b22fd12121a9071201d96b9e5c7943ed",
+          "status": "user_rejected",
+          "reason": "用户退回：女校服重伤双腿前后骨骼不正确，保留旧图作临时运行占位，待重绘与独立复验。"
+        }
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc"
+    },
+    "rover.female_school.06-HV-dark": {
+      "key": "rover.female_school.06-HV-dark",
+      "entity": "rover",
+      "form": "female_school",
+      "action": "guard",
+      "label": "女漂泊者 · 校服 · 暗涌 · 防御",
+      "src": "assets/RVF-S-06-HV-dark_v001_work1px.png",
+      "width": 704,
+      "height": 448,
+      "referenceBodyHeight": 352.22,
+      "bodyHeight": 352.22,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left_or_front_left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 229.0,
+          "y": 418
+        },
+        "head": {
+          "x": 193.0,
+          "y": 89.0
+        }
+      },
+      "sha256": "f0e5df9214e09550e5a8cb852ab0dcb31521663767d81c885aa39f6fa6503e29",
+      "naturalWidth": 704,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBinary": true,
+      "alphaBBox": [
+        107,
+        62,
+        608,
+        419
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc"
+    },
+    "rover.female_school.07-HV-dark": {
+      "key": "rover.female_school.07-HV-dark",
+      "entity": "rover",
+      "form": "female_school",
+      "action": "down",
+      "label": "女漂泊者 · 校服 · 暗涌 · 倒地",
+      "src": "assets/RVF-S-07-HV-dark_v001_work1px.png",
+      "width": 704,
+      "height": 448,
+      "referenceBodyHeight": 352.22,
+      "bodyHeight": 352.22,
+      "bodyScale": 1,
+      "side": "ally",
+      "facing": "left_or_front_left",
+      "mirrorAllowed": false,
+      "assetStatus": "art_candidate_user_acceptance_pending",
+      "runtimeVerified": true,
+      "userConfirmed": false,
+      "anchors": {
+        "ground": {
+          "x": 288.0,
+          "y": 418
+        },
+        "head": {
+          "x": 112.0,
+          "y": 287.0
+        }
+      },
+      "sha256": "5c130518f1137fcb7dcb884f785f2cb849e3091ad60495f040670973a278adbe",
+      "naturalWidth": 704,
+      "naturalHeight": 448,
+      "provenanceVerified": true,
+      "artReview": "Static visual review passed; independent runtime and user acceptance tracked separately",
+      "alphaBinary": true,
+      "alphaBBox": [
+        49,
+        247,
+        520,
+        419
+      ],
+      "sourceVersion": "test6-20261011",
+      "attribute": "havoc"
     }
   },
   "forms": {
@@ -10031,7 +11450,7 @@
           "rover_havoc_e1": "rover.male_default.04-HV-a",
           "rover_havoc_e2": "rover.male_default.04-HV-b",
           "rover_havoc_e3": "rover.male_default.04-HV-a",
-          "rover_havoc_s": "rover.male_default.04-HV-b",
+          "rover_havoc_s": "rover.male_default.10-HV",
           "rover_havoc_r": "rover.male_default.10-HV",
           "rover_havoc_e2a": "rover.male_default.04-HV-a",
           "rover_havoc_e2b": "rover.male_default.04-HV-b",
@@ -10061,9 +11480,9 @@
             "rover.male_default.02-CM"
           ]
         },
-        "assetStatus": "complete_first_release_body_art_candidate",
-        "plannedUniquePoses": 16,
-        "readyUniquePoses": 16,
+        "assetStatus": "test6_art_candidate",
+        "plannedUniquePoses": 24,
+        "readyUniquePoses": 24,
         "aliasReasons": {
           "aero_enhanced": "Both selected as compatible wind healing-release static keypose; effect mechanics remain separate",
           "electro_enhanced": "Critical-state entry uses the common attack keypose plus independent state effects",
@@ -10074,7 +11493,47 @@
         },
         "mappingNotes": {
           "test4": "New skill keys explicitly reuse delivered action poses. A different skill key does not claim a newly drawn pose.",
-          "rover_electro_e1_state": "Four true attacks are engine events; visual keypose reuses existing conductive skill art."
+          "rover_electro_e1_state": "Four true attacks are engine events; visual keypose reuses existing conductive skill art.",
+          "test6_havoc_s": "Normal S reuses unwinged liberation casting pose; persistent dark-surge S uses the dedicated wing/scythe pose."
+        },
+        "stateActions": {
+          "dark_surge": {
+            "idle": "rover.male_default.04-HV-b",
+            "basic": "rover.male_default.02-HV-dark",
+            "skill": "rover.male_default.04-HV-a-dark",
+            "enhanced": "rover.male_default.04-HV-b",
+            "liberation": "rover.male_default.10-HV-dark",
+            "critical": "rover.male_default.03-HV-dark",
+            "guard": "rover.male_default.06-HV-dark",
+            "hurt": "rover.male_default.09-HV-dark",
+            "down": "rover.male_default.07-HV-dark",
+            "victory": "rover.male_default.04-HV-b",
+            "support": "rover.male_default.04-HV-b",
+            "wait": "rover.male_default.04-HV-b",
+            "escape": "rover.male_default.04-HV-b",
+            "retreat": "rover.male_default.04-HV-b",
+            "negotiate": "rover.male_default.04-HV-b",
+            "rover_havoc_a": "rover.male_default.02-HV-dark",
+            "rover_havoc_e1": "rover.male_default.04-HV-a-dark",
+            "rover_havoc_e2": "rover.male_default.04-HV-b",
+            "rover_havoc_e3": "rover.male_default.04-HV-a-dark",
+            "rover_havoc_s": "rover.male_default.04-HV-b",
+            "rover_havoc_r": "rover.male_default.10-HV-dark",
+            "rover_havoc_e2a": "rover.male_default.04-HV-a-dark",
+            "rover_havoc_e2b": "rover.male_default.04-HV-b",
+            "rover_havoc_e1_state": "rover.male_default.04-HV-a-dark",
+            "havoc_basic": "rover.male_default.02-HV-dark",
+            "havoc_skill": "rover.male_default.04-HV-a-dark",
+            "havoc_enhanced": "rover.male_default.04-HV-b",
+            "havoc_liberation": "rover.male_default.10-HV-dark"
+          }
+        },
+        "elementActions": {
+          "aero": {
+            "basic": "rover.male_default.02-AE",
+            "aero_basic": "rover.male_default.02-AE",
+            "rover_aero_a": "rover.male_default.02-AE"
+          }
         }
       },
       "male_school": {
@@ -10118,7 +11577,7 @@
           "rover_havoc_e1": "rover.male_school.04-HV-a",
           "rover_havoc_e2": "rover.male_school.04-HV-b",
           "rover_havoc_e3": "rover.male_school.04-HV-a",
-          "rover_havoc_s": "rover.male_school.04-HV-b",
+          "rover_havoc_s": "rover.male_school.10-HV",
           "rover_havoc_r": "rover.male_school.10-HV",
           "rover_havoc_e2a": "rover.male_school.04-HV-a",
           "rover_havoc_e2b": "rover.male_school.04-HV-b",
@@ -10148,9 +11607,9 @@
             "rover.male_school.02-CM"
           ]
         },
-        "assetStatus": "complete_first_release_body_art_candidate",
-        "plannedUniquePoses": 16,
-        "readyUniquePoses": 16,
+        "assetStatus": "test6_art_candidate",
+        "plannedUniquePoses": 24,
+        "readyUniquePoses": 24,
         "aliasReasons": {
           "aero_enhanced": "Both selected as compatible wind healing-release static keypose; effect mechanics remain separate",
           "electro_enhanced": "Critical-state entry uses the common attack keypose plus independent state effects",
@@ -10161,7 +11620,47 @@
         },
         "mappingNotes": {
           "test4": "New skill keys explicitly reuse delivered action poses. A different skill key does not claim a newly drawn pose.",
-          "rover_electro_e1_state": "Four true attacks are engine events; visual keypose reuses existing conductive skill art."
+          "rover_electro_e1_state": "Four true attacks are engine events; visual keypose reuses existing conductive skill art.",
+          "test6_havoc_s": "Normal S reuses unwinged liberation casting pose; persistent dark-surge S uses the dedicated wing/scythe pose."
+        },
+        "stateActions": {
+          "dark_surge": {
+            "idle": "rover.male_school.04-HV-b",
+            "basic": "rover.male_school.02-HV-dark",
+            "skill": "rover.male_school.04-HV-a-dark",
+            "enhanced": "rover.male_school.04-HV-b",
+            "liberation": "rover.male_school.10-HV-dark",
+            "critical": "rover.male_school.03-HV-dark",
+            "guard": "rover.male_school.06-HV-dark",
+            "hurt": "rover.male_school.09-HV-dark",
+            "down": "rover.male_school.07-HV-dark",
+            "victory": "rover.male_school.04-HV-b",
+            "support": "rover.male_school.04-HV-b",
+            "wait": "rover.male_school.04-HV-b",
+            "escape": "rover.male_school.04-HV-b",
+            "retreat": "rover.male_school.04-HV-b",
+            "negotiate": "rover.male_school.04-HV-b",
+            "rover_havoc_a": "rover.male_school.02-HV-dark",
+            "rover_havoc_e1": "rover.male_school.04-HV-a-dark",
+            "rover_havoc_e2": "rover.male_school.04-HV-b",
+            "rover_havoc_e3": "rover.male_school.04-HV-a-dark",
+            "rover_havoc_s": "rover.male_school.04-HV-b",
+            "rover_havoc_r": "rover.male_school.10-HV-dark",
+            "rover_havoc_e2a": "rover.male_school.04-HV-a-dark",
+            "rover_havoc_e2b": "rover.male_school.04-HV-b",
+            "rover_havoc_e1_state": "rover.male_school.04-HV-a-dark",
+            "havoc_basic": "rover.male_school.02-HV-dark",
+            "havoc_skill": "rover.male_school.04-HV-a-dark",
+            "havoc_enhanced": "rover.male_school.04-HV-b",
+            "havoc_liberation": "rover.male_school.10-HV-dark"
+          }
+        },
+        "elementActions": {
+          "aero": {
+            "basic": "rover.male_school.02-AE",
+            "aero_basic": "rover.male_school.02-AE",
+            "rover_aero_a": "rover.male_school.02-AE"
+          }
         }
       },
       "female_default": {
@@ -10205,7 +11704,7 @@
           "rover_havoc_e1": "rover.female_default.04-HV-a",
           "rover_havoc_e2": "rover.female_default.04-HV-b",
           "rover_havoc_e3": "rover.female_default.04-HV-a",
-          "rover_havoc_s": "rover.female_default.04-HV-b",
+          "rover_havoc_s": "rover.female_default.10-HV",
           "rover_havoc_r": "rover.female_default.10-HV",
           "rover_havoc_e2a": "rover.female_default.04-HV-a",
           "rover_havoc_e2b": "rover.female_default.04-HV-b",
@@ -10235,9 +11734,9 @@
             "rover.female_default.02-CM"
           ]
         },
-        "assetStatus": "complete_first_release_body_art_candidate",
-        "plannedUniquePoses": 16,
-        "readyUniquePoses": 16,
+        "assetStatus": "test6_art_candidate",
+        "plannedUniquePoses": 24,
+        "readyUniquePoses": 24,
         "aliasReasons": {
           "aero_enhanced": "Both selected as compatible wind healing-release static keypose; effect mechanics remain separate",
           "electro_enhanced": "Critical-state entry uses the common attack keypose plus independent state effects",
@@ -10248,7 +11747,47 @@
         },
         "mappingNotes": {
           "test4": "New skill keys explicitly reuse delivered action poses. A different skill key does not claim a newly drawn pose.",
-          "rover_electro_e1_state": "Four true attacks are engine events; visual keypose reuses existing conductive skill art."
+          "rover_electro_e1_state": "Four true attacks are engine events; visual keypose reuses existing conductive skill art.",
+          "test6_havoc_s": "Normal S reuses unwinged liberation casting pose; persistent dark-surge S uses the dedicated wing/scythe pose."
+        },
+        "stateActions": {
+          "dark_surge": {
+            "idle": "rover.female_default.04-HV-b",
+            "basic": "rover.female_default.02-HV-dark",
+            "skill": "rover.female_default.04-HV-a-dark",
+            "enhanced": "rover.female_default.04-HV-b",
+            "liberation": "rover.female_default.10-HV-dark",
+            "critical": "rover.female_default.03-HV-dark",
+            "guard": "rover.female_default.06-HV-dark",
+            "hurt": "rover.female_default.09-HV-dark",
+            "down": "rover.female_default.07-HV-dark",
+            "victory": "rover.female_default.04-HV-b",
+            "support": "rover.female_default.04-HV-b",
+            "wait": "rover.female_default.04-HV-b",
+            "escape": "rover.female_default.04-HV-b",
+            "retreat": "rover.female_default.04-HV-b",
+            "negotiate": "rover.female_default.04-HV-b",
+            "rover_havoc_a": "rover.female_default.02-HV-dark",
+            "rover_havoc_e1": "rover.female_default.04-HV-a-dark",
+            "rover_havoc_e2": "rover.female_default.04-HV-b",
+            "rover_havoc_e3": "rover.female_default.04-HV-a-dark",
+            "rover_havoc_s": "rover.female_default.04-HV-b",
+            "rover_havoc_r": "rover.female_default.10-HV-dark",
+            "rover_havoc_e2a": "rover.female_default.04-HV-a-dark",
+            "rover_havoc_e2b": "rover.female_default.04-HV-b",
+            "rover_havoc_e1_state": "rover.female_default.04-HV-a-dark",
+            "havoc_basic": "rover.female_default.02-HV-dark",
+            "havoc_skill": "rover.female_default.04-HV-a-dark",
+            "havoc_enhanced": "rover.female_default.04-HV-b",
+            "havoc_liberation": "rover.female_default.10-HV-dark"
+          }
+        },
+        "elementActions": {
+          "aero": {
+            "basic": "rover.female_default.02-AE",
+            "aero_basic": "rover.female_default.02-AE",
+            "rover_aero_a": "rover.female_default.02-AE"
+          }
         }
       },
       "female_school": {
@@ -10292,7 +11831,7 @@
           "rover_havoc_e1": "rover.female_school.04-HV-a",
           "rover_havoc_e2": "rover.female_school.04-HV-b",
           "rover_havoc_e3": "rover.female_school.04-HV-a",
-          "rover_havoc_s": "rover.female_school.04-HV-b",
+          "rover_havoc_s": "rover.female_school.10-HV",
           "rover_havoc_r": "rover.female_school.10-HV",
           "rover_havoc_e2a": "rover.female_school.04-HV-a",
           "rover_havoc_e2b": "rover.female_school.04-HV-b",
@@ -10322,9 +11861,9 @@
             "rover.female_school.02-CM"
           ]
         },
-        "assetStatus": "complete_first_release_body_art_candidate",
-        "plannedUniquePoses": 16,
-        "readyUniquePoses": 16,
+        "assetStatus": "test6_art_candidate",
+        "plannedUniquePoses": 23,
+        "readyUniquePoses": 23,
         "aliasReasons": {
           "aero_enhanced": "Both selected as compatible wind healing-release static keypose; effect mechanics remain separate",
           "electro_enhanced": "Critical-state entry uses the common attack keypose plus independent state effects",
@@ -10335,7 +11874,53 @@
         },
         "mappingNotes": {
           "test4": "New skill keys explicitly reuse delivered action poses. A different skill key does not claim a newly drawn pose.",
-          "rover_electro_e1_state": "Four true attacks are engine events; visual keypose reuses existing conductive skill art."
+          "rover_electro_e1_state": "Four true attacks are engine events; visual keypose reuses existing conductive skill art.",
+          "test6_havoc_s": "Normal S reuses unwinged liberation casting pose; persistent dark-surge S uses the dedicated wing/scythe pose.",
+          "test6_hurt_reuse": "In dark surge, hit feedback retains the current action/state pose and uses flash/displacement. No new hurt drawing. Direct idle fallback remains winged."
+        },
+        "stateActions": {
+          "dark_surge": {
+            "idle": "rover.female_school.04-HV-b",
+            "basic": "rover.female_school.02-HV-dark",
+            "skill": "rover.female_school.04-HV-a-dark",
+            "enhanced": "rover.female_school.04-HV-b",
+            "liberation": "rover.female_school.10-HV-dark",
+            "critical": "rover.female_school.03-HV-dark",
+            "guard": "rover.female_school.06-HV-dark",
+            "hurt": "rover.female_school.04-HV-b",
+            "down": "rover.female_school.07-HV-dark",
+            "victory": "rover.female_school.04-HV-b",
+            "support": "rover.female_school.04-HV-b",
+            "wait": "rover.female_school.04-HV-b",
+            "escape": "rover.female_school.04-HV-b",
+            "retreat": "rover.female_school.04-HV-b",
+            "negotiate": "rover.female_school.04-HV-b",
+            "rover_havoc_a": "rover.female_school.02-HV-dark",
+            "rover_havoc_e1": "rover.female_school.04-HV-a-dark",
+            "rover_havoc_e2": "rover.female_school.04-HV-b",
+            "rover_havoc_e3": "rover.female_school.04-HV-a-dark",
+            "rover_havoc_s": "rover.female_school.04-HV-b",
+            "rover_havoc_r": "rover.female_school.10-HV-dark",
+            "rover_havoc_e2a": "rover.female_school.04-HV-a-dark",
+            "rover_havoc_e2b": "rover.female_school.04-HV-b",
+            "rover_havoc_e1_state": "rover.female_school.04-HV-a-dark",
+            "havoc_basic": "rover.female_school.02-HV-dark",
+            "havoc_skill": "rover.female_school.04-HV-a-dark",
+            "havoc_enhanced": "rover.female_school.04-HV-b",
+            "havoc_liberation": "rover.female_school.10-HV-dark"
+          }
+        },
+        "elementActions": {
+          "aero": {
+            "basic": "rover.female_school.02-AE",
+            "aero_basic": "rover.female_school.02-AE",
+            "rover_aero_a": "rover.female_school.02-AE"
+          }
+        },
+        "stateActionPolicies": {
+          "dark_surge": {
+            "hurt": "preserve_current_pose"
+          }
         }
       }
     }

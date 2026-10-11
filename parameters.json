@@ -1,8 +1,8 @@
 {
   "schema_version": "0.4.0-candidate",
-  "date": "2026-10-10",
-  "release_tag": "v3.0.0-test.4",
-  "status": "独立角色定位/SP-CD-BP测试候选；项目改编数值，非官方参数或最终平衡。",
+  "date": "2026-10-11",
+  "release_tag": "v3.0.0-test.7",
+  "status": "玩家创建与编队测试候选；保留既有角色数值，新增玩家模板为项目改编候选，非官方参数或最终平衡。",
   "reference_level": 20,
   "level_range": [
     1,
@@ -17,7 +17,7 @@
     "havoc": "湮灭"
   },
   "formula": {
-    "damage": "floor(stat * coefficient * (100+5*source_level)/(100+5*source_level+effective_DEF) * (1-effective_resistance) * applicable_multipliers)",
+    "damage": "floor(stat * coefficient * (100+5*source_level)/(100+5*source_level+effective_DEF) * resistanceMultiplier(r) * applicable_multipliers); r=clamp(effective_resistance,-0.5,0.9); resistanceMultiplier(r)=r<0 ? 1-r/2 : r<0.75 ? 1-r : 1/(1+4*r)",
     "k_base": 100,
     "k_per_level": 5,
     "resistance_format": "fraction_resisted",
@@ -4753,7 +4753,86 @@
             ]
           },
           "description": "全队恢复40＋35%防御力的生命，并落地。指定友方在莫宁下次行动前，下次受攻击减伤60%，上限为莫宁防御力的120%；成功格挡后反击110%防御力伤害，本技能冷却缩短1轮。每战首次施放本招或分布式阵列时，授予目标有界2轮。",
-          "slot": "E1"
+          "slot": "E1",
+          "test6_branches": {
+            "protect": {
+              "sp": 10,
+              "cd": 2,
+              "default": true
+            },
+            "intercept": {
+              "name": "迎击",
+              "sp": 16,
+              "cd": 3,
+              "target": "敌单体；格挡固定本人",
+              "numeric_audit": {
+                "role_class": "mixed",
+                "basis": "DEF",
+                "damage_atk_by_bp": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "damage_def_by_bp": [
+                  0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "q_by_bp": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "original_attacks_by_bp": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "sp": 16,
+                "cd": 3,
+                "base_energy": 20,
+                "energy_cost": 0,
+                "legal_by_bp": [
+                  true,
+                  true,
+                  true,
+                  true
+                ],
+                "secondary_damage_notes": "仅即时本体；附伤/协同/反击另列，不假装已计入。",
+                "healing": {
+                  "boost_channel": "healing",
+                  "flat_by_bp": [
+                    40,
+                    50.0,
+                    60.0,
+                    70.0
+                  ],
+                  "def_by_bp": [
+                    0.35,
+                    0.4375,
+                    0.5249999999999999,
+                    0.6124999999999999
+                  ],
+                  "target_count": "每名在场存活队友",
+                  "guard_fixed": "60%，总上限1.20DEF；反击固定1.10DEF不Boost"
+                }
+              },
+              "taunt": {
+                "duration_rounds": 2,
+                "eligible_roots": 1,
+                "bp_scaling": false,
+                "locked_targets": false,
+                "aoe": false,
+                "counters": false,
+                "mechanisms": false
+              },
+              "provenance": "用户确认的角色专属测试候选；非官方原作技能"
+            }
+          }
         },
         "E2": {
           "id": "E2",
@@ -16583,7 +16662,7 @@
       "attack_multiplier": 0.75,
       "shield_offset": 0,
       "allow_charge_control_once": true,
-      "targeting": "rotation"
+      "targeting": "lowest_fraction"
     },
     "standard": {
       "name": "标准",
@@ -16592,7 +16671,7 @@
       "attack_multiplier": 1,
       "shield_offset": 0,
       "allow_charge_control_once": false,
-      "targeting": "rotation"
+      "targeting": "lowest_fraction"
     },
     "challenge": {
       "name": "挑战",
