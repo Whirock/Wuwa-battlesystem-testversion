@@ -1,0 +1,171 @@
+{
+  "suite": "test8-independent-real-cloud-browser",
+  "at": "2026-10-11T11:12:16.401271+00:00",
+  "status": "passed within documented core scope",
+  "candidateOnly": true,
+  "publicationPerformed": false,
+  "browser": "dedicated cloud Chrome, DPR1; real desktop viewport plus measured same-origin CSS iframe viewports",
+  "cssViewports": [
+    [
+      1366,
+      768
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "deployment": {
+    "identity": "Private browser QA deployment details omitted from this public copy.",
+    "note": "Browser deployment has pre-amendment release-note wording and source documentation; source comparison confirmed tested implementation JS/CSS/pixels match final candidate. Local final aggregate includes amended release notes."
+  },
+  "checks": [
+    {
+      "id": "desktop-party-scale",
+      "status": "PASS",
+      "result": "1366x768 and 1920x1080 CSS iframe party views: Lynae no longer oversized, shared standing-body reference and foot line; complete authored silhouettes visible."
+    },
+    {
+      "id": "live-detail-preview",
+      "status": "PASS",
+      "result": "Real mouse switch Lynae default to peppermint; captured before and fully loaded after pixels. Returning preserves draft; skin is shown in party and picker."
+    },
+    {
+      "id": "picker-controls-order",
+      "status": "PASS",
+      "result": "1920x1080 actual geometry confirms Amy/Denia mode and all four Rover gender control top edges equal role-detail bottom edges, below role detail."
+    },
+    {
+      "id": "picker-cancel-and-repeated-gender",
+      "status": "PASS",
+      "result": "Female button pressed repeatedly, all four element cards synchronized and selection count stayed unchanged; Cancel then reopen restored male."
+    },
+    {
+      "id": "rover-identity-outfit",
+      "status": "PASS",
+      "result": "Male default -> female school via detail, Escape returns focus to originating detail button; changing gender in picker preserves school; Spectro -> Electro replaces the one Rover slot."
+    },
+    {
+      "id": "keyboard-navigation",
+      "status": "PASS",
+      "result": "ArrowRight moved focus from Amy to Lynae; F2 opened role detail; Enter and Escape exercised detail, selection, completion, and save paths."
+    },
+    {
+      "id": "party-discard",
+      "status": "PASS",
+      "result": "Rejecting native discard confirmation kept the draft; accepting discard and reopening restored persisted peppermint rather than unsaved default."
+    },
+    {
+      "id": "narrow-layout",
+      "status": "PASS",
+      "result": "390x844 CSS iframe: role dialog width374 at left8; content clientWidth=scrollWidth=357. Picker width374 at left8, clientWidth=scrollWidth=372. Vertical scrolling and visible gender/Done controls remain usable. Physical mobile device not tested."
+    },
+    {
+      "id": "save-reload",
+      "status": "PASS",
+      "result": "Saved QA preset with Lynae peppermint and female-school Electro Rover; applied party, reloaded real browser, reopened party and confirmed preset label, roster and female-school selection. Five independent slots are additionally covered by the fake-IDB suite; real-browser test used one slot."
+    },
+    {
+      "id": "workbench-preset-boundary",
+      "status": "PASS",
+      "result": "Set Lynae normal in workbench -> opened party detail shows default. Explicit load of saved preset -> detail shows peppermint; saved preset snapshot was not rewritten by workbench."
+    },
+    {
+      "id": "next-encounter",
+      "status": "PASS",
+      "result": "Before launch, active battle still contained Denia. After applying and starting next encounter, visible HUD showed Electro Rover and female-school appearance, replacing Denia."
+    },
+    {
+      "id": "native-and-custom-pixels",
+      "status": "PASS",
+      "result": "ART SCALE DONE visible report ok=true. All26 rendered samples visually inspected: 12 authored standing appearances +2 custom bodies x7 hairstyles. Shared bodyHeight240.8 and groundY342 on280x380 canvases; nonempty pixels and no clipping. Does not certify all created colors/poses."
+    },
+    {
+      "id": "original-icon-visible",
+      "status": "PASS",
+      "result": "Real party/picker screenshots visibly render mapped attribute icons and healing icon; other roles retain project vectors.14 exact local images separately decoded and source/semantic/load-error paths tested by independent Node suites."
+    },
+    {
+      "id": "extra-hud-inspection",
+      "status": "NOT RUN",
+      "result": "Supplemental visual inspection of the Lynae attribute panel, image-loading DOM, HUD screenshot and console logs was not executed. HUD mapping, shield-vs-guard and XSS passed automated actual-app DOM tests."
+    },
+    {
+      "id": "physical-double-click-done",
+      "status": "NOT CERTIFIED",
+      "result": "Stale repeated handler is independently tested and repaired. A browser double-click attempt targeted an obscured/offscreen control while detail was still open; it is not counted as passed physical double-click evidence."
+    }
+  ],
+  "runtimeHashes": {
+    "app.js": "f0af934e19fafac215d17fc5ed13215844a91a237c788204c7950155f31154d8",
+    "assets.js": "7650ec216f0cdd26ec9e9951622897d80b8484c012338f7d8bd608a40688b846",
+    "creation-art-data.js": "e6ee84c5fdbb88c0fcc0be14449632f3b1e7cc7a832fdec98785adce4d345d27",
+    "creation-art.js": "f1f528ef5718daacd9098775229f2d2cbebbceafcef17065fc50053cbc7a209e",
+    "creation-core.js": "3dbf2c9ed8ba76f1dbef0c1508408d662f973e64ce9b8c49fc13f58c63033eac",
+    "creation-data.js": "0d0a46bcb92f6c68c464e83249f9f85bf8c644208acfd31696d4a2ff8131b760",
+    "creation-effects.js": "f9ac5a69c949242f88bbc620f2d3b340667ea447d2476d055696feed8c338299",
+    "creation-ui.js": "de1fb36474fe5e9130c462cc650b0ec8579104765498a1da5fcedb7a3de84381",
+    "creation.css": "8b68c33e0ec3764f84fe66ce85522d837fe773ea612ab9c42a9c7e11b7e4e199",
+    "engine.js": "e639fd2f1363a56368623e2128035dc3010b67cefa7a7b800a74dcc0bcbcb6c7",
+    "parameters.js": "564a7f4252a0350286affbf1f5b9fb2c514fa040028c787f000c6363f0611895",
+    "party-stage.css": "d2fea21eb7168502ff2f9fbc8e9166ebf5bbe77da883884a3da03d877f13e84d",
+    "party-stage.js": "8a5bd38118592e1cddc1507aecc6eb798f3eacc3e1a0e4efda92408a997e2fa3",
+    "skill-effects.js": "725003bc2638f7e094a8908fb61d3e846a593c736f810dc43631805edf83ed52",
+    "storage.js": "15b8f514989210e75e0ec53e081fa1e7ca8fabd9021e6dfd3c8ea7b15c3ca91b",
+    "style.css": "aeab606b1bb923a0099338c475ce6b74e5f39c9ee9403622ef250441bd3623e5",
+    "ui-icons.css": "6ade287103687ecfa0eee33bd5136c01ee0a3105e8a281b1d08ac3a7b3608719",
+    "ui-icons.js": "455218f43b3cb004953d966d1ffdfd70433480d338b0a155db71ee2f653e11fa"
+  },
+  "privateEvidence": [
+    {
+      "filename": "party-1366.png",
+      "sha256": "17612c82ff2a2c68b7278e522db1895b199ff5817d49f9380e5838a28d301527"
+    },
+    {
+      "filename": "detail-lynae-default-1366.png",
+      "sha256": "e27433cb0d650024f8cc31e926ced800ae65d834ee213911ae8ee345ff3c66e7"
+    },
+    {
+      "filename": "detail-lynae-peppermint-ready-1366.png",
+      "sha256": "4641913bbcb02bdd1ead243379208099620b664a6d3a8c35feedfb639e16c71f"
+    },
+    {
+      "filename": "picker-1920.png",
+      "sha256": "bf18362abbcbcbe3cc5f3d526c1970af5137a2d1284df0104e3b8dbf269f49c3"
+    },
+    {
+      "filename": "detail-rover-female-school-390.png",
+      "sha256": "023b024b20de69167e8a17a03cc2fcebe868696bcd9378e41d48966d481eee4b"
+    },
+    {
+      "filename": "picker-390-ready.png",
+      "sha256": "d5ae31b310ea7d883ac82c99e170b4c105a3edaad634447ba9bca515c4c4e9cd"
+    },
+    {
+      "filename": "party-updated-1920.png",
+      "sha256": "9c25963b568040220a82278cbd66d52c9ae6a16f764ed1ee7a72c37a6d2d48dd"
+    },
+    {
+      "filename": "art-native-12.png",
+      "sha256": "dd1264a919cf31232eccc5a6657cf645be80269a0a2c6e7a4ea5914a11fab930"
+    },
+    {
+      "filename": "art-custom-14.png",
+      "sha256": "311ccf19eeaa15096dea62f37ce19987f6e8838f3afe76a0a336290979a4fb28"
+    },
+    {
+      "filename": "art-visible-results.json",
+      "sha256": "d2284625d5279ec6b9feda0a03d57c7165cd4fba76302f76be0e8ebe2820f313"
+    }
+  ],
+  "limitations": [
+    "No public release or deployment certification.",
+    "No physical mobile hardware, native Windows launch, actual audio, exhaustive accessibility, final user artwork approval or balance certification.",
+    "Screenshots are private local QA evidence, not included as public attachments.",
+    "Offscreen iframe pointer attempts that did not visibly change state were not counted; usable keyboard paths and measured layout were verified."
+  ]
+}

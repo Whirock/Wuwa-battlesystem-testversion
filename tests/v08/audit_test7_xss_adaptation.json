@@ -1,0 +1,7 @@
+{
+  "reason": "New static verified icon <img> elements are intentionally rendered. Original XSS tests must reject all non-icon images and all inline events, rather than reject legitimate static images. tests/v08/audit_icon_contracts.cjs additionally verifies exact local registry allowlist and hostile forged-class strings. No test removed.",
+  "originalSha256": "7722f3477e2b20546d0a11236abaa7285361a8cb220347dbb2584a29f23589aa",
+  "updatedSha256": "fa639f85e2370d1c219f55983bfe3aa8078bba43dd606258a45dd31026482e42",
+  "file": "tests/v07/app_integration_contracts.cjs",
+  "changes": "Three container image selectors exclude only img.ui-icon__image[data-ui-original=true]; original event, script, literal-text and pwned checks retained."
+}

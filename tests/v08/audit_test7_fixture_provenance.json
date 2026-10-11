@@ -1,0 +1,12 @@
+{
+  "source": "Verified test.7 release; synthetic fresh application export, no user data",
+  "schema": "resonant-project-test7",
+  "version": 7,
+  "projectSha256": "1300e3aade79ac250643b4a7e3405e3ad975e20366422fc96f39e107149ae40e",
+  "baselineSources": {
+    "app.js": "139e2b09c7fe85cd5ad03333322c235c8d72b7e09b200e2d0ae9acafcbc206ae",
+    "party-stage.js": "99ab3313df2024a8adafde77dc326d7ccf48e8fb7265b21376a1b4357adfdbee",
+    "engine.js": "e639fd2f1363a56368623e2128035dc3010b67cefa7a7b800a74dcc0bcbcb6c7",
+    "storage.js": "15b8f514989210e75e0ec53e081fa1e7ca8fabd9021e6dfd3c8ea7b15c3ca91b"
+  }
+}

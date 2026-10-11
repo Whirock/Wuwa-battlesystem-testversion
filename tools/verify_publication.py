@@ -118,7 +118,7 @@ def verify(root, repository=False):
             'checked_files': checked, 'runtime_pngs': len(pngs),
             'retained_unverified_extra_count': len(retained_unverified),
             'retained_unverified_extra_files': retained_unverified,
-            'scope': ('Listed test.7 files, exact active assets tree and build manifest; retained extra files are not verified.'
+            'scope': ('Listed test.8 files, exact active assets tree and build manifest; retained extra files are not verified.'
                       if repository else 'Exact package file tree, listed hashes, active assets and optional build manifest.'),
             'build_manifest_present': manifest_path.is_file(), 'errors': errors}
 

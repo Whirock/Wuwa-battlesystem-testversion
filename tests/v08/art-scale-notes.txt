@@ -1,0 +1,59 @@
+Party standing-art scale correction · test.8 candidate
+
+Changed production scope
+  app.js: new pure setupArtLayout helper and drawSetupArt only.
+  Original artwork, battle rendering, combat data and CSS are unchanged by this change.
+
+Diagnosis and measurement
+  Old drawSetupArt used min(canvasWidth / PNG width, canvasHeight / PNG height).
+  On a 280 × 380 party canvas, the same rule produced these standing-reference heights:
+    Amy human       359 × (280 / 418)       = 240.478 px
+    Lynae normal    350 × (280 / 299)       = 327.759 px
+    Mornye normal   358 × (280 / 427)       = 234.754 px
+    Rover female    349.977 × (280 / 448)   = 218.736 px
+  Lynae was therefore 1.498 times the female Rover's reference-body height.
+  These are manifest-based body measurements, not guessed visible-silhouette heights.
+
+New layout rule
+  The common standing-reference target is min(canvasHeight × .70, canvasWidth × .86).
+  At the authored 280 × 380 size, every existing idle form has 240.8 px reference body height.
+  Ground anchors land at canvasHeight × .90, or y = 342 px at that size.
+  Body metadata precedence: referenceBodyHeight, standingBodyHeight, bodyHeight,
+  body_reference_height, then a defensive head-to-ground fallback only for missing metadata.
+  Pixel and normalized anchors are both supported. Source-dimension changes rescale metadata.
+  alphaBBox is used solely for a 4% safe margin and horizontal containment; equipment,
+  long hair and transparent padding do not define the body-height ruler. Unusually large
+  future/imported silhouettes can uniformly shrink as a last safety constraint.
+  Authored feet/ground are respected. Pixels below them, such as Chisa's scissors, remain
+  visible; a weapon tip is not mistaken for a foot or forced onto the floor.
+  CreationArt.render().meta is retained, including the custom standing height and ground.
+  Portraits keep their existing independent crop and manual portrait calibration.
+  Canvas imageSmoothingEnabled remains false; stale load/error/custom promises and detached
+  canvases cannot repaint after a newer request.
+
+Executed evidence
+  node --check app.js
+  node tests/v08/art-scale-contracts.cjs
+  Result: eight contract groups passed. Detailed output: art-scale-contracts-results.json.
+  Coverage: all 14 authored standing forms at 3 canvas sizes; 24 actual selectable
+  key/appearance routes; portraits; native/normalized anchors; source resizes; transparent
+  padding; extreme silhouettes; custom metadata; stale/detached async success/error handling.
+  These tests record actual drawSetupArt arguments; they are not real pixel/browser proof.
+
+Real pixel fixture
+  tests/v08/art-scale-fixture.html contains the actual extracted helper/renderer and loads
+  this candidate's real PNGs and CreationArt components. Serve the candidate root and open it.
+  The page automatically renders 12 authored visual appearances and 2 custom body sets × 7
+  hairstyles. It records real canvas pixel bounds, reference body height and floor in
+  window.ART_SCALE_RESULTS and a visible JSON block. Title becomes ART SCALE DONE on finish.
+  Screenshot the existing and custom grids for visual review. No source artwork is changed.
+  Regenerate after any production renderer edit:
+    WRITE_ART_SCALE_FIXTURE=1 node tests/v08/art-scale-browser.cjs
+  Optional headless runner (requires Playwright and Chromium):
+    PLAYWRIGHT_MODULE=/path/to/playwright CHROMIUM_PATH=/path/to/chromium node tests/v08/art-scale-browser.cjs
+
+Verification boundary
+  Local Chromium launch was attempted and blocked by the environment's socket restriction,
+  including an approved escalation retry. No local Chromium pixel results are claimed.
+  The parent is performing real visual verification in the supported cloud browser against
+  the private candidate Site. Use that separate result as the browser evidence.

@@ -1,0 +1,525 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "key": "amy",
+      "form": "human",
+      "bodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "pixelBBox": [
+        11,
+        78,
+        247,
+        343
+      ],
+      "projectedAlphaBBox": [
+        11.200000000000001,
+        78.39442896935935,
+        246.63398328690806,
+        343.341504178273
+      ],
+      "opaque": 22745,
+      "smoothing": false
+    },
+    {
+      "key": "lynae",
+      "form": "normal",
+      "bodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "pixelBBox": [
+        70,
+        98,
+        241,
+        343
+      ],
+      "projectedAlphaBBox": [
+        69.82400000000001,
+        97.75999999999999,
+        241.13599999999997,
+        343.376
+      ],
+      "opaque": 24934,
+      "smoothing": false
+    },
+    {
+      "key": "lynae",
+      "form": "peppermint",
+      "bodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "pixelBBox": [
+        70,
+        95,
+        245,
+        343
+      ],
+      "projectedAlphaBBox": [
+        69.824,
+        95.00800000000004,
+        244.57599999999996,
+        342.68800000000005
+      ],
+      "opaque": 23702,
+      "smoothing": false
+    },
+    {
+      "key": "mornye",
+      "form": "normal",
+      "bodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "pixelBBox": [
+        75,
+        71,
+        234,
+        343
+      ],
+      "projectedAlphaBBox": [
+        75.42793296089387,
+        70.93184357541901,
+        234.16759776536313,
+        343.34525139664805
+      ],
+      "opaque": 21439,
+      "smoothing": false
+    },
+    {
+      "key": "mornye",
+      "form": "winter",
+      "bodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "pixelBBox": [
+        66,
+        72,
+        225,
+        343
+      ],
+      "projectedAlphaBBox": [
+        66.01117318435755,
+        72.27709497206706,
+        224.75083798882682,
+        343.34525139664805
+      ],
+      "opaque": 21265,
+      "smoothing": false
+    },
+    {
+      "key": "denia",
+      "form": "red",
+      "bodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "pixelBBox": [
+        11,
+        62,
+        254,
+        344
+      ],
+      "projectedAlphaBBox": [
+        11.200000000000001,
+        61.90277777777782,
+        253.67222222222222,
+        343.6722222222222
+      ],
+      "opaque": 41171,
+      "smoothing": false
+    },
+    {
+      "key": "chisa",
+      "form": "normal",
+      "bodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "pixelBBox": [
+        11,
+        62,
+        235,
+        348
+      ],
+      "projectedAlphaBBox": [
+        11.200000000000003,
+        61.507692307692295,
+        234.8,
+        347.95384615384614
+      ],
+      "opaque": 31931,
+      "smoothing": false
+    },
+    {
+      "key": "chisa",
+      "form": "peach",
+      "bodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "pixelBBox": [
+        11,
+        55,
+        234,
+        354
+      ],
+      "projectedAlphaBBox": [
+        11.200000000000003,
+        55.48663101604282,
+        233.97219251336895,
+        354.2331550802139
+      ],
+      "opaque": 34183,
+      "smoothing": false
+    },
+    {
+      "key": "rover_electro",
+      "form": "male_default",
+      "bodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "pixelBBox": [
+        90,
+        95,
+        229,
+        343
+      ],
+      "projectedAlphaBBox": [
+        89.59136621451508,
+        94.72521534958062,
+        228.55570800152762,
+        343.3623955077158
+      ],
+      "opaque": 14863,
+      "smoothing": false
+    },
+    {
+      "key": "rover_electro",
+      "form": "male_school",
+      "bodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "pixelBBox": [
+        90,
+        95,
+        229,
+        343
+      ],
+      "projectedAlphaBBox": [
+        89.59136621451508,
+        94.72521534958062,
+        228.55570800152762,
+        343.3623955077158
+      ],
+      "opaque": 14696,
+      "smoothing": false
+    },
+    {
+      "key": "rover_electro",
+      "form": "female_default",
+      "bodyHeight": 240.79999999999995,
+      "groundY": 342,
+      "pixelBBox": [
+        86,
+        89,
+        199,
+        343
+      ],
+      "projectedAlphaBBox": [
+        85.64442806241554,
+        89.48740631527217,
+        199.1718884383831,
+        343.3760904287996
+      ],
+      "opaque": 15843,
+      "smoothing": false
+    },
+    {
+      "key": "rover_electro",
+      "form": "female_school",
+      "bodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "pixelBBox": [
+        87,
+        90,
+        194,
+        343
+      ],
+      "projectedAlphaBBox": [
+        86.67423769235138,
+        90.41178808699115,
+        194.00942592697746,
+        343.3673272386577
+      ],
+      "opaque": 15473,
+      "smoothing": false
+    },
+    {
+      "key": "custom_male_basic_short",
+      "form": "short",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        89,
+        91,
+        192,
+        343
+      ],
+      "projectedAlphaBBox": [
+        88.69318181818181,
+        90.93863636363635,
+        191.9909090909091,
+        342.6840909090909
+      ],
+      "opaque": 15714,
+      "smoothing": false
+    },
+    {
+      "key": "custom_male_basic_ear_length",
+      "form": "ear_length",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        89,
+        96,
+        192,
+        343
+      ],
+      "projectedAlphaBBox": [
+        88.69318181818181,
+        95.72727272727272,
+        191.9909090909091,
+        342.6840909090909
+      ],
+      "opaque": 15798,
+      "smoothing": false
+    },
+    {
+      "key": "custom_male_basic_shoulder_length",
+      "form": "shoulder_length",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        89,
+        98,
+        192,
+        343
+      ],
+      "projectedAlphaBBox": [
+        88.69318181818181,
+        97.77954545454544,
+        191.9909090909091,
+        342.6840909090909
+      ],
+      "opaque": 15869,
+      "smoothing": false
+    },
+    {
+      "key": "custom_male_basic_waist_length",
+      "form": "waist_length",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        89,
+        92,
+        209,
+        343
+      ],
+      "projectedAlphaBBox": [
+        88.69318181818181,
+        92.30681818181816,
+        209.09318181818182,
+        342.6840909090909
+      ],
+      "opaque": 18053,
+      "smoothing": false
+    },
+    {
+      "key": "custom_male_basic_high_ponytail",
+      "form": "high_ponytail",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        89,
+        87,
+        206,
+        343
+      ],
+      "projectedAlphaBBox": [
+        88.69318181818181,
+        86.83409090909089,
+        205.67272727272726,
+        342.6840909090909
+      ],
+      "opaque": 17897,
+      "smoothing": false
+    },
+    {
+      "key": "custom_male_basic_low_ponytail",
+      "form": "low_ponytail",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        89,
+        97,
+        195,
+        343
+      ],
+      "projectedAlphaBBox": [
+        88.69318181818181,
+        97.09545454545453,
+        195.41136363636363,
+        342.6840909090909
+      ],
+      "opaque": 16136,
+      "smoothing": false
+    },
+    {
+      "key": "custom_male_basic_twin_tails",
+      "form": "twin_tails",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        89,
+        98,
+        202,
+        343
+      ],
+      "projectedAlphaBBox": [
+        88.69318181818181,
+        98.46363636363634,
+        201.5681818181818,
+        342.6840909090909
+      ],
+      "opaque": 17475,
+      "smoothing": false
+    },
+    {
+      "key": "custom_female_basic_short",
+      "form": "short",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        92,
+        91,
+        189,
+        343
+      ],
+      "projectedAlphaBBox": [
+        92.11363636363636,
+        90.93863636363635,
+        188.57045454545454,
+        342.6840909090909
+      ],
+      "opaque": 14141,
+      "smoothing": false
+    },
+    {
+      "key": "custom_female_basic_ear_length",
+      "form": "ear_length",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        92,
+        96,
+        189,
+        343
+      ],
+      "projectedAlphaBBox": [
+        92.11363636363636,
+        95.72727272727272,
+        188.57045454545454,
+        342.6840909090909
+      ],
+      "opaque": 14212,
+      "smoothing": false
+    },
+    {
+      "key": "custom_female_basic_shoulder_length",
+      "form": "shoulder_length",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        92,
+        98,
+        189,
+        343
+      ],
+      "projectedAlphaBBox": [
+        92.11363636363636,
+        97.77954545454544,
+        188.57045454545454,
+        342.6840909090909
+      ],
+      "opaque": 14360,
+      "smoothing": false
+    },
+    {
+      "key": "custom_female_basic_waist_length",
+      "form": "waist_length",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        92,
+        92,
+        209,
+        343
+      ],
+      "projectedAlphaBBox": [
+        92.11363636363636,
+        92.30681818181816,
+        209.09318181818182,
+        342.6840909090909
+      ],
+      "opaque": 16871,
+      "smoothing": false
+    },
+    {
+      "key": "custom_female_basic_high_ponytail",
+      "form": "high_ponytail",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        92,
+        87,
+        206,
+        343
+      ],
+      "projectedAlphaBBox": [
+        92.11363636363636,
+        86.83409090909089,
+        205.67272727272726,
+        342.6840909090909
+      ],
+      "opaque": 16391,
+      "smoothing": false
+    },
+    {
+      "key": "custom_female_basic_low_ponytail",
+      "form": "low_ponytail",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        92,
+        97,
+        195,
+        343
+      ],
+      "projectedAlphaBBox": [
+        92.11363636363636,
+        97.09545454545453,
+        195.41136363636363,
+        342.6840909090909
+      ],
+      "opaque": 14870,
+      "smoothing": false
+    },
+    {
+      "key": "custom_female_basic_twin_tails",
+      "form": "twin_tails",
+      "bodyHeight": 240.8,
+      "groundY": 342,
+      "pixelBBox": [
+        92,
+        98,
+        202,
+        343
+      ],
+      "projectedAlphaBBox": [
+        92.11363636363636,
+        98.46363636363634,
+        201.5681818181818,
+        342.6840909090909
+      ],
+      "opaque": 16087,
+      "smoothing": false
+    }
+  ]
+}

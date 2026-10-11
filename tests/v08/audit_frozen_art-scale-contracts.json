@@ -1,0 +1,214 @@
+{
+  "suite": "test8-setup-art-scale",
+  "scope": "Actual helper and drawSetupArt with draw-call recording; not a pixel or full UI certificate.",
+  "passed": [
+    "all 14 authored standing forms use one body ruler and floor at three canvas sizes",
+    "actual setup draw supports authored dual skins and all four Rover elements × four appearances",
+    "portrait crop stays independent of full-body scale and honors portrait calibration",
+    "stale native load/error, missing replacement and disconnected canvas never paint",
+    "native pixels and normalized anchors yield identical geometry, including resized source images",
+    "transparent padding does not change body scale or ground registration",
+    "extreme silhouette is contained uniformly without using weapon length as body height",
+    "custom rendering retains body/ground metadata, independent portrait and stale promise/error protection"
+  ],
+  "measurements": [
+    {
+      "entity": "amy",
+      "form": "human",
+      "bodyReference": 359,
+      "oldBodyHeight": 240.47846889952154,
+      "newBodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        11.200000000000001,
+        78.39442896935935,
+        246.63398328690806,
+        343.341504178273
+      ]
+    },
+    {
+      "entity": "amy",
+      "form": "mecha",
+      "bodyReference": 414,
+      "oldBodyHeight": 248.75536480686696,
+      "newBodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        38.21256038647342,
+        50.5971014492754,
+        265.05314009661834,
+        337.3468599033817
+      ]
+    },
+    {
+      "entity": "lynae",
+      "form": "normal",
+      "bodyReference": 350,
+      "oldBodyHeight": 327.75919732441474,
+      "newBodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        69.82400000000001,
+        97.75999999999999,
+        241.13599999999997,
+        343.376
+      ]
+    },
+    {
+      "entity": "lynae",
+      "form": "peppermint",
+      "bodyReference": 350,
+      "oldBodyHeight": 329.96632996632997,
+      "newBodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        69.824,
+        95.00800000000004,
+        244.57599999999996,
+        342.68800000000005
+      ]
+    },
+    {
+      "entity": "mornye",
+      "form": "normal",
+      "bodyReference": 358,
+      "oldBodyHeight": 234.75409836065572,
+      "newBodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        75.42793296089387,
+        70.93184357541901,
+        234.16759776536313,
+        343.34525139664805
+      ]
+    },
+    {
+      "entity": "mornye",
+      "form": "winter",
+      "bodyReference": 358,
+      "oldBodyHeight": 234.2056074766355,
+      "newBodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        66.01117318435755,
+        72.27709497206706,
+        224.75083798882682,
+        343.34525139664805
+      ]
+    },
+    {
+      "entity": "denia",
+      "form": "red",
+      "bodyReference": 288,
+      "oldBodyHeight": 248.12307692307695,
+      "newBodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        11.200000000000001,
+        61.90277777777782,
+        253.67222222222222,
+        343.6722222222222
+      ]
+    },
+    {
+      "entity": "denia",
+      "form": "blue",
+      "bodyReference": 278,
+      "oldBodyHeight": 243.25,
+      "newBodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        11.200000000000001,
+        87.34100719424463,
+        266.72517985611506,
+        343.7323741007194
+      ]
+    },
+    {
+      "entity": "chisa",
+      "form": "normal",
+      "bodyReference": 364,
+      "oldBodyHeight": 147.07070707070707,
+      "newBodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        11.200000000000003,
+        61.507692307692295,
+        234.8,
+        347.95384615384614
+      ]
+    },
+    {
+      "entity": "chisa",
+      "form": "peach",
+      "bodyReference": 374,
+      "oldBodyHeight": 142.2826086956522,
+      "newBodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        11.200000000000003,
+        55.48663101604282,
+        233.97219251336895,
+        354.2331550802139
+      ]
+    },
+    {
+      "entity": "rover",
+      "form": "male_default",
+      "bodyReference": 353.495,
+      "oldBodyHeight": 220.934375,
+      "newBodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        89.59136621451508,
+        94.72521534958062,
+        228.55570800152762,
+        343.3623955077158
+      ]
+    },
+    {
+      "entity": "rover",
+      "form": "male_school",
+      "bodyReference": 353.495,
+      "oldBodyHeight": 220.934375,
+      "newBodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        89.59136621451508,
+        94.72521534958062,
+        228.55570800152762,
+        343.3623955077158
+      ]
+    },
+    {
+      "entity": "rover",
+      "form": "female_default",
+      "bodyReference": 349.977,
+      "oldBodyHeight": 218.73562499999997,
+      "newBodyHeight": 240.79999999999995,
+      "groundY": 342,
+      "alphaBBox": [
+        85.64442806241554,
+        89.48740631527217,
+        199.1718884383831,
+        343.3760904287996
+      ]
+    },
+    {
+      "entity": "rover",
+      "form": "female_school",
+      "bodyReference": 352.22,
+      "oldBodyHeight": 220.13750000000002,
+      "newBodyHeight": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        86.67423769235138,
+        90.41178808699115,
+        194.00942592697746,
+        343.3673272386577
+      ]
+    }
+  ],
+  "ok": true,
+  "total": 8
+}

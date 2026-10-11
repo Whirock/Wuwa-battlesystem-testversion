@@ -1,0 +1,46 @@
+{
+  "suite": "test8-independent-party-controls",
+  "at": "2026-10-11T10:55:07.784Z",
+  "scope": "Real party-stage module under jsdom with callback records. No pixels, real browser layout, or application storage certification.",
+  "passed": [
+    "detail preview immediately redraws chosen legal skin and updates pressed state",
+    "all authored cosmetic controls are exact and battle forms are not skins",
+    "mode and Rover gender buttons follow role detail in DOM order",
+    "repeated gender buttons preserve clothing and selected identity/order",
+    "picker footer Cancel rolls back appearance, mode and team together",
+    "picker close button and Escape roll back draft appearance",
+    "detail Escape keeps picker draft until picker cancellation",
+    "finish merges appearance for an unselected character; apply persists all keys",
+    "party cancellation asks once, can reject, and discards after approval",
+    "repeated Apply while persistence pending saves only once",
+    "all five presets retain independent appearance snapshots after party cancellation",
+    "Rover element changes replace one identity and keep one appearance",
+    "targeted replacement refuses duplicate Rover in another slot",
+    "detail gender and outfit compose the exact four Rover skins",
+    "workbench sync updates baseline and open picker without dirty prompt or preset rewrite",
+    "display strings remain literal in expanded detail appearance section"
+  ],
+  "failed": [
+    {
+      "name": "repeated Done on original button does not erase newly accepted appearance",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'female_school'\n",
+      "stack": [
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:",
+        "+ actual - expected",
+        "",
+        "+ undefined",
+        "- 'female_school'"
+      ]
+    }
+  ],
+  "summary": {
+    "passed": 16,
+    "failed": 1
+  },
+  "ok": false,
+  "sourceHashes": {
+    "party-stage.js": "ed5dc8d9aaa86d24f50abd4e104a3627ca7d07686d635f22203829eb2383437e",
+    "party-stage.css": "d2fea21eb7168502ff2f9fbc8e9166ebf5bbe77da883884a3da03d877f13e84d",
+    "assets.js": "7650ec216f0cdd26ec9e9951622897d80b8484c012338f7d8bd608a40688b846"
+  }
+}

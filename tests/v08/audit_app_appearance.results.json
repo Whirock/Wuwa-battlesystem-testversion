@@ -1,0 +1,30 @@
+{
+  "suite": "test8-independent-app-appearance",
+  "at": "2026-10-11T10:57:12.724Z",
+  "scope": "Real app/party/engine and fake IndexedDB. Synthetic hash-verified test.7 export. Canvas/media/clock doubles; not real pixels or browser persistence.",
+  "passed": [
+    "published test.7 synthetic project imports without losing battle or schema",
+    "app detail Apply persists next-party skin without mutating current battle or current skin",
+    "next encounter consumes applied skin while retaining chosen gameplay forms",
+    "workbench skin change synchronizes applied party and leaves saved presets unchanged",
+    "workbench Rover choice and explicit preset restore each keep exact snapshot semantics",
+    "old empty appearance preset explicitly restores defaults after workbench choice",
+    "five preset appearance snapshots survive IndexedDB reload and exact restore",
+    "workbench choice while party and picker open survives their cancellation",
+    "invalid skin in imported current, party or preset data rejects atomically",
+    "pre-test7 migration retains supported skins and reinitializes old battle",
+    "failed appearance persistence remains exportable with truthful receipt"
+  ],
+  "failed": [],
+  "summary": {
+    "passed": 11,
+    "failed": 0
+  },
+  "ok": true,
+  "sourceHashes": {
+    "app.js": "9780971489c871b2f20018acf80bd264801ad98f5fc9dd28cb286039ed707561",
+    "party-stage.js": "8a5bd38118592e1cddc1507aecc6eb798f3eacc3e1a0e4efda92408a997e2fa3",
+    "storage.js": "15b8f514989210e75e0ec53e081fa1e7ca8fabd9021e6dfd3c8ea7b15c3ca91b",
+    "engine.js": "e639fd2f1363a56368623e2128035dc3010b67cefa7a7b800a74dcc0bcbcb6c7"
+  }
+}

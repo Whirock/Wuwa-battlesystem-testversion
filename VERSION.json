@@ -1,9 +1,9 @@
 {
-  "version": "0.5.0-creation-candidate",
-  "release_tag": "v3.0.0-test.7",
-  "display_version": "3.0 · 玩家创建与编队测试",
+  "version": "0.5.1-appearance-candidate",
+  "release_tag": "v3.0.0-test.8",
+  "display_version": "3.0 · 编队外观修订预发布",
   "date": "2026-10-11",
-  "status": "verified_test_candidate_prepared_for_prerelease",
+  "status": "github_prerelease_requested_pending_remote_receipt",
   "runtime_profiles": 9,
   "active_authored_cards": 61,
   "growth_levels": 90,
@@ -19,17 +19,28 @@
     "note": "120 includes masks and clips, not independent action count."
   },
   "verification": {
-    "status": "runtime_and_browser_passed",
-    "automation": "20/20 final commands passed with unchanged source hashes; see tests/v07/results-final.json",
-    "real_browser": "Current cloud Chrome real input and rendered checks passed; see tests/v07/browser/coverage.json",
+    "automation": "28/28 effective commands passed; 81.586 seconds; 234 runtime/asset file hashes unchanged; tests/v08/audit_results.json in the complete package",
+    "real_browser": "Core requested flows passed in cloud Chrome; 3 CSS viewports and 26 rendered samples inspected. Exact scope and not-run items in tests/v08/audit_browser_results.json",
+    "optional_hud_browser_check": "not run; DOM/source/image checks passed",
     "windows_double_click": "not tested",
     "audible_playback": "not tested",
-    "balance": "candidate; not certified balanced",
-    "user_art_approval": "pending"
+    "balance": "not certified balanced",
+    "user_art_approval": "pending",
+    "publication_freeze": "Final frozen aggregate passed after publication-status and source-documentation updates. The original QA receipt and the redacted public-copy receipt are recorded separately in PUBLICATION_CHECKS.json."
   },
   "publication_scope": "Runtime, required implementation data, public player documentation and reproducible verification only. Full private framework, source references and art production guidance excluded.",
-  "compatibility": "Separate test7 storage; old projects migrate compatible media/settings and restart combat. Same-version snapshots retain their validated creation roster.",
+  "compatibility": "UI and appearance revision only. Keep resonant-project-test7 / version 7 and resonant-encounter-lab-test7 storage (IndexedDB version 1). Automated compatibility and all five independent preset snapshots passed; real browser save/reload covered one preset slot and current party.",
   "active_cards": 61,
-  "release_url": "https://github.com/Whirock/Wuwa-battlesystem-testversion/releases/tag/v3.0.0-test.7",
-  "publication_record": "This ZIP is frozen before external publication; the actual GitHub Release and its asset hashes are authoritative."
+  "release_url": null,
+  "publication_record": "User requested GitHub prerelease v3.0.0-test.8 on 2026-10-11. Publication completion, commit, tag and attachments require a verified remote receipt; this metadata is not a receipt.",
+  "inventory_status": "Runtime inventory retains 9 authored profiles, 61 active cards, 191 existing PNGs and 120 embedded creation components; test.8 adds 14 local WebP UI icons. Final package inventories and hashes are verified separately.",
+  "previous_release_url": "https://github.com/Whirock/Wuwa-battlesystem-testversion/releases/tag/v3.0.0-test.7",
+  "ui_icon_webp_count": 14,
+  "publication_request": {
+    "requested": true,
+    "date": "2026-10-11",
+    "repository": "Whirock/Wuwa-battlesystem-testversion",
+    "prerelease": true,
+    "rights_note": "User publication instruction does not grant copyright or confirm third-party redistribution permission."
+  }
 }

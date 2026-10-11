@@ -1,0 +1,29 @@
+{
+  "suite": "test8-party-appearance-snapshots",
+  "at": "2026-10-11T11:26:29.507Z",
+  "scope": "Actual party-stage.js and authored assets under jsdom; injected persistence callbacks and recorded draw requests. Does not certify rendered pixels, app storage, browser layout, or battle mechanics.",
+  "passed": [
+    "new drafts materialize cosmetic defaults without turning combat forms into skins",
+    "opening merges effective saved and workbench appearances before adding defaults",
+    "legacy empty preset restores defaults without rewriting its stored snapshot",
+    "new preset saves an explicit complete appearance snapshot for absent characters",
+    "workbench synchronization changes only requested keys and leaves explicit presets unchanged",
+    "synchronization updates selected detail button and preview without stealing focus",
+    "workbench sync survives picker cancellation while unrelated picker edits roll back",
+    "synchronization cannot partially mutate a draft on invalid patch input",
+    "one picker skin edit redraws detail, full party art and quick portrait immediately",
+    "picker cancellation repaints accepted party skin rather than the project baseline",
+    "Rover gender preserves costume across all four attribute previews without choosing a team",
+    "explicit preset reload wins over newer workbench skin only after party application"
+  ],
+  "failed": [],
+  "summary": {
+    "passed": 12,
+    "failed": 0
+  },
+  "ok": true,
+  "sourceHashes": {
+    "party-stage.js": "8a5bd38118592e1cddc1507aecc6eb798f3eacc3e1a0e4efda92408a997e2fa3",
+    "party-stage.css": "d2fea21eb7168502ff2f9fbc8e9166ebf5bbe77da883884a3da03d877f13e84d"
+  }
+}

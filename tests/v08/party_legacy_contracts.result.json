@@ -1,0 +1,27 @@
+{
+  "suite": "test7-party-stage-DOM-independent",
+  "at": "2026-10-11T10:57:11.186Z",
+  "passed": [
+    "four seats, five preset tabs, and original roster entries",
+    "picker changes are draft until done and party until apply",
+    "canceling changed party asks and can keep draft",
+    "five independent presets save and reload exact team order",
+    "rover replacement keeps one identity and real element configuration",
+    "transformed battle forms are rejected as starting mode",
+    "seven stages plus custom selector retain exact options",
+    "stage selection save does not start until launch",
+    "empty team cannot apply or start",
+    "party arrow navigation and F2 details operate through DOM key events",
+    "untrusted character name stays text in party and picker",
+    "untrusted character name stays text in role detail title and aria label",
+    "untrusted preset name stays text in rendered tab"
+  ],
+  "failed": [],
+  "scope": "Actual party-stage UI and validation under jsdom with injected project callbacks and no art; not full app persistence or rendered-browser evidence.",
+  "summary": {
+    "passed": 13,
+    "failed": 0
+  },
+  "ok": true,
+  "sourceHash": "8a5bd38118592e1cddc1507aecc6eb798f3eacc3e1a0e4efda92408a997e2fa3"
+}

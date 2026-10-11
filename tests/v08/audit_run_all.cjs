@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),{spawnSync}=require('node:child_process');
+const root=path.resolve(process.argv[2]||path.join(__dirname,'../..'));
+const walk=(dir,base='')=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name),path.join(base,e.name)):[path.join(base,e.name)]);
+const fileNames=[...fs.readdirSync(root).filter(f=>/\.(js|css)$/.test(f)||['index.html','parameters.json'].includes(f)),...walk(path.join(root,'assets'),'assets')].sort();
+const hash=()=>Object.fromEntries(fileNames.map(f=>[f,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex')]));
+const report={suite:'test8-independent-frozen-candidate',at:new Date().toISOString(),node:process.version,scope:'Existing 20-command test.7 regression plus eight focused candidate suites. One documented original XSS selector adaptation allows verified static icons; all hostile event/literal-string checks retained. No real-browser/pixels/audio/Windows/final art approval is inferred.',sourceHashes:hash(),commands:[]};
+const own=['audit_party_controls.cjs','audit_app_appearance.cjs','audit_art_callbacks.cjs','audit_icon_contracts.cjs','party_appearance_snapshots.cjs','art-scale-contracts.cjs','icons_contracts.cjs','icons_integration.cjs'];
+const commands=[['tests/v07/run_all.cjs',root],...own.map(f=>['tests/v08/'+f,root])];
+for(const args of commands){process.stderr.write('Running node '+args[0]+'\n');const t=Date.now(),r=spawnSync(process.execPath,args,{cwd:root,env:{...process.env,QA_ROOT:root},encoding:'utf8',maxBuffer:100*1024*1024});let data;try{data=JSON.parse(r.stdout)}catch{}const name=args[0],item={command:'node '+name+' <runtime>',exitCode:r.status,elapsedMs:Date.now()-t,report:data,stdout:data?undefined:r.stdout,stderr:r.stderr,error:r.error?.message};report.commands.push(item);if(data&&name!=='tests/v07/run_all.cjs')fs.writeFileSync(path.join(__dirname,'audit_frozen_'+path.basename(name,'.cjs')+'.json'),JSON.stringify(data,null,2)+'\n');}
+report.endHashes=hash();report.changedSources=Object.keys(report.sourceHashes).filter(f=>report.sourceHashes[f]!==report.endHashes[f]);report.passed=!report.changedSources.length&&report.commands.every(r=>r.exitCode===0);report.effectiveCommands=20+own.length;report.elapsedMs=report.commands.reduce((n,c)=>n+c.elapsedMs,0);console.log(JSON.stringify(report,null,2));process.exitCode=report.passed?0:1;

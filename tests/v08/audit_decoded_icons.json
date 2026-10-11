@@ -1,0 +1,104 @@
+{
+  "scope": "Local Pillow decoding and exact bytes, no visual or provenance certification",
+  "decoded": 14,
+  "images": [
+    {
+      "path": "assets/ui-icons/SP_RoleLabelA1.webp",
+      "width": 128,
+      "height": 128,
+      "mode": "RGBA",
+      "sha256": "af4fccbb09ef77019f15d31d0e7d16f4cd66bd083e57e4c934c857da07d2749e"
+    },
+    {
+      "path": "assets/ui-icons/T_IconElementDark1_UI.webp",
+      "width": 128,
+      "height": 128,
+      "mode": "RGBA",
+      "sha256": "08c7da131d5e2a83df7056cd3c4a5a3e16dc6cfac45739b1aad43e92d1a658bc"
+    },
+    {
+      "path": "assets/ui-icons/T_IconElementFire1_UI.webp",
+      "width": 128,
+      "height": 128,
+      "mode": "RGBA",
+      "sha256": "82747ffe41ccc9c98ee225c8abe484b505be32b34f65ed082823d385333d7a1f"
+    },
+    {
+      "path": "assets/ui-icons/T_IconElementIce1_UI.webp",
+      "width": 128,
+      "height": 128,
+      "mode": "RGBA",
+      "sha256": "d265e785cf243b80a056ef72e1991e54e82791cbd767a90811bbd668ab8780ef"
+    },
+    {
+      "path": "assets/ui-icons/T_IconElementLight1_UI.webp",
+      "width": 128,
+      "height": 128,
+      "mode": "RGBA",
+      "sha256": "38af1b0e7c23677d50821a21651df4ac0f5c2232fb2db6019e30533210845c82"
+    },
+    {
+      "path": "assets/ui-icons/T_IconElementThunder1_UI.webp",
+      "width": 128,
+      "height": 128,
+      "mode": "RGBA",
+      "sha256": "706074429a942d9babdf7422752db79fe794fe9747a305872432bbaef320d672"
+    },
+    {
+      "path": "assets/ui-icons/T_IconElementWind1_UI.webp",
+      "width": 128,
+      "height": 128,
+      "mode": "RGBA",
+      "sha256": "1fc040bce8dfc024386456f9927ad94bdd5408134667ed136a585b3a4d48132a"
+    },
+    {
+      "path": "assets/ui-icons/T_Iconpropertygreendefense_UI.webp",
+      "width": 96,
+      "height": 96,
+      "mode": "RGBA",
+      "sha256": "2eebd6e227c01565d5a1ec1acc4338fe9795abe870309616571d18d7eed40e8f"
+    },
+    {
+      "path": "assets/ui-icons/T_Iconpropertygreenenergy_UI.webp",
+      "width": 96,
+      "height": 96,
+      "mode": "RGBA",
+      "sha256": "edbd2a433bab2999d752c86a69421eb06a3d351dde28234599cddeca83d41a65"
+    },
+    {
+      "path": "assets/ui-icons/T_Iconpropertygreenlife_UI.webp",
+      "width": 96,
+      "height": 96,
+      "mode": "RGBA",
+      "sha256": "d0f4d07613c2d99475087dd1c8b0848b37d3dd509896ea05eec6f7630591df93"
+    },
+    {
+      "path": "assets/ui-icons/T_Iconpropertygreenprotect_UI.webp",
+      "width": 96,
+      "height": 96,
+      "mode": "RGBA",
+      "sha256": "be0e450b631e6da743f23a36cf6243a568fafb8c1102061f5ecc0d09fd9b592a"
+    },
+    {
+      "path": "assets/ui-icons/T_Iconpropertyredattack_UI.webp",
+      "width": 96,
+      "height": 96,
+      "mode": "RGBA",
+      "sha256": "ccbd5b565c4d781b3c870e1425edc4ee8b26fab432f76ef45decd475286818b1"
+    },
+    {
+      "path": "assets/ui-icons/T_Iconpropertyredbaoji_UI.webp",
+      "width": 96,
+      "height": 96,
+      "mode": "RGBA",
+      "sha256": "6303192f556f2990d6be866e6e0e47afada8730ab9851807ef76f3530f068733"
+    },
+    {
+      "path": "assets/ui-icons/T_Iconpropertyredcrit_UI.webp",
+      "width": 96,
+      "height": 96,
+      "mode": "RGBA",
+      "sha256": "8e48810b96fc4e8d58b9e024019a0d812f453bbb5589819bada406262b1862f1"
+    }
+  ]
+}

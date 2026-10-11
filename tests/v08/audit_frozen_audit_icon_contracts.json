@@ -1,0 +1,28 @@
+{
+  "suite": "test8-independent-icon-contracts",
+  "at": "2026-10-11T11:26:28.466Z",
+  "scope": "Registry/local bytes, dynamic icon load/error event DOM, exact production HUD markup, XSS and full application import. No rendered-browser pixel certification.",
+  "passed": [
+    "fourteen verified semantic registry entries use exact local nonempty WebP files",
+    "SP SPD guard and unrelated role/status concepts never borrow false official mappings",
+    "all original markup uses local allowlist with no inline code or remote images",
+    "malicious labels titles keys classes and fallback strings are inert literal text",
+    "dynamic load and error select official versus project fallback without losing accessible label",
+    "HUD stat markup covers only HP ATK DEF CR CDMG ER and retains SP SPD text",
+    "HUD true shield uses official shield icon while guard does not",
+    "full app always creates allowlisted icons in party picker detail and HUD",
+    "forged official-icon class in user character and skill description stays literal"
+  ],
+  "failed": [],
+  "summary": {
+    "passed": 9,
+    "failed": 0
+  },
+  "ok": true,
+  "sourceHashes": {
+    "ui-icons.js": "455218f43b3cb004953d966d1ffdfd70433480d338b0a155db71ee2f653e11fa",
+    "ui-icons.css": "6ade287103687ecfa0eee33bd5136c01ee0a3105e8a281b1d08ac3a7b3608719",
+    "app.js": "f0af934e19fafac215d17fc5ed13215844a91a237c788204c7950155f31154d8",
+    "party-stage.js": "8a5bd38118592e1cddc1507aecc6eb798f3eacc3e1a0e4efda92408a997e2fa3"
+  }
+}

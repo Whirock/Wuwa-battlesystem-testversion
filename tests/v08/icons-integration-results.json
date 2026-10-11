@@ -1,0 +1,15 @@
+{
+  "suite": "test8-icons-actual-app-integration",
+  "passed": true,
+  "checks": [
+    "Actual HUD shows original icons for exactly six of eight stats, without relabeling SP or SPD",
+    "Actual party cards consume the local element/role API and preserve the group fallback",
+    "Actual dynamic quick picker uses original local element images for its authored roster",
+    "A strict restored battle maps real barrier/chisa_shield absorption values, never the guard stance",
+    "Icon load/failure events preserve the complete live battle snapshot and generate no runtime errors"
+  ],
+  "limits": [
+    "Uses the actual app/engine/storage under jsdom; image event simulation is not a real decoder or rendered-layout test.",
+    "Large status capacity, artwork and end-to-end browser coverage are separate suites."
+  ]
+}

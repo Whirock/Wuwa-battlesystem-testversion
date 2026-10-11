@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-11T11:25:09.781Z",
+  "passed": true,
+  "effectiveCommands": 28,
+  "elapsedMs": 81586,
+  "hashedFiles": 234,
+  "drift": [],
+  "changesSincePriorAggregate": [
+    "assets/ui-icons/ICON_USAGE.md",
+    "assets/ui-icons/SOURCES.json"
+  ],
+  "sourceHashes": {
+    "assets/ui-icons/ICON_USAGE.md": "e35a7a576ada0c98d9fae60bb4b167909202330166162ed18b9318e09de43259",
+    "assets/ui-icons/SOURCES.json": "60eb2c4c97cdbdee47ee30f0d99ecbcb2e5fdf54752b47348c02380d74a3688c"
+  },
+  "reportSha256": "f60ea906635fb869d17733d0e5b4550d586989500040ff177d50ef6fb6a027a5",
+  "browserResultsUnchanged": true,
+  "productCodeEditedByAudit": false
+}

@@ -1,0 +1,424 @@
+{
+  "suite": "test8-independent-art-callbacks",
+  "at": "2026-10-11T11:26:28.171Z",
+  "scope": "Exact production layout/draw functions extracted without edits. Draw-call coordinates and controlled load/promise races; not rendered pixels or visual approval.",
+  "passed": [
+    "all 14 authored idle forms share exact body ruler and foot line",
+    "transparent margins change canvas extent without enlarging the body",
+    "pixel and normalized anchors plus native image resizes yield identical visible layout",
+    "wide weapon silhouette safety limit preserves aspect and keeps feet on line",
+    "real draw uses shared body scale rather than canvas fit for Lynae and Rover",
+    "portrait keeps independent authored square crop",
+    "newer skin loaded first cannot be overwritten by earlier image success",
+    "older image failure cannot replace newer loaded preview with error text",
+    "detached preview ignores both successful and failed completion",
+    "latest image failure displays an explicit loading failure",
+    "unknown replacement invalidates an older pending image",
+    "custom renderer receives full-body mode and retains body metadata",
+    "older synthetic custom success and rejection cannot alter newer authored art"
+  ],
+  "failed": [],
+  "layouts": [
+    {
+      "entity": "amy",
+      "form": "human",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        11.200000000000001,
+        78.39442896935935,
+        246.63398328690806,
+        343.341504178273
+      ]
+    },
+    {
+      "entity": "amy",
+      "form": "human",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        8,
+        45.710306406685234,
+        176.16713091922006,
+        234.95821727019498
+      ]
+    },
+    {
+      "entity": "amy",
+      "form": "mecha",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        38.21256038647342,
+        50.5971014492754,
+        265.05314009661834,
+        337.3468599033817
+      ]
+    },
+    {
+      "entity": "amy",
+      "form": "mecha",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        27.294685990338163,
+        25.85507246376811,
+        189.32367149758454,
+        230.67632850241546
+      ]
+    },
+    {
+      "entity": "lynae",
+      "form": "normal",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        69.82400000000001,
+        97.75999999999999,
+        241.13599999999997,
+        343.376
+      ]
+    },
+    {
+      "entity": "lynae",
+      "form": "normal",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        49.87428571428572,
+        59.54285714285715,
+        172.24,
+        234.98285714285714
+      ]
+    },
+    {
+      "entity": "lynae",
+      "form": "peppermint",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        69.824,
+        95.00800000000004,
+        244.57599999999996,
+        342.68800000000005
+      ]
+    },
+    {
+      "entity": "lynae",
+      "form": "peppermint",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        49.87428571428572,
+        57.57714285714287,
+        174.69714285714286,
+        234.49142857142857
+      ]
+    },
+    {
+      "entity": "mornye",
+      "form": "normal",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        75.42793296089387,
+        70.93184357541901,
+        234.16759776536313,
+        343.34525139664805
+      ]
+    },
+    {
+      "entity": "mornye",
+      "form": "normal",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        53.87709497206704,
+        40.37988826815643,
+        167.26256983240222,
+        234.9608938547486
+      ]
+    },
+    {
+      "entity": "mornye",
+      "form": "winter",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        66.01117318435755,
+        72.27709497206706,
+        224.75083798882682,
+        343.34525139664805
+      ]
+    },
+    {
+      "entity": "mornye",
+      "form": "winter",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        47.150837988826815,
+        41.34078212290503,
+        160.53631284916202,
+        234.9608938547486
+      ]
+    },
+    {
+      "entity": "denia",
+      "form": "red",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        11.200000000000001,
+        61.90277777777782,
+        253.67222222222222,
+        343.6722222222222
+      ]
+    },
+    {
+      "entity": "denia",
+      "form": "red",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        8,
+        33.93055555555555,
+        181.19444444444446,
+        235.19444444444443
+      ]
+    },
+    {
+      "entity": "denia",
+      "form": "blue",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        11.200000000000001,
+        87.34100719424463,
+        266.72517985611506,
+        343.7323741007194
+      ]
+    },
+    {
+      "entity": "denia",
+      "form": "blue",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        8,
+        52.100719424460415,
+        190.5179856115108,
+        235.23741007194243
+      ]
+    },
+    {
+      "entity": "chisa",
+      "form": "normal",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        11.200000000000003,
+        61.507692307692295,
+        234.8,
+        347.95384615384614
+      ]
+    },
+    {
+      "entity": "chisa",
+      "form": "normal",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        8,
+        33.64835164835164,
+        167.7142857142857,
+        238.25274725274724
+      ]
+    },
+    {
+      "entity": "chisa",
+      "form": "peach",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        11.200000000000003,
+        55.48663101604282,
+        233.97219251336895,
+        354.2331550802139
+      ]
+    },
+    {
+      "entity": "chisa",
+      "form": "peach",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        8,
+        29.34759358288769,
+        167.12299465240642,
+        242.73796791443849
+      ]
+    },
+    {
+      "entity": "rover",
+      "form": "male_default",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        89.59136621451508,
+        94.72521534958062,
+        228.55570800152762,
+        343.3623955077158
+      ]
+    },
+    {
+      "entity": "rover",
+      "form": "male_default",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        63.993833010367894,
+        57.37515382112901,
+        163.25407714394828,
+        234.97313964836843
+      ]
+    },
+    {
+      "entity": "rover",
+      "form": "male_school",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        89.59136621451508,
+        94.72521534958062,
+        228.55570800152762,
+        343.3623955077158
+      ]
+    },
+    {
+      "entity": "rover",
+      "form": "male_school",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        63.993833010367894,
+        57.37515382112901,
+        163.25407714394828,
+        234.97313964836843
+      ]
+    },
+    {
+      "entity": "rover",
+      "form": "female_default",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999995,
+      "groundY": 342,
+      "alphaBBox": [
+        85.64442806241554,
+        89.48740631527217,
+        199.1718884383831,
+        343.3760904287996
+      ]
+    },
+    {
+      "entity": "rover",
+      "form": "female_default",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        61.17459147315394,
+        53.63386165376581,
+        142.26563459884505,
+        234.98292173485686
+      ]
+    },
+    {
+      "entity": "rover",
+      "form": "female_school",
+      "W": 280,
+      "H": 380,
+      "bodyPixels": 240.79999999999998,
+      "groundY": 342,
+      "alphaBBox": [
+        86.67423769235138,
+        90.41178808699115,
+        194.00942592697746,
+        343.3673272386577
+      ]
+    },
+    {
+      "entity": "rover",
+      "form": "female_school",
+      "W": 200,
+      "H": 260,
+      "bodyPixels": 172,
+      "groundY": 234,
+      "alphaBBox": [
+        61.91016978025098,
+        54.294134347850786,
+        138.57816137641248,
+        234.9766623133269
+      ]
+    }
+  ],
+  "summary": {
+    "passed": 13,
+    "failed": 0
+  },
+  "ok": true,
+  "sourceHashes": {
+    "app.js": "f0af934e19fafac215d17fc5ed13215844a91a237c788204c7950155f31154d8",
+    "assets.js": "7650ec216f0cdd26ec9e9951622897d80b8484c012338f7d8bd608a40688b846"
+  }
+}

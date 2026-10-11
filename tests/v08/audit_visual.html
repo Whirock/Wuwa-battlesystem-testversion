@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>test.8 候选独立视口 QA</title>
+<style>
+html{background:#101820;color:#edf7f5;font:14px system-ui}body{margin:0;width:max-content;min-width:100vw}.toolbar{padding:12px;display:flex;align-items:center;gap:8px;min-height:44px;flex-wrap:wrap;max-width:1280px}button{padding:8px 12px;border:1px solid #799b94;border-radius:6px;color:#edf7f5;background:#223b37;cursor:pointer}button[aria-pressed=true]{background:#385f57}small{color:#bfd1cc}#frame{display:block;border:0;background:#101820;width:1366px;height:768px}#measure{font-variant-numeric:tabular-nums;min-width:290px}
+</style>
+<div class="toolbar"><strong>test.8 候选 · iframe CSS 视口</strong><button data-w="1366" data-h="768">1366 × 768</button><button data-w="1920" data-h="1080">1920 × 1080</button><button data-w="390" data-h="844">390 × 844</button><output id="measure" role="status">载入中</output><small>仅 QA，无自动清档或项目导入。截图是测量后的 CSS 视口，不是物理设备。应用仍使用本浏览器的测试项目。</small></div>
+<iframe id="frame" title="test.8 候选应用" src="../../index.html?audit=appearance-test8"></iframe>
+<script>
+'use strict';
+const frame=document.getElementById('frame'),out=document.getElementById('measure');
+function measure(){try{out.textContent='实际 '+frame.contentWindow.innerWidth+' × '+frame.contentWindow.innerHeight+' CSS px；DPR '+frame.contentWindow.devicePixelRatio;}catch{out.textContent='尚不能读取应用视口';}}
+function size(w,h){frame.style.width=w+'px';frame.style.height=h+'px';document.querySelectorAll('[data-w]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.w===w&&+b.dataset.h===h)));requestAnimationFrame(measure)}
+for(const b of document.querySelectorAll('[data-w]'))b.onclick=()=>size(+b.dataset.w,+b.dataset.h);
+frame.addEventListener('load',measure);size(1366,768);
+window.AppearanceAudit={size,measure,frame,readLayout(){const w=frame.contentWindow,d=w.document;return {viewport:{width:w.innerWidth,height:w.innerHeight,dpr:w.devicePixelRatio},dialogs:[...d.querySelectorAll('dialog[open]')].map(el=>{const r=el.getBoundingClientRect();return {id:el.id,left:r.left,top:r.top,width:r.width,height:r.height,scrollWidth:el.scrollWidth,clientWidth:el.clientWidth,scrollHeight:el.scrollHeight,clientHeight:el.clientHeight}}),images:[...d.querySelectorAll('dialog[open] img.ui-icon__image')].map(el=>({src:el.getAttribute('src'),complete:el.complete,width:el.naturalWidth,state:el.parentElement.dataset.uiState})),draft:w.BattleLabDiagnostics?.getPartyDraft()};}};
+</script>
+</html>

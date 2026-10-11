@@ -1,0 +1,33 @@
+{
+  "suite": "test8-semantic-local-ui-icons",
+  "at": "2026-10-11T11:02:14.786Z",
+  "passed": [
+    "six semantic elements use one original family with fixed local src",
+    "healing is the only verified original among the sixteen project roles",
+    "verified stat semantics match original data and SP/SPD remain unclaimed",
+    "shield value icon is opt-in and does not stand in for guard/protection/abnormal statuses",
+    "group is not mislabeled as pull and damage is not main-DPS",
+    "original-pending markup has a same-semantics visible fallback",
+    "load of dynamically inserted images selects original without changing semantics",
+    "missing local element original uses fallback without retry or remote replacement",
+    "missing local role original uses healing fallback",
+    "a later successful load restores original and original tooltip",
+    "cached successful and failed images can be reconciled explicitly",
+    "unrelated image failure leaves icon states untouched",
+    "unknown and prototype-like keys get local neutral fallbacks",
+    "untrusted key, label, title, class and fallback content remain inert",
+    "caller-supplied src cannot override audited local mapping",
+    "decorative icons avoid duplicated accessible names beside existing labels",
+    "CSS preserves aspect, source colors and forced-colors fallback",
+    "runtime has no network hotlink, fetch, inline handlers or image regeneration",
+    "index loads icon CSS and library once, before party and app consumers",
+    "bundled originals are accounted for with unchanged hashes and rights notes"
+  ],
+  "failed": [],
+  "scope": "Source checks and actual DOM event paths in jsdom; image decode and visual/browser layout are separate evidence.",
+  "summary": {
+    "passed": 20,
+    "failed": 0
+  },
+  "ok": true
+}
